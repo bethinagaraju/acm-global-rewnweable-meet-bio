@@ -1,0 +1,77 @@
+import React from 'react';
+import { Target, Globe, Star, Users } from 'lucide-react';
+
+const ConferenceMissionVision: React.FC = () => {
+  return (
+    <section className="py-16 px-4 lg:px-28 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "'Manrope', sans-serif", color: '#2e376c' }}>
+            Our Mission & Vision
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mt-3">
+            Advancing research and collaboration at the intersection of Artificial Intelligence, Machine Learning, and Robotics to build safer, fairer, and more impactful technologies for society.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-indigo-50 rounded-2xl p-6 shadow-sm border border-indigo-100">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center">
+                <Target className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900">Mission</h3>
+                <p className="text-gray-600 mt-2">
+                  Foster interdisciplinary exchange and promote ethical, reproducible research that accelerates real-world AI and robotics solutions across industries.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-indigo-50 rounded-2xl p-6 shadow-sm border border-indigo-100">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center">
+                <Globe className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900">Vision</h3>
+                <p className="text-gray-600 mt-2">
+                  Build a global, inclusive community where human-centered AI and robotics research responsibly improves quality of life and drives sustainable innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
+            <div className="mx-auto w-12 h-12 bg-yellow-50 text-yellow-600 rounded-lg flex items-center justify-center mb-3">
+              <Star className="w-5 h-5" />
+            </div>
+            <h4 className="font-semibold">Excellence</h4>
+            <p className="text-sm text-gray-500 mt-1">High-quality, peer-reviewed research and reproducible methods.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
+            <div className="mx-auto w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-3">
+              <Users className="w-5 h-5" />
+            </div>
+            <h4 className="font-semibold">Collaboration</h4>
+            <p className="text-sm text-gray-500 mt-1">Cross-disciplinary partnerships to translate ideas into impact.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
+            <div className="mx-auto w-12 h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mb-3">
+              <Globe className="w-5 h-5" />
+            </div>
+            <h4 className="font-semibold">Global Reach</h4>
+            <p className="text-sm text-gray-500 mt-1">Inclusive participation from researchers and practitioners worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ConferenceMissionVision;

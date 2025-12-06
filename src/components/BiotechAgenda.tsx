@@ -1,0 +1,869 @@
+// // import React, { useState } from 'react';
+// // import { User } from 'lucide-react';
+// // import Header from './Header';
+
+// // // Defines the type for a single event in the schedule
+// // interface ScheduleItem {
+// //   time: string;
+// //   title: string;
+// //   description: string;
+// //   speaker: string | null; // Speaker can be a string or null if not applicable
+// // }
+
+// // // Defines the type for the entire schedule object
+// // interface ScheduleData {
+// //   day1: ScheduleItem[];
+// //   day2: ScheduleItem[];
+// // }
+
+
+
+// // const scheduleData: ScheduleData = {
+// //   day1: [
+// //     {
+// //       time: '08:00 - 09:00',
+// //       title: 'Registration & Welcome Coffee',
+// //       description: 'Check-in, collect your badge, and network with peers over coffee.',
+// //       speaker: null,
+// //     },
+// //     {
+// //       time: '09:00 - 10:00',
+// //       title: 'Keynote: Engineering the Future of Medicine',
+// //       description: 'How biomedical engineering is bridging the gap between clinical challenges and technological solutions.',
+// //       speaker: 'Dr. Aris Thorne, Director at the Institute for Medical Engineering',
+// //     },
+// //     {
+// //       time: '10:00 - 11:30',
+// //       title: 'Panel: Next-Generation Medical Devices',
+// //       description: 'Experts discuss innovations in diagnostics, therapeutics, and wearable technology from lab to clinic.',
+// //       speaker: 'Moderated by Dr. Lena Hanson',
+// //     },
+// //     {
+// //       time: '11:30 - 12:00',
+// //       title: 'Coffee & Networking Break',
+// //       description: 'Connect with speakers and attendees.',
+// //       speaker: null,
+// //     },
+// //     {
+// //       time: '12:00 - 13:30',
+// //       title: 'Track 1: Advances in Biomaterials & Tissue Engineering',
+// //       description: 'Exploring novel materials for regenerative medicine and drug delivery systems.',
+// //       speaker: 'Prof. Kenji Tanaka, Center for Regenerative Medicine',
+// //     },
+// //     {
+// //       time: '13:30 - 14:30',
+// //       title: 'Networking Lunch',
+// //       description: 'Enjoy a catered lunch while discussing the morning sessions.',
+// //       speaker: null,
+// //     },
+// //     {
+// //       time: '14:30 - 16:00',
+// //       title: 'Track 2: Innovations in Medical Imaging & Diagnostics',
+// //       description: 'A deep dive into AI-powered diagnostics and the latest in imaging technology.',
+// //       speaker: 'Dr. Isabella Rossi, Lead Imaging Scientist',
+// //     },
+// //   ],
+// //   day2: [
+// //     {
+// //       time: '08:30 - 09:00',
+// //       title: 'Morning Coffee & Networking',
+// //       description: 'Start the day with fresh coffee and new connections.',
+// //       speaker: null,
+// //     },
+// //     {
+// //       time: '09:00 - 10:00',
+// //       title: 'Keynote: AI & Robotics in Modern Healthcare',
+// //       description: 'The transformative impact of intelligent systems in surgical procedures and patient care.',
+// //       speaker: 'Dr. Samuel Chen, CEO of MedBotics Inc.',
+// //     },
+// //     {
+// //       time: '10:00 - 11:30',
+// //       title: 'Panel: Commercializing Biomedical Innovations',
+// //       description: 'Founders and venture capitalists discuss navigating regulatory pathways and securing funding.',
+// //       speaker: 'Featuring panelists from MedTech Ventures & Health Innovate',
+// //     },
+// //     {
+// //       time: '11:30 - 12:00',
+// //       title: 'Coffee & Networking Break',
+// //       description: 'A final opportunity to exchange contacts.',
+// //       speaker: null,
+// //     },
+// //     {
+// //       time: '12:00 - 13:30',
+// //       title: 'Workshop: Computational Modeling in Biomechanics',
+// //       description: 'A hands-on session using modern software for simulating biological systems.',
+// //       speaker: 'Dr. Maria Flores, Bio-Signal Processing Lab',
+// //     },
+// //     {
+// //       time: '13:30 - 14:30',
+// //       title: 'Networking Lunch',
+// //       description: 'Final networking lunch.',
+// //       speaker: null,
+// //     },
+// //     {
+// //       time: '14:30 - 16:00',
+// //       title: 'Closing Remarks & Future Outlook',
+// //       description: 'A summary of key takeaways and a look at the future of biomedical engineering.',
+// //       speaker: 'Conference Chair',
+// //     },
+// //   ],
+
+
+  
+  
+// // };
+
+// // const BiotechAgenda: React.FC = () => {
+// //   const [activeDay, setActiveDay] = useState<number>(1);
+// //   const themeColor = '#2e366c'; 
+
+// //   const renderSchedule = (day: ScheduleItem[]) => {
+// //     return day.map((item, index) => (
+// //       <div key={index} className="flex flex-col sm:flex-row border-t border-gray-200 py-6">
+// //         <div className="w-full sm:w-1/4 pr-4 mb-2 sm:mb-0 sm:text-right">
+// //           <p className="font-bold text-lg" style={{ color: themeColor }}>
+// //             {item.time}
+// //           </p>
+// //         </div>
+// //         <div className="w-full sm:w-3/4 pl-4 sm:border-l border-gray-200">
+// //           <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
+// //           <p className="text-gray-600 mt-1">{item.description}</p>
+// //           {item.speaker && (
+// //             <div className="flex items-center mt-3 text-gray-500">
+// //               <User size={16} className="mr-2 flex-shrink-0" />
+// //               <span className="text-sm font-medium">{item.speaker}</span>
+// //             </div>
+// //           )}
+// //         </div>
+// //       </div>
+// //     ));
+// //   };
+
+// //   return (
+// //     <div>
+      
+// //       <section className="bg-white py-16 px-4">
+// //         <div className="max-w-6xl mx-auto">
+// //           {/* <h2 className="text-4xl font-extrabold text-center" style={{color: '#f4aa3d'}}>
+// //             CONFERENCE AGENDA
+// //           </h2> */}
+
+// //              <h1
+// //         style={{ fontFamily: "'Manrope', sans-serif", color: '#2e376c' }}
+// //         className="text-2xl md:text-4xl font-bold text-center mb-4"
+// //       >
+// //         CONFERENCE AGENDA
+// //       </h1>
+// //           <br/>
+// //           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+// //             Explore our two-day agenda packed with insightful keynotes, expert panels, and networking opportunities in Biomedical Engineering.
+// //           </p>
+
+// //           {/* Day Toggle Buttons */}
+// //           <div className="flex justify-center mb-10 gap-2 sm:gap-4 p-1 bg-gray-100 max-w-xs mx-auto">
+
+// //             <button
+// //               onClick={() => setActiveDay(1)}
+// //               className={`w-full px-6 py-3 text-sm sm:text-base font-bold rounded-full transition-all duration-300 ease-in-out ${
+// //                 activeDay === 1 ? 'text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'
+// //               }`}
+// //               style={{ backgroundColor: activeDay === 1 ? themeColor : '' }}
+// //             >
+// //               Day 1
+// //             </button>
+
+// //             <button
+// //               onClick={() => setActiveDay(2)}
+// //               className={`w-full px-6 py-3 text-sm sm:text-base font-bold rounded-full transition-all duration-300 ease-in-out ${
+// //                 activeDay === 2 ? 'text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'
+// //               }`}
+// //               style={{ backgroundColor: activeDay === 2 ? themeColor : '' }}
+// //             >
+// //               Day 2
+// //             </button>
+
+// //           </div>
+
+// //           {/* Schedule Display */}
+// //           <div className="transition-opacity duration-500 ease-in-out">
+// //             {activeDay === 1
+// //               ? renderSchedule(scheduleData.day1)
+// //               : renderSchedule(scheduleData.day2)}
+// //           </div>
+
+          
+
+// //           {/* Register Button */}
+// //           <div className="flex justify-center mt-10">
+// //             <a href="#" className="bg-[#f4aa3d] hover:bg-teal-600 text-white px-6 py-2 rounded font-semibold text-sm transition-colors">
+// //               Register Now
+// //             </a>
+// //           </div>
+// //         </div>
+// //       </section>
+// //     </div>
+// //   );
+// // };
+
+// // export default BiotechAgenda;
+
+
+
+
+// import React, { useState } from 'react';
+// import { User } from 'lucide-react';
+// import Header from './Header';
+// import { Link } from 'react-router-dom';
+
+// // Defines the type for a single event in the schedule
+// interface ScheduleItem {
+//   time: string;
+//   title: string;
+//   description: string;
+//   speaker: string | null; // Speaker can be a string or null if not applicable
+// }
+
+// // Defines the type for the entire schedule object
+// interface ScheduleData {
+//   day1: ScheduleItem[];
+//   day2: ScheduleItem[];
+//   day3: ScheduleItem[];
+// }
+
+
+
+// const scheduleData: ScheduleData = {
+//   day1: [
+//     {
+//       time: '08:00 - 09:00',
+//       title: 'Registration & Welcome Coffee',
+//       description: 'Check-in, collect your badge, and network with peers over coffee.',
+//       speaker: null,
+//     },
+//     {
+//       time: '09:00 - 10:00',
+//       title: 'Keynote: Engineering the Future of Medicine',
+//       description: 'How biomedical engineering is bridging the gap between clinical challenges and technological solutions.',
+//       speaker: 'Dr. Aris Thorne, Director at the Institute for Medical Engineering',
+//     },
+//     {
+//       time: '10:00 - 11:30',
+//       title: 'Panel: Next-Generation Medical Devices',
+//       description: 'Experts discuss innovations in diagnostics, therapeutics, and wearable technology from lab to clinic.',
+//       speaker: 'Moderated by Dr. Lena Hanson',
+//     },
+//     {
+//       time: '11:30 - 12:00',
+//       title: 'Coffee & Networking Break',
+//       description: 'Connect with speakers and attendees.',
+//       speaker: null,
+//     },
+//     {
+//       time: '12:00 - 13:30',
+//       title: 'Track 1: Advances in Biomaterials & Tissue Engineering',
+//       description: 'Exploring novel materials for regenerative medicine and drug delivery systems.',
+//       speaker: 'Prof. Kenji Tanaka, Center for Regenerative Medicine',
+//     },
+//     {
+//       time: '13:30 - 14:30',
+//       title: 'Networking Lunch',
+//       description: 'Enjoy a catered lunch while discussing the morning sessions.',
+//       speaker: null,
+//     },
+//     {
+//       time: '14:30 - 16:00',
+//       title: 'Track 2: Innovations in Medical Imaging & Diagnostics',
+//       description: 'A deep dive into AI-powered diagnostics and the latest in imaging technology.',
+//       speaker: 'Dr. Isabella Rossi, Lead Imaging Scientist',
+//     },
+//   ],
+//   day2: [
+//     {
+//       time: '08:30 - 09:00',
+//       title: 'Morning Coffee & Networking',
+//       description: 'Start the day with fresh coffee and new connections.',
+//       speaker: null,
+//     },
+//     {
+//       time: '09:00 - 10:00',
+//       title: 'Keynote: AI & Robotics in Modern Healthcare',
+//       description: 'The transformative impact of intelligent systems in surgical procedures and patient care.',
+//       speaker: 'Dr. Samuel Chen, CEO of MedBotics Inc.',
+//     },
+//     {
+//       time: '10:00 - 11:30',
+//       title: 'Panel: Commercializing Biomedical Innovations',
+//       description: 'Founders and venture capitalists discuss navigating regulatory pathways and securing funding.',
+//       speaker: 'Featuring panelists from MedTech Ventures & Health Innovate',
+//     },
+//     {
+//       time: '11:30 - 12:00',
+//       title: 'Coffee & Networking Break',
+//       description: 'A final opportunity to exchange contacts.',
+//       speaker: null,
+//     },
+//     {
+//       time: '12:00 - 13:30',
+//       title: 'Workshop: Computational Modeling in Biomechanics',
+//       description: 'A hands-on session using modern software for simulating biological systems.',
+//       speaker: 'Dr. Maria Flores, Bio-Signal Processing Lab',
+//     },
+//     {
+//       time: '13:30 - 14:30',
+//       title: 'Networking Lunch',
+//       description: 'Final networking lunch.',
+//       speaker: null,
+//     },
+//     {
+//       time: '14:30 - 16:00',
+//       title: 'Closing Remarks & Future Outlook',
+//       description: 'A summary of key takeaways and a look at the future of biomedical engineering.',
+//       speaker: 'Conference Chair',
+//     },
+//   ],
+//   day3: [
+//     {
+//       time: '09:00 - 09:30',
+//       title: 'Welcome & Recap of Previous Days',
+//       description: 'A brief recap of key insights and announcements.',
+//       speaker: 'Event Coordinator',
+//     },
+//     {
+//       time: '09:30 - 11:00',
+//       title: 'Panel: Future of AI-Powered Healthcare Systems',
+//       description: 'Experts discuss the next big steps for AI and ML applications in hospitals and telemedicine.',
+//       speaker: 'Panelists from HealthAI & DeepMed',
+//     },
+//     {
+//       time: '11:00 - 11:30',
+//       title: 'Coffee & Networking Break',
+//       description: 'Relax and network with fellow attendees and speakers.',
+//       speaker: null,
+//     },
+//     {
+//       time: '11:30 - 13:00',
+//       title: 'Workshop: Robotics in Precision Surgery',
+//       description: 'Live demonstration of robotic systems in medical applications and simulation environments.',
+//       speaker: 'Dr. Nina Alvarez, Robotics Research Lab',
+//     },
+//     {
+//       time: '13:00 - 14:00',
+//       title: 'Lunch & Networking',
+//       description: 'Enjoy lunch while exchanging ideas with global experts.',
+//       speaker: null,
+//     },
+//     {
+//       time: '14:00 - 15:30',
+//       title: 'Innovation Showcase & Award Ceremony',
+//       description: 'Presentation of top student research and industry innovations, followed by the Excellence Awards.',
+//       speaker: 'Conference Committee',
+//     },
+//     {
+//       time: '15:30 - 16:00',
+//       title: 'Farewell & Closing Speech',
+//       description: 'Official closing of the conference with highlights and next-year plans.',
+//       speaker: 'Conference Chair',
+//     },
+//   ],
+// };
+
+
+
+// const BiotechAgenda: React.FC = () => {
+//   const [activeDay, setActiveDay] = useState<number>(1);
+//   const themeColor = '#2e366c';
+
+//   const renderSchedule = (day: ScheduleItem[]) =>
+//     day.map((item, index) => (
+//       <div key={index} className="flex flex-col sm:flex-row border-t border-gray-200 py-6">
+//         <div className="w-full sm:w-1/4 pr-4 mb-2 sm:mb-0 sm:text-right">
+//           <p className="font-bold text-lg" style={{ color: themeColor }}>
+//             {item.time}
+//           </p>
+//         </div>
+//         <div className="w-full sm:w-3/4 pl-4 sm:border-l border-gray-200">
+//           <h3 className="text-base font-bold text-gray-800 sm:text-xl" style={{ fontFamily: "'Manrope', sans-serif" }}>{item.title}</h3>
+//           <p className="text-gray-600 mt-1 " style={{ fontFamily: "'Manrope', sans-serif" }}>{item.description}</p>
+//           {/* {item.speaker && (
+//             <div className="flex items-center mt-3 text-gray-500">
+//               <User size={16} className="mr-2 flex-shrink-0" />
+//               <span className="text-sm font-medium">{item.speaker}</span>
+//             </div>
+//           )} */}
+//         </div>
+//       </div>
+//     ));
+
+//   return (
+//     <div>
+//       <section id='agenda-section' className="bg-white py-16 px-4">
+//         <div className="max-w-6xl mx-auto">
+//           <h1
+//             style={{ fontFamily: "'Manrope', sans-serif", color: '#2e376c' }}
+//             className="text-2xl md:text-4xl font-bold text-center mb-4"
+//           >
+//             CONFERENCE AGENDA
+//           </h1>
+
+//           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto" style={{ fontSize: '1rem', font: "sans-serif" }}>
+//             Experience three days of inspiring keynotes, hands-on workshops, and cutting-edge innovations in AI, ML, and Robotics.
+//           </p>
+
+//           {/* Day Toggle Buttons */}
+//           <div className="flex justify-center mb-10 gap-2 sm:gap-4 p-1 bg-gray-100 max-w-sm mx-auto rounded-full">
+//             {[1, 2, 3].map((day) => (
+//               <button
+//                 key={day}
+//                 onClick={() => setActiveDay(day)}
+//                 className={`w-full px-5 py-3 text-sm sm:text-base font-bold rounded-full transition-all duration-300 ${
+//                   activeDay === day
+//                     ? 'text-white shadow-md'
+//                     : 'text-gray-600 hover:bg-gray-200'
+//                 }`}
+//                 style={{ backgroundColor: activeDay === day ? themeColor : '' }}
+//               >
+//                 Day {day}
+//               </button>
+//             ))}
+//           </div>
+
+//           {/* Schedule Display */}
+//           <div className="transition-opacity duration-500 ease-in-out">
+//             {activeDay === 1
+//               ? renderSchedule(scheduleData.day1)
+//               : activeDay === 2
+//               ? renderSchedule(scheduleData.day2)
+//               : renderSchedule(scheduleData.day3)}
+//           </div>
+
+//           {/* Register Button */}
+//           <div className="flex justify-center mt-10">
+//             <Link to="/register">
+//               <a
+//                 className="bg-[#2e366c] hover:bg-[#4967a0] text-white px-6 py-2 font-semibold text-sm transition-colors"
+//               >
+//                 Register Now
+//               </a>
+//             </Link>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default BiotechAgenda;
+
+
+
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Presentation, Mic2, FileText, Zap, Wrench, Users, Trophy, Calendar, Clock, ArrowRight } from 'lucide-react'; // Icon for the accordion
+import Header from './Header';
+import KeyDatesSection from './KeyDatesSection';
+import EndFooter from './EndFooter';
+
+// --- Data Structure for Conference Tracks ---
+// We define the shape of a track object
+interface Track {
+  id: number;
+  title: string;
+  description: string;
+  subtopicsLabel: string; // "Subtopics" or "Topics Include"
+  subtopics: string[];
+  buttonText: string;
+  submitLink: string; // A unique link for each track's submission
+}
+
+// Populate the data from your provided content
+const tracksData: Track[] = [
+  {
+    id: 1,
+    title: '1️⃣ Core Robotics & AI Foundations',
+    description:
+      'This track focuses on machine learning and AI techniques for autonomous robots, including perception, decision-making, multi-robot coordination, and neuromorphic computing.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'Advances in Machine Learning for Robotics',
+      'Deep Learning Architectures for Intelligent Robotics Systems',
+      'Reinforcement Learning for Autonomous Agents',
+      'Human–Robot Interaction (HRI)',
+      'Cognitive Robotics and Perception Systems',
+      'Swarm Intelligence & Multi-Robot Coordination',
+      'Neuromorphic Computing in Robotics',
+    ],
+    buttonText: 'Submit Abstract for Core Robotics & AI Foundations',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 2,
+    title: '2️⃣ Industrial & Service Robotics',
+    description:
+      'This track covers robotics applications in industries, smart manufacturing, logistics, healthcare, agriculture, construction, and maintenance.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'Smart Manufacturing & Industry 4.0',
+      'Collaborative Robots (Cobots)',
+      'Robotics in Logistics & Supply Chain Automation',
+      'Agricultural Robotics & Smart Farming',
+      'Healthcare & Assistive Robotics',
+      'Construction & Mining Robots',
+      'Cleaning & Maintenance Robots',
+    ],
+    buttonText: 'Submit Abstract for Industrial & Service Robotics',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 3,
+    title: '3️⃣ Aerospace, Space & Defense Robotics',
+    description:
+      'Focus on autonomous systems in space, aerospace, defense, and drone technologies for exploration, maintenance, and operations.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'Autonomous Spacecraft & Planetary Rovers',
+      'AI in Satellite Operations & Maintenance',
+      'Drone Technologies & UAV Swarm Control',
+      'Robotics for Orbital Assembly & Repair',
+      'Space Exploration Robotics & Navigation',
+      'AI for Aerospace Safety & Predictive Maintenance',
+    ],
+    buttonText: 'Submit Abstract for Aerospace, Space & Defense Robotics',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 4,
+    title: '4️⃣ AI Research & Applications',
+    description:
+      'This track emphasizes AI research in perception, decision-making, generative models, explainable AI, ethics, and next-generation computing.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'Natural Language Processing & Human Communication',
+      'Computer Vision & Object Recognition',
+      'Generative AI & Creativity',
+      'AI for Decision-Making & Optimization',
+      'Trustworthy & Explainable AI (XAI)',
+      'Ethics, Bias & Regulation in AI',
+      'Quantum AI & Next-Gen Computing',
+    ],
+    buttonText: 'Submit Abstract for AI Research & Applications',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 5,
+    title: '5️⃣ Intelligent Systems & Integration',
+    description:
+      'Track on integrating AI into cyber-physical systems, edge intelligence, sensor fusion, digital twins, intelligent control, and predictive analytics.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'Cyber-Physical Systems',
+      'Edge AI & Embedded Intelligence',
+      'Sensor Fusion & Perception Technologies',
+      'Digital Twins for Robotics & Aerospace',
+      'Intelligent Control Systems',
+      'Data Analytics & Predictive Modeling for Robotics',
+    ],
+    buttonText: 'Submit Abstract for Intelligent Systems & Integration',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 6,
+    title: '6️⃣ Sustainability & Societal Impact',
+    description:
+      'Focus on robotics and AI solutions for renewable energy, disaster response, climate modeling, ethical design, social well-being, and workforce transformation.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'AI & Robotics for Renewable Energy Systems',
+      'Disaster Response & Humanitarian Robotics',
+      'AI for Climate Modeling & Resource Optimization',
+      'Ethical & Responsible Robotics Design',
+      'Social Robots & Human Well-being',
+      'Reskilling the Workforce for an Automated Future',
+    ],
+    buttonText: 'Submit Abstract for Sustainability & Societal Impact',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 7,
+    title: '7️⃣ Demos, Competitions & Innovation Showcases',
+    description:
+      'Interactive and competitive sessions including hackathons, model benchmarking, student competitions, startup pitches, and live robotics demonstrations.',
+    subtopicsLabel: 'Subtopics:',
+    subtopics: [
+      'Robotics Hackathon & Design Challenge',
+      'AI Model Benchmarking Session',
+      'Student Robotics Competitions',
+      'Startups in Robotics & AI Pitch Session',
+      'Interactive Demonstrations (drones, robots, smart systems)',
+    ],
+    buttonText: 'Submit Abstract for Demos, Competitions & Innovation Showcases',
+    submitLink: '/AbstractSubmission',
+  },
+  {
+    id: 8,
+    title: '8️⃣ Panel & Roundtable Topics',
+    description:
+      'Discussion forums on AI and robotics ethics, regulation, commercialization, human-machine collaboration, and space exploration.',
+    subtopicsLabel: 'Topics Include:',
+    subtopics: [
+      'The Future of Human–Machine Collaboration',
+      'AI Regulation: Balancing Innovation and Safety',
+      'Robotics in Space Exploration: Beyond Mars',
+      'From Labs to Market: Commercializing AI & Robotics Innovations',
+      'AI in Defense and Ethical Implications',
+    ],
+    buttonText: 'Submit Abstract for Propose a Panel Topic',
+    submitLink: '/AbstractSubmission',
+  },
+];
+
+/**
+ * A single accordion item component for a conference track.
+ */
+const TrackAccordionItem: React.FC<{
+  track: Track;
+  isOpen: boolean;
+  onToggle: () => void;
+  themeColor: string;
+}> = ({ track, isOpen, onToggle, themeColor }) => {
+  return (
+    
+    <div className="border-b border-gray-200 last:border-b-0">
+      
+      {/* --- Accordion Header / Button --- */}
+      <h2>
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          aria-controls={`track-content-${track.id}`}
+          className="flex w-full items-center justify-between p-5 sm:p-6 text-left"
+        >
+          <span
+            className="text-lg sm:text-xl font-semibold"
+            style={{ color: themeColor }}
+          >
+            {track.title}
+          </span>
+          <ChevronDown
+            size={24}
+            className={`flex-shrink-0 text-gray-500 transition-transform duration-300 ${
+              isOpen ? 'rotate-180' : 'rotate-0'
+            }`}
+          />
+        </button>
+      </h2>
+
+      {/* --- Accordion Content (Collapsible Area) --- */}
+      <div
+        id={`track-content-${track.id}`}
+        role="region"
+        aria-labelledby={`track-header-${track.id}`}
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? 'max-h-[1000px]' : 'max-h-0' // Animate height
+        }`}
+      >
+        <div className="px-5 sm:px-6 pb-6 pt-0">
+          <p className="text-gray-700 mb-5" style={{ fontFamily: "'Manrope', sans-serif" }}>
+            {track.description}
+          </p>
+
+          <h4 className="text-base font-semibold text-gray-800 mb-3">
+            {track.subtopicsLabel}
+          </h4>
+          <ul className="list-disc list-inside space-y-1.5 text-gray-600 mb-8">
+            {track.subtopics.map((subtopic, index) => (
+              <li key={index}>{subtopic}</li>
+            ))}
+          </ul>
+
+          <Link
+            to={track.submitLink}
+            className="inline-block text-white font-bold py-3 px-6 rounded-md transition-all duration-300"
+            style={{ backgroundColor: themeColor, fontFamily: "'Manrope', sans-serif" }}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#4967a0')} // Darker hover
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = themeColor)}
+          >
+            {track.buttonText}
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/**
+ * Main component to display the list of conference tracks (replaces the old agenda).
+ */
+const BiotechAgenda: React.FC = () => {
+  // State to track which accordion item is currently open
+  // null means all are closed. A number means that track.id is open.
+  const [openTrackId, setOpenTrackId] = useState<number | null>(null);
+  
+  const themeColor = '#2e366c'; // Main theme color from original file
+
+  // Toggles an accordion item. If it's already open, close it.
+  const handleToggle = (trackId: number) => {
+    setOpenTrackId(openTrackId === trackId ? null : trackId);
+  };
+
+  return (
+    // Note: The original component had no wrapper div, starting directly with <section>.
+    // The original also didn't import Header, so I've left it out.
+    // If you still need the Header, you can add it back above the <section>.
+    <section id="tracks-section" className="bg-gray-50">
+      <Header />
+
+      {/* Banner Section */}
+      <div className="relative bg-indigo-900 text-white overflow-hidden py-16">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+
+        <div className="relative container mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-indigo-800 rounded-full px-4 py-1 mb-6 border border-indigo-600">
+            <span className="text-xs font-semibold tracking-widest uppercase text-indigo-200">Conference Program</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
+            Sessions & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-400">Tracks</span>
+          </h1>
+          <p className="text-lg md:text-xl text-indigo-200 max-w-2xl mx-auto font-light">
+            Discover the comprehensive program of ICAMLR 2026 featuring cutting-edge research and innovative sessions.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto">
+        <h1
+          style={{ fontFamily: "'Manrope', sans-serif", color: themeColor }}
+          className="text-3xl md:text-4xl font-bold text-center mb-4 pt-16"
+        >
+          SESSIONS & TRACKS
+        </h1>
+
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg" style={{ fontFamily: "'Manrope', sans-serif" }}>
+          Explore the conference tracks and submit your abstract.
+        </p>
+
+        {/* --- Accordion Container --- */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          {tracksData.map((track) => (
+            <TrackAccordionItem
+              key={track.id}
+              track={track}
+              isOpen={openTrackId === track.id}
+              onToggle={() => handleToggle(track.id)}
+              themeColor={themeColor}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* <div className="mt-16 px-6 lg:px-0">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
+            <Presentation className="w-8 h-8 text-indigo-600" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: themeColor, fontFamily: "'Manrope', sans-serif" }}>
+            Types of Sessions
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+            ICAMLR 2026 will host a diverse mix of interactive and knowledge-rich formats giving researchers, industry leaders, and innovators a platform to exchange ideas.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { name: "Keynote Talks", desc: "Insights from world-leading experts in AI & Robotics.", icon: Mic2 },
+            { name: "Technical Paper Presentations", desc: "Full research papers with in-depth technical contributions.", icon: FileText },
+            { name: "Poster & Lightning Sessions", desc: "Fast innovation pitches and visual research communication.", icon: Zap },
+            { name: "Hands-on Workshops", desc: "Skill-based learning guided by expert mentors.", icon: Wrench },
+            { name: "Panel Discussions", desc: "Engaging debates on ethics, policy, innovation, and future trends.", icon: Users },
+            { name: "Student Competitions", desc: "Challenges and awards encouraging emerging researchers.", icon: Trophy },
+          ].map((item, idx) => {
+            const IconComponent = item.icon;
+            return (
+              <div key={idx} className="bg-white shadow-lg rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:border-indigo-200 transition-all duration-300 group">
+                <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-indigo-600 transition-colors">
+                  <IconComponent className="w-7 h-7 text-indigo-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-bold mb-3" style={{ color: themeColor }}>{item.name}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div> */}
+
+
+      <div className="py-12 px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
+      {/* Decorative Background Blob */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none opacity-40">
+        <div className="absolute top-20 right-0 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30 animate-pulse" />
+        <div className="absolute bottom-20 left-0 w-72 h-72 bg-purple-200 rounded-full blur-3xl opacity-30" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-semibold text-sm mb-6 shadow-sm">
+            <Presentation className="w-4 h-4" />
+            <span>Conference Format</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 tracking-tight">
+            Explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Session Types</span>
+          </h2>
+          <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+            ICAMLR 2026 features a dynamic blend of formats designed to maximize knowledge transfer and networking in AI & Robotics.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { name: "Keynote Talks", desc: "Insights from world-leading experts in AI & Robotics.", icon: Mic2 },
+            { name: "Technical Papers", desc: "Full research papers with in-depth technical contributions.", icon: FileText },
+            { name: "Poster Sessions", desc: "Fast innovation pitches and visual research communication.", icon: Zap },
+            { name: "Hands-on Workshops", desc: "Skill-based learning guided by expert mentors.", icon: Wrench },
+            { name: "Panel Discussions", desc: "Engaging debates on ethics, policy, and future trends.", icon: Users },
+            { name: "Student Challenges", desc: "Competitions and awards encouraging emerging researchers.", icon: Trophy },
+          ].map((item, idx) => {
+            const IconComponent = item.icon;
+            return (
+              <div 
+                key={idx} 
+                className="group bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-2xl hover:border-indigo-100 transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden"
+              >
+                 {/* Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:rotate-6 transition-all duration-300">
+                    <IconComponent className="w-7 h-7 text-indigo-600 group-hover:text-white transition-colors" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-indigo-600 transition-colors">
+                    {item.name}
+                  </h3>
+                  
+                  <p className="text-slate-500 mb-6 leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  <div className="flex items-center text-sm font-semibold text-indigo-600 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                    Read more <ArrowRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+
+
+      <KeyDatesSection />
+
+      <EndFooter />
+
+    </section>
+  );
+};
+
+export default BiotechAgenda;

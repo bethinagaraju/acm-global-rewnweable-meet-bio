@@ -1,0 +1,65 @@
+import React, { useState } from "react";
+import { Calendar, MapPin, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const TopNavbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (open: boolean) => void }) => {
+  return (
+    <div className="border-b">
+      <div className="container mx-auto px-4 h-[90px] sm:h-[120px] flex items-center justify-between">
+        {/* Left Section */}
+        <div className="flex h-full items-center divide-x divide-gray-200">
+          {/* Logo */}
+          <div className="h-full flex items-center">
+            <Link to="/">
+              <img
+                src="aimllogo.jpg"
+                alt="Artificial Intelligence, Machine Learning and Robotics Conference Logo"
+                className="h-[70px] sm:h-[120px] w-auto object-contain transition-all duration-300"
+              />
+            </Link>
+          </div>
+
+          {/* Event Details (visible on sm and up) */}
+          <div className="pl-4 sm:pl-6 flex-col space-y-1 sm:space-y-2 text-[11px] sm:text-sm text-gray-800 min-w-[180px] sm:min-w-[200px] flex">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <Calendar className="text-indigo-900" size={16} />
+              <span className="font-bold tracking-tight sm:text-sm">
+                July 28–30, 2026
+              </span>
+            </div>
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <MapPin className="text-indigo-900" size={16} />
+              <span className="font-bold tracking-tight sm:text-sm leading-snug">
+                Crowne Plaza - St. Peter’s Rome, Italy
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section (desktop buttons) */}
+        <div className="hidden md:flex items-center gap-4 ml-12">
+          <Link to="/register">
+            <button style={{ backgroundImage: "linear-gradient(90deg, rgba(0,72,139,1) 0%, rgba(15,133,255,1) 100%)" }} className="w-[120px] text-white font-bold py-2 hover:bg-[#425a92] transition-colors duration-300">
+              REGISTER
+            </button>
+          </Link>
+
+          <Link to="/AbstractSubmission">
+            <button style={{ backgroundImage: "linear-gradient(90deg, rgba(0,47,48,1) 0%, rgba(0,0,48,1) 100%)" }} className="w-[232px] text-white font-bold py-2 hover:bg-[#011136] transition-colors duration-300">
+              ABSTRACT SUBMISSION
+            </button>
+          </Link>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden ml-3">
+          <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TopNavbar;
