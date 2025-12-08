@@ -12,7 +12,7 @@ const CTARegisterAbstract: React.FC = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="container mx-auto max-w-5xl">
-        <div className="bg-[#282c61] text-white rounded-2xl shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <div className="bg-[#282c61] text-white shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
 
           {/* Left text */}
           <div className="flex-1 text-center md:text-left">
@@ -30,7 +30,7 @@ const CTARegisterAbstract: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center gap-3 justify-center px-5 py-3 rounded-md font-semibold bg-white text-indigo-800 shadow hover:shadow-md transition-all w-full sm:w-auto"
+                className="flex items-center gap-3 justify-center px-5 py-3 font-semibold bg-white text-indigo-800 shadow hover:shadow-md transition-all w-full sm:w-auto"
                 aria-label="Register"
               >
                 <UserPlus className="w-5 h-5 text-indigo-700" />
@@ -43,7 +43,7 @@ const CTARegisterAbstract: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center gap-3 justify-center px-5 py-3 rounded-md font-semibold bg-transparent border border-white text-white hover:bg-white/10 transition-all w-full sm:w-auto"
+                className="flex items-center gap-3 justify-center px-5 py-3 font-semibold bg-transparent border border-white text-white hover:bg-white/10 transition-all w-full sm:w-auto"
                 aria-label="Abstract Submission"
               >
                 <FileText className="w-5 h-5 text-white/90" />

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import StatisticsSection from './StatisticsSection';
 
 const HeroSection: React.FC = () => {
   return (
@@ -20,59 +21,67 @@ const HeroSection: React.FC = () => {
       <div className="relative min-h-[430px] flex items-center justify-center px-3 sm:px-6 md:px-8">
         <div className="container mx-auto">
           <div
-            className="max-w-4xl w-full flex flex-col items-center text-center py-6 sm:py-10 px-4 sm:px-8 bg-white bg-opacity-40 backdrop-blur-sm"
+            className="max-w-6xl w-full flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-6 sm:py-10 px-4 sm:px-8 bg-white bg-opacity-40 backdrop-blur-sm"
             style={{ marginTop: '100px' }}
           >
-            {/* Title */}
-            <p
-              style={{ fontFamily: 'Manrope, sans-serif' }}
-              className="text-xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black uppercase leading-snug"
-            >
-              Artificial Intelligence, Machine Learning and Robotics Conference
-            </p>
+            {/* Left Side Content */}
+            <div className="flex-1 mb-6 lg:mb-0 lg:pr-8">
+              {/* Title */}
+              <p
+                style={{ fontFamily: 'Manrope, sans-serif' }}
+                className="text-xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black uppercase leading-snug"
+              >
+                Artificial Intelligence, Machine Learning and Robotics Conference
+              </p>
 
-            {/* Date and Venue */}
-            <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 sm:mb-6 text-gray-800">
-              July 28–30, 2026 | Crowne Plaza – St. Peter's Rome, Italy
-            </p>
+              {/* Date and Venue */}
+              <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 sm:mb-6 text-gray-800">
+                July 28–30, 2026 | Crowne Plaza – St. Peter's Rome, Italy
+              </p>
 
-            {/* Buttons Section */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full">
-              <Link to="/register">
-                <button
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(90deg, rgba(0,72,139,1) 0%, rgba(15,133,255,1) 100%)',
-                  }}
-                  className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-colors hover:opacity-90"
-                >
-                  REGISTER
-                </button>
-              </Link>
+              {/* Buttons Section */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full">
+                <Link to="/register">
+                  <button
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(90deg, rgba(0,72,139,1) 0%, rgba(15,133,255,1) 100%)',
+                    }}
+                    className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-colors hover:opacity-90"
+                  >
+                    REGISTER
+                  </button>
+                </Link>
 
-              <a href="/#contact-form">
-                <button
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(90deg, rgba(0,47,48,1) 0%, rgba(0,0,48,1) 100%)',
-                  }}
-                  className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-colors hover:opacity-90"
-                >
-                  SPONSORSHIP ENQUIRY
-                </button>
-              </a>
+                <a href="/#contact-form">
+                  <button
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(90deg, rgba(0,47,48,1) 0%, rgba(0,0,48,1) 100%)',
+                    }}
+                    className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-colors hover:opacity-90"
+                  >
+                    SPONSORSHIP ENQUIRY
+                  </button>
+                </a>
 
-              <Link to="/AbstractSubmission">
-                <button
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(90deg, rgba(35,35,87,1) 0%, rgba(76,109,166,1) 100%)',
-                  }}
-                  className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-colors hover:opacity-90"
-                >
-                  ABSTRACT SUBMISSION
-                </button>
-              </Link>
+                <Link to="/AbstractSubmission">
+                  <button
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(90deg, rgba(35,35,87,1) 0%, rgba(76,109,166,1) 100%)',
+                    }}
+                    className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-colors hover:opacity-90"
+                  >
+                    ABSTRACT SUBMISSION
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Side Statistics */}
+            <div className="flex-1">
+              <StatisticsSection embedded={true} />
             </div>
           </div>
         </div>

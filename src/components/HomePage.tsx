@@ -35,6 +35,7 @@ import CountdownTimer from './CountdownTimer';
 import ComplianceBadges from './ComplianceBadges';
 import ComboKeyDatesAndVenue from './ComboKeyDatesAndVenue';
 import KeyDatesSection from './KeyDatesSection';
+import QuickLinksSection from './QuickLinksSection';
 
 
 function HomePage() {
@@ -61,6 +62,9 @@ function HomePage() {
       
       
       <StatisticsSection />
+
+      <QuickLinksSection />
+
       
       <ContentSection />
 

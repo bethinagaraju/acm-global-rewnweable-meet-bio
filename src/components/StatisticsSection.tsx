@@ -122,46 +122,47 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
-const stats = [
-  // { value: 2500, label: 'EXHIBITION ATTENDEES' },
-  // { value: 500, label: 'DELEGATES' },
-  { value: 35, label: 'SPEAKERS' },
-  { value: 20, label: 'COUNTRIES REPRESENTED' },
-  // { value: 150, label: 'EXHIBITORS' },
-  { value: 150, label: 'PARTICIPATES' },
-  { value: 100, label: 'SPONSORS & PARTNERS' },
-];
+interface StatisticsSectionProps {
+  embedded?: boolean;
+}
 
-const StatisticsSection: React.FC = () => {
+const StatisticsSection: React.FC<StatisticsSectionProps> = ({ embedded = false }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
 
+  const content = (
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+        {stats.map((stat, index) => (
+          <div
+            key={index}
+            className="px-4 border-l border-white"
+          >
+            <div className="text-4xl font-bold text-left">
+              {inView ? <CountUp end={stat.value} duration={2} /> : 0} +
+            </div>
+            <h4 className="text-left mt-2 font-sans-serif">
+              {stat.label.split(' ').map((word, i) => (
+                <span key={i}>
+                  {word + ' '}
+                </span>
+              ))}
+            </h4>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  if (embedded) {
+    return <div ref={ref}>{content}</div>;
+  }
+
   return (
     <section className="text-white py-6" ref={ref} style={{ backgroundImage: "linear-gradient(90deg, rgba(35,35,87,1) 0%, rgba(76,109,166,1) 100%)" }}>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="px-4 border-l border-white"
-            >
-              <div className="text-4xl font-bold text-left">
-                {inView ? <CountUp end={stat.value} duration={2} /> : 0} +
-              </div>
-              <h4 className="text-left mt-2 font-sans-serif">
-                {stat.label.split(' ').map((word, i) => (
-                  <span key={i}>
-                    {word + ' '}
-                    {/* <br /> */}
-                  </span>
-                ))}
-              </h4>
-            </div>
-          ))}
-        </div>
-      </div>
+      {content}
     </section>
   );
 };

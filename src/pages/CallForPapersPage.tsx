@@ -811,7 +811,7 @@ function CallForPapersPage() {
           </section>
 
           {/* Submission Guidelines */}
-          <section>
+          {/* <section>
             <h2 className="text-2xl font-bold mb-6">Submission Guidelines</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {guidelines.map((g, i) => {
@@ -827,7 +827,54 @@ function CallForPapersPage() {
                 );
               })}
             </div>
-          </section>
+          </section> */}
+
+          {/* Submission Guidelines */}
+<section>
+  <h2 className="text-2xl font-bold mb-6">Submission Guidelines</h2>
+
+  <div className="bg-white border rounded-2xl shadow-sm p-6 space-y-5">
+
+    {guidelines.map((g, i) => {
+      const Icon = g.icon;
+      return (
+        <div
+          key={i}
+          className={`flex items-start gap-4 transition-all ${
+            g.highlight ? "bg-red-50 border border-red-200 p-4 rounded-xl" : ""
+          }`}
+        >
+          <div
+            className={`w-10 h-10 flex items-center justify-center rounded-xl shadow-sm ${
+              g.highlight
+                ? "bg-red-100 text-red-600"
+                : "bg-indigo-100 text-indigo-600"
+            }`}
+          >
+            <Icon className="w-5 h-5" />
+          </div>
+
+          <div>
+            <p className="font-semibold text-slate-900 text-[15px]">
+              {g.title}
+            </p>
+            <p className="text-slate-600 text-sm mt-1 leading-relaxed">
+              {g.text}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+
+  </div>
+
+  {/* Bottom Note */}
+  <p className="text-sm text-slate-500 mt-4 flex items-center gap-2 italic">
+    <Shield className="w-4 h-4 text-indigo-500" />  
+    All submissions will undergo a rigorous double-blind review process to ensure academic integrity and fairness.
+  </p>
+</section>
+
 
           {/* Double Blind Review */}
           <section>
