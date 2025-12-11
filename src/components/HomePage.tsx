@@ -36,6 +36,13 @@ import ComplianceBadges from './ComplianceBadges';
 import ComboKeyDatesAndVenue from './ComboKeyDatesAndVenue';
 import KeyDatesSection from './KeyDatesSection';
 import QuickLinksSection from './QuickLinksSection';
+import ScientificSessions from './ScientificSessions';
+import AnnouncementBar from './AnnouncementBar';
+import ScrollbarPage from '../pages/ScrollbarPage';
+import { TestTube2 } from 'lucide-react';
+import TestimonialCard from './TestimonialCard';
+import Testimonials from './Testimonials';
+import VenueAndContactSection from './VenueAndContactSection';
 
 
 function HomePage() {
@@ -58,24 +65,34 @@ function HomePage() {
     <div className="min-h-screen bg-white">
       <CookieConsent />
       <Header />
+      {/* <AnnouncementBar /> */}
       <HeroSection />
       
       
       <StatisticsSection />
+      {/* <QuickLinksSection /> */}
 
-      <QuickLinksSection />
+    
 
       
       <ContentSection />
+
+      {/* <ScrollbarPage/> */}
 
       
 
       <Mixcomponents/>
       
+      <WhyAttendSection />
       
-      <ConferenceHighlights />
-      <KeyTopicsSection />
-      <ComboKeyDatesAndVenue />
+      {/* <ConferenceHighlights /> */}
+      <ScientificSessions />
+      {/* <KeyTopicsSection /> */}
+
+      {/* <ComboKeyDatesAndVenue /> */}
+
+      <VenueAndContactSection />
+
       {/* <KeyDatesSection /> */}
 
       {/* <RegionChartComponent/>
@@ -118,10 +135,13 @@ function HomePage() {
       <ComplianceBadges /> */}
 
       <CountdownTimer />
+      
+      <Testimonials />
+
       <CTARegisterAbstract />
       
       
-      <Footer />
+      {/* <Footer /> */}
       <EndFooter/>
 
       

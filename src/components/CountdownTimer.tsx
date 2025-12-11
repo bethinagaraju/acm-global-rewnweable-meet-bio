@@ -179,7 +179,7 @@ const CountdownTimer: React.FC = () => {
           
           {/* Single Heading */}
           <div className="flex items-center gap-2 mb-8">
-            <Timer className="w-6 h-6 text-indigo-600" />
+            <Timer className="w-6 h-6 text-red-600" />
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
               Time Remaining Until Conference Begins
             </h2>

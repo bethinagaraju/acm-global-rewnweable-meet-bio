@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
       <Header />
 
       {/* Banner Section */}
-      <div className="relative bg-indigo-900 text-white overflow-hidden py-12">
+      {/* <div className="relative bg-indigo-900 text-white overflow-hidden py-12">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
 
         <div className="relative container mx-auto px-6 text-center">
@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
             Have questions about ICAMLR 2026? We're here to help you every step of the way.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Contact Information & Form */}
       <div className="py-16 px-4 sm:px-6 lg:px-32">

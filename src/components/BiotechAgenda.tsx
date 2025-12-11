@@ -842,6 +842,7 @@ import Header from './Header';
 import KeyDatesSection from './KeyDatesSection';
 import EndFooter from './EndFooter';
 import SessionTypesSection from './SessionTypesSection';
+import ScientificSession from './ScientificSession';
 
 // --- Data Structure for Conference Tracks ---
 interface Track {
@@ -1072,10 +1073,10 @@ const BiotechAgenda: React.FC = () => {
 
   return (
     <section id="tracks-section" className="bg-gray-50">
-      <Header />
+      {/* <Header /> */}
 
       {/* Banner Section */}
-      <div className="relative bg-indigo-900 text-white overflow-hidden py-16">
+      {/* <div className="relative bg-indigo-900 text-white overflow-hidden py-16">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
         <div className="relative container mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 bg-indigo-800 rounded-full px-4 py-1 mb-6 border border-indigo-600">
@@ -1088,9 +1089,12 @@ const BiotechAgenda: React.FC = () => {
             Discover the comprehensive program of ICAMLR 2026 featuring cutting-edge research and innovative sessions.
           </p>
         </div>
-      </div>
+      </div> */}
 
-      <div className="max-w-4xl mx-auto">
+
+      <ScientificSession/>
+
+      {/* <div className="max-w-4xl mx-auto">
         <h1
           style={{ fontFamily: "'Manrope', sans-serif", color: themeColor }}
           className="text-3xl md:text-4xl font-bold text-center mb-4 pt-16"
@@ -1101,7 +1105,7 @@ const BiotechAgenda: React.FC = () => {
           Explore the conference tracks and submit your abstract.
         </p>
 
-        {/* --- Accordion Container --- */}
+        
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
           {tracksData.map((track) => (
             <TrackAccordionItem
@@ -1113,12 +1117,12 @@ const BiotechAgenda: React.FC = () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       <SessionTypesSection />
 
-      <KeyDatesSection />
-      <EndFooter />
+      {/* <KeyDatesSection /> */}
+      {/* <EndFooter /> */}
     </section>
   );
 };

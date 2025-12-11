@@ -755,12 +755,73 @@ function CallForPapersPage() {
         <div className="lg:col-span-8 space-y-14">
 
           {/* CFP Introduction */}
-          <section>
+          {/* <section>
+
             <h2 className="text-2xl font-bold mb-3">About the Call</h2>
             <p className="text-slate-600 leading-relaxed">
               We welcome submissions that push boundaries in AI, ML, and Robotics. Whether theoretical, experimental, interdisciplinary, or domain-driven, your research is part of shaping the future.
             </p>
-          </section>
+
+          </section> */}
+
+
+
+          {/* <section>
+  <h2 className="text-2xl font-bold mb-3">About the Call</h2>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    We welcome you to the 2nd Edition of the Artificial Intelligence, Machine Learning & Robotics Conference (AIMLR 2026), scheduled from July 28–30, 2026, in Rome, Italy — and accessible worldwide through our hybrid (onsite + virtual) format. This ensures global participation, allowing researchers, technologists, industry leaders, and innovators to connect, collaborate, and exchange advancements shaping the future of intelligent systems.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    AIMLR 2026 stands as a leading platform for professionals across AI, machine learning, robotics, deep learning, automation, and data-driven innovation — showcasing how intelligent technologies are reshaping industries and accelerating global research.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    The event will feature keynote speeches, technical sessions, product demonstrations, panel discussions, and interactive workshops covering a wide spectrum of topics including autonomous systems, natural language processing, AI in healthcare, robotics engineering, neural networks, cybersecurity applications, digital ethics, and next-generation computing architecture.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    Whether you're a researcher developing new AI frameworks, a robotics engineer designing autonomous systems, a student exploring emerging technologies, or an industry expert driving real-world AI adoption — AIMLR 2026 provides a collaborative space to learn, present, and innovate.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    Participants will also have the opportunity to publish their work in indexed conference proceedings, engage with global experts, and join networking sessions designed to foster interdisciplinary partnerships, research collaborations, and future-focused innovation.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed">
+    We look forward to welcoming you to AIMLR 2026 as we explore cutting-edge breakthroughs, shape responsible AI practices, and collectively build the next era of intelligent technology.
+  </p>
+</section> */}
+
+
+<section>
+  <h2 className="text-2xl font-bold mb-3">About the Call</h2>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    Welcome to the 2nd Edition of the Artificial Intelligence, Machine Learning & Robotics Conference (AIMLR 2026), taking place from July 28–30, 2026, in Rome, Italy — with hybrid (onsite + virtual) participation for global accessibility.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    AIMLR 2026 brings together researchers, technologists, industry leaders, and innovators to explore advancements shaping the future of intelligent systems across AI, machine learning, robotics, deep learning, and automation.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    The conference features keynote talks, technical sessions, workshops, and panel discussions on areas such as autonomous systems, NLP, AI in healthcare, neural networks, robotics engineering, cybersecurity, and digital ethics.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed mb-4">
+    Whether you're a researcher, student, robotics engineer, or industry expert, AIMLR 2026 offers a collaborative platform to present work, learn from global experts, and build meaningful research and industry connections.
+  </p>
+
+  <p className="text-slate-600 leading-relaxed">
+    Join us in exploring breakthrough innovations and shaping the next era of responsible and impactful AI technologies.
+  </p>
+</section>
+
+
+
+
 
           {/* Full Topics List */}
           <section>

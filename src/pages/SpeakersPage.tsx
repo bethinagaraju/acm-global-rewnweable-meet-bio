@@ -295,7 +295,7 @@ function SpeakersPage() {
               <h3 className="font-semibold">{speaker.name}</h3>
               <p className="text-sm text-gray-600">{speaker.title}</p>
               {/* <p className="text-xs text-gray-500">{speaker.company}</p> */}
-              <p className="text-sm text-gray-500">{speaker.type}</p>
+              <p className="text-sm text-gray-500 font-semibold">{speaker.type}</p>
             </div>
           ))}
         </div>

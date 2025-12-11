@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import BiotechAgenda from './components/BiotechAgenda';
@@ -26,8 +26,24 @@ import VenueTravelPage from './pages/VenueTravelPage';
 import SponsorsPage from './pages/SponsorsPage';
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
+import HurryUpModal from './components/HurryUpModal';
+import ScrollbarPage from './pages/ScrollbarPage';
+import ScrollVenuePage from './pages/ScrollVenuePage';
+import ScrollGuidelines from './pages/ScrollGuidlines';
+import ScrollFaq from './pages/ScrollFaq';
+import ScrollCommiteePage from './pages/ScrollCommiteePage';
+import ScrollSchedule from './pages/ScrollSchedule';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 10000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
 
@@ -58,9 +74,17 @@ function App() {
         <Route path="/venue-travel" element={<VenueTravelPage />} />
         <Route path="/sponsors" element={<SponsorsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path='/sessions' element={<ScrollbarPage />} />
+        <Route path='/venue' element={<ScrollVenuePage />} />
+        <Route path='/guidelines' element={<ScrollGuidelines />} />
+        <Route path='/Faq' element={<ScrollFaq />} />
+        <Route path='/commitee' element={<ScrollCommiteePage />} />
+        <Route path='/schedule' element={<ScrollSchedule />} />
         
         
       </Routes>
+
+      <HurryUpModal isOpen={showModal} onClose={() => setShowModal(false)} />
 
     </Router>
   );

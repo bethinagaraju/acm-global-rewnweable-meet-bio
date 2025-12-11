@@ -189,7 +189,7 @@ const GuestCard = ({ imageUrl, name, title, company, type }) => (
       {/* Text Section */}
       <h3 className="text-xl font-bold text-gray-800 mt-4" style={{ fontFamily: 'Manrope, sans-serif' }}>{name}</h3>
       <p className="text-sm text-gray-500 mt-1" style={{ fontFamily: 'Manrope, sans-serif' }}>{title}</p>
-      <p className="text-sm text-gray-500 mt-1" style={{ fontFamily: 'Manrope, sans-serif' }}>{type}</p>
+      <p className="text-sm text-gray-500 mt-1 font-semibold" style={{ fontFamily: 'Manrope, sans-serif' }}>{type}</p>
       {/* <p className="text-base font-semibold text-gray-700 mt-2">{company}</p> */}
       <div className="mt-2" /> {/* Extra spacing for visual balance */}
     </div>

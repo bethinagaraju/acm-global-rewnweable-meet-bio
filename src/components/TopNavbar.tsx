@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Calendar, MapPin, Menu, X } from "lucide-react";
+import { Calendar, MapPin, Menu, Monitor, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const TopNavbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (open: boolean) => void }) => {
@@ -27,12 +27,24 @@ const TopNavbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: 
                 July 28–30, 2026
               </span>
             </div>
+
             <div className="flex items-center space-x-2 sm:space-x-3">
               <MapPin className="text-indigo-900" size={16} />
               <span className="font-bold tracking-tight sm:text-sm leading-snug">
                 Crowne Plaza - St. Peter’s Rome, Italy
               </span>
             </div>
+            
+            <div className="flex items-center space-x-2 sm:space-x-3">
+  <div className="flex items-center justify-center space-x-1">
+    <MapPin className="text-indigo-900" size={16} />
+    {/* <Monitor className="text-indigo-900" size={16} /> */}
+  </div>
+  <span className="font-semibold tracking-tight sm:text-sm leading-snug text-indigo-900">
+    Hybrid Event: In-Person & Virtual Participation
+  </span>
+</div>
+
           </div>
         </div>
 

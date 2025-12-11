@@ -214,13 +214,25 @@ function Mixcomponents() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
           {speakersData.slice(0, 8).map((speaker, idx) => (
             <div key={idx} className="flex-shrink-0">
-              <GuestCard
+              {/* <GuestCard
                 imageUrl={speaker.imageUrl}
                 name={speaker.name}
                 title={speaker.title}
                 company={speaker.company}
                 type={speaker.type}
+              /> */}
+
+                          <div key={idx} className="text-center">
+              <img
+                src={speaker.imageUrl}
+                className="w-32 h-32 object-cover rounded-full mx-auto mb-3"
+                alt={speaker.name}
               />
+              <h3 className="font-semibold">{speaker.name}</h3>
+              <p className="text-sm text-gray-600">{speaker.title}</p>
+              {/* <p className="text-xs text-gray-500">{speaker.company}</p> */}
+              <p className="text-sm text-gray-500 font-semibold">{speaker.type}</p>
+            </div>
             </div>
           ))}
         </div>
@@ -229,7 +241,7 @@ function Mixcomponents() {
         <div className="text-center">
           <a
             href="/speakers"
-            className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 transition-colors duration-300"
+            className="inline-block bg-[#2e376c] hover:bg-[#1f254b] text-white font-bold py-3 px-8 transition-colors duration-300"
           >
             View All Speakers
           </a>

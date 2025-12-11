@@ -631,7 +631,7 @@ const ComboKeyDatesAndVenue: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           {/* Conference Dates */}
-          <div className="bg-white rounded-3xl shadow-xl border border-gray-200">
+          <div className="bg-white shadow-xl border border-gray-200">
             <div className="bg-[#003b66] text-white text-center font-semibold py-3 rounded-t-3xl">
               Conference Dates
             </div>
@@ -680,7 +680,7 @@ const ComboKeyDatesAndVenue: React.FC = () => {
         </div>
 
         {/* --- VENUE SECTION BELOW CARDS --- */}
-        <div className="mt-8 flex flex-col items-center text-center bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
+        <div className="mt-8 flex flex-col items-center text-center bg-white p-10 shadow-xl border border-gray-100">
           <MapPin size={36} className="text-indigo-600 mb-4" />
           <h3 className="text-2xl font-semibold text-gray-900 mb-2">Conference Venue</h3>
           <p className="text-gray-600 text-lg mb-4">Crowne Plaza — St. Peter's Rome</p>

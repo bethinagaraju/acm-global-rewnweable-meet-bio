@@ -571,17 +571,17 @@ import EndFooter from '../components/EndFooter';
 function VenueTravelPage() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       
       {/* --- 1. OLD BANNER (Restored) --- */}
-      <div className="bg-[#312e81] bg-[url('https://www.transparenttextures.com/patterns/dark-fish-skin.png')] text-white py-16">
+      {/* <div className="bg-[#312e81] bg-[url('https://www.transparenttextures.com/patterns/dark-fish-skin.png')] text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Venue & Travel</h1>
           <p className="text-xl">Everything you need to know about attending ICAMLR 2026 in Rome</p>
         </div>
-      </div>
+      </div> */}
 
-      <div className="py-16 bg-white">
+      <div className="py-0 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto space-y-16">
 
@@ -625,79 +625,9 @@ function VenueTravelPage() {
             </div> */}
             <VenueComponent />
 
-            {/* --- 3. NEW HOTEL SUGGESTIONS (With Real Images) --- */}
-            <div>
-              <div className="flex items-start gap-4 mb-6">
-                <Hotel className="w-8 h-8 text-purple-600 mt-1" />
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900">Hotel Suggestions</h3>
-                  <p className="text-gray-600 mt-2">
-                    We recommend these hotels near the venue. Mention "ICAMLR 2026" for special rates.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                 <HotelCard 
-                    name="Crowne Plaza Rome"
-                    stars={4}
-                    image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    distance="Conference Venue"
-                    price="€€€"
-                    tag="On-Site"
-                 />
-                 <HotelCard 
-                    name="Hotel Degli Aranci"
-                    stars={4}
-                    image="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    distance="15 min walk"
-                    price="€€"
-                    tag="Quiet"
-                 />
-                 <HotelCard 
-                    name="Hotel Mozart"
-                    stars={3}
-                    image="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    distance="20 min (Metro)"
-                    price="€"
-                    tag="City Center"
-                 />
-              </div>
-            </div>
 
-            {/* --- 4. NEW ATTRACTIONS (With Real Images & Location) --- */}
-            <div>
-               <div className="flex items-start gap-4 mb-6">
-                  <Camera className="w-8 h-8 text-pink-600 mt-1" />
-                  <div>
-                    <h3 className="text-3xl font-bold text-gray-900">Explore Rome</h3>
-                    <p className="text-gray-600 mt-2">Don't miss these iconic landmarks during your stay.</p>
-                  </div>
-               </div>
 
-               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <AttractionCard 
-                    name="Vatican City"
-                    location="0.8 km from Venue"
-                    image="https://images.unsplash.com/photo-1531572753322-ad063cecc140?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  />
-                  <AttractionCard 
-                    name="The Colosseum"
-                    location="4.5 km from Venue"
-                    image="https://th.bing.com/th/id/R.22620bc7580ff093ce87facf219b34de?rik=ctnM8sLMUoAgLg&riu=http%3a%2f%2fwww.mostamazingwonders.com%2fwp-content%2fuploads%2f2014%2f06%2fRoman-Colosseum1.jpg%3f0cc007&ehk=3313Bf0SVYWKUN5T%2fwj%2b9PRLfWhl2izz6A0K0qAFaO0%3d&risl=&pid=ImgRaw&r=0"
-                  />
-                  <AttractionCard 
-                    name="Trevi Fountain"
-                    location="3.2 km from Venue"
-                    image="https://images.unsplash.com/photo-1525874684015-58379d421a52?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  />
-                  <AttractionCard 
-                    name="Spanish Steps"
-                    location="3.5 km from Venue"
-                    image="https://images.unsplash.com/photo-1529154036614-a60975f5c760?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  />
-               </div>
-            </div>
+
 
             {/* --- 5. IMPROVED TRAVEL & VISA INFO --- */}
             <div className="grid md:grid-cols-2 gap-8">
@@ -761,10 +691,87 @@ function VenueTravelPage() {
                </div>
             </div>
 
+
+                        {/* --- 3. NEW HOTEL SUGGESTIONS (With Real Images) --- */}
+            <div>
+              <div className="flex items-start gap-4 mb-6">
+                <Hotel className="w-8 h-8 text-purple-600 mt-1" />
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900">Hotel Suggestions</h3>
+                  <p className="text-gray-600 mt-2">
+                    We recommend these hotels near the venue. Mention "ICAMLR 2026" for special rates.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                 <HotelCard 
+                    name="Crowne Plaza Rome"
+                    stars={4}
+                    image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    distance="Conference Venue"
+                    price="€€€"
+                    tag="On-Site"
+                 />
+                 <HotelCard 
+                    name="Hotel Degli Aranci"
+                    stars={4}
+                    image="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    distance="15 min walk"
+                    price="€€"
+                    tag="Quiet"
+                 />
+                 <HotelCard 
+                    name="Hotel Mozart"
+                    stars={3}
+                    image="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    distance="20 min (Metro)"
+                    price="€"
+                    tag="City Center"
+                 />
+              </div>
+            </div>
+
+
+
+                        {/* --- 4. NEW ATTRACTIONS (With Real Images & Location) --- */}
+            <div>
+               <div className="flex items-start gap-4 mb-6">
+                  <Camera className="w-8 h-8 text-pink-600 mt-1" />
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900">Explore Rome</h3>
+                    <p className="text-gray-600 mt-2">Don't miss these iconic landmarks during your stay.</p>
+                  </div>
+               </div>
+
+               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <AttractionCard 
+                    name="Vatican City"
+                    location="0.8 km from Venue"
+                    image="https://images.unsplash.com/photo-1531572753322-ad063cecc140?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  />
+                  <AttractionCard 
+                    name="The Colosseum"
+                    location="4.5 km from Venue"
+                    image="https://th.bing.com/th/id/R.22620bc7580ff093ce87facf219b34de?rik=ctnM8sLMUoAgLg&riu=http%3a%2f%2fwww.mostamazingwonders.com%2fwp-content%2fuploads%2f2014%2f06%2fRoman-Colosseum1.jpg%3f0cc007&ehk=3313Bf0SVYWKUN5T%2fwj%2b9PRLfWhl2izz6A0K0qAFaO0%3d&risl=&pid=ImgRaw&r=0"
+                  />
+                  <AttractionCard 
+                    name="Trevi Fountain"
+                    location="3.2 km from Venue"
+                    image="https://images.unsplash.com/photo-1525874684015-58379d421a52?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  />
+                  <AttractionCard 
+                    name="Spanish Steps"
+                    location="3.5 km from Venue"
+                    image="https://images.unsplash.com/photo-1529154036614-a60975f5c760?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  />
+               </div>
+            </div>
+
           </div>
         </div>
       </div>
-      <EndFooter />
+      {/* <EndFooter /> */}
     </div>
   );
 }

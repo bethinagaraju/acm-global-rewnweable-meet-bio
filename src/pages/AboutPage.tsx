@@ -124,15 +124,17 @@ function AboutPage() {
           
           {/* Date & Location Pills */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm md:text-base">
-            <div className="flex items-center gap-2 bg-white/10 px-6 py-3 rounded-lg backdrop-blur-md">
+            <div className="flex items-center gap-2 bg-white/10 px-6 py-3 backdrop-blur-md">
               <Calendar className="w-5 h-5 text-blue-300" />
               <span>July 28–30, 2026</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 px-6 py-3 rounded-lg backdrop-blur-md">
+            <div className="flex items-center gap-2 bg-white/10 px-6 py-3 backdrop-blur-md">
               <MapPin className="w-5 h-5 text-blue-300" />
               <span>Crowne Plaza – St. Peter’s Rome, Italy</span>
             </div>
           </div>
+
+
         </div>
 
 
@@ -149,7 +151,7 @@ function AboutPage() {
               <img 
                 src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                 alt="Futuristic Robot Face" 
-                className="relative rounded-2xl shadow-2xl w-full object-cover h-[400px]"
+                className="relative shadow-2xl w-full object-cover h-[400px]"
               />
             </div>
             
@@ -188,7 +190,7 @@ function AboutPage() {
       <RegionChartComponent/>
       <OrganizerOverview />
 
-      <EthicsValues />
+      {/* <EthicsValues /> */}
       
 
       {/* --- CTA SECTION --- */}

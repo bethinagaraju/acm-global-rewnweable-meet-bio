@@ -339,7 +339,8 @@ import {
   ShieldX,
   Ticket,
   Calendar,
-  AlertCircle
+  AlertCircle,
+  Check
 } from "lucide-react";
 import EndFooter from "./EndFooter";
 
@@ -392,7 +393,7 @@ const passes = [
 function PassCard({ pass, onBookNow }) {
   return (
     <div
-      className={`flex flex-col rounded-xl border bg-white p-8 shadow-sm transition hover:shadow-lg ${
+      className={`flex flex-col border bg-white p-8 shadow-sm transition hover:shadow-lg ${
         pass.isPopular ? "border-indigo-500 ring-1 ring-indigo-500" : "border-slate-200"
       }`}
     >
@@ -428,7 +429,7 @@ function PassCard({ pass, onBookNow }) {
       <div className="mt-auto pt-4">
         <button
           onClick={() => onBookNow(pass)}
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#2b3267] px-6 py-3 text-lg font-semibold text-white shadow-sm transition hover:bg-opacity-90"
+          className="flex w-full items-center justify-center gap-2 bg-[#2b3267] px-6 py-3 text-lg font-semibold text-white shadow-sm transition hover:bg-opacity-90"
         >
           Register Now <ArrowRight size={20} />
         </button>
@@ -471,13 +472,13 @@ function RegisterPasses() {
 
           <div className="mt-24 space-y-12 text-slate-700">
             
-            <Section icon={<Ticket className="text-indigo-600" />} title="Registration Categories Explained">
+            {/* <Section icon={<Ticket className="text-indigo-600" />} title="Registration Categories Explained">
                 <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
+                    <div className="bg-white p-4 border border-slate-100 shadow-sm">
                         <h4 className="font-semibold text-[#2b3267] mb-2">Delegate</h4>
                         <p className="text-sm text-slate-600">For industry professionals, corporate attendees, and general visitors looking to network and attend sessions.</p>
                     </div>
-                    <div className="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
+                    <div className="bg-white p-4 border border-slate-100 shadow-sm">
                         <h4 className="font-semibold text-[#2b3267] mb-2">Speaker</h4>
                         <p className="text-sm text-slate-600">Strictly for individuals whose abstracts have been accepted for oral presentation. ID verification required.</p>
                     </div>
@@ -486,10 +487,30 @@ function RegisterPasses() {
                         <p className="text-sm text-slate-600">For researchers presenting visual posters. Includes access to poster sessions and main conference areas.</p>
                     </div>
                 </div>
-            </Section>
+            </Section> */}
 
-            <Section icon={<Calendar className="text-indigo-600" />} title="Important Dates & Deadlines">
-               <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-100">
+            <Section icon={<Ticket className="text-indigo-600" />} title="Registration Categories Explained">
+    <ul className="list-disc pl-6 space-y-4 text-slate-700">
+        <li>
+            <span className="font-semibold text-[#2b3267]">Delegate:</span>
+            <span className="ml-1">For industry professionals, corporate attendees, and general visitors looking to network and attend sessions.</span>
+        </li>
+
+        <li>
+            <span className="font-semibold text-[#2b3267]">Speaker:</span>
+            <span className="ml-1">Strictly for individuals whose abstracts have been accepted for oral presentation. ID verification required.</span>
+        </li>
+
+        <li>
+            <span className="font-semibold text-[#2b3267]">Poster Presenter:</span>
+            <span className="ml-1">For researchers presenting visual posters. Includes access to poster sessions and main conference areas.</span>
+        </li>
+    </ul>
+</Section>
+
+
+            {/* <Section icon={<Calendar className="text-indigo-600" />} title="Important Dates & Deadlines">
+               <div className="bg-indigo-50 p-6 border border-indigo-100">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-indigo-200">
                      <div className="p-2">
                         <p className="text-sm uppercase tracking-wide text-indigo-500 font-semibold">Early Bird</p>
@@ -508,21 +529,46 @@ function RegisterPasses() {
                      </div>
                   </div>
                </div>
-            </Section>
+            </Section> */}
+
+            <Section icon={<Calendar className="text-indigo-600" />} title="Important Dates & Deadlines">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        
+        <div className="p-2">
+            <p className="text-sm uppercase tracking-wide text-indigo-500 font-semibold">Early Bird</p>
+            <p className="text-2xl font-bold text-[#2b3267] mt-1">Ends Aug 30</p>
+            <p className="text-xs text-slate-600 mt-1">Save up to 20%</p>
+        </div>
+
+        <div className="p-2">
+            <p className="text-sm uppercase tracking-wide text-indigo-500 font-semibold">Regular Registration</p>
+            <p className="text-2xl font-bold text-[#2b3267] mt-1">Ends Oct 15</p>
+            <p className="text-xs text-slate-600 mt-1">Standard pricing applies</p>
+        </div>
+
+        <div className="p-2">
+            <p className="text-sm uppercase tracking-wide text-indigo-500 font-semibold">Late / On-Spot</p>
+            <p className="text-2xl font-bold text-[#2b3267] mt-1">After Oct 15</p>
+            <p className="text-xs text-slate-600 mt-1">Additional fees apply</p>
+        </div>
+
+    </div>
+</Section>
+
 
             <div className="grid md:grid-cols-2 gap-12">
                 <Section icon={<Users className="text-indigo-600" />} title="Student Discounts">
                     <p className="mb-4">
                         We offer a <strong>30% discount</strong> for currently enrolled undergraduate and graduate students.
                     </p>
-                    <div className="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-r-md">
+                    <div className="bg-orange-50 border-l-4 border-orange-400 p-4">
                         <p className="text-sm text-orange-800">
                             <strong>Note:</strong> A valid University ID card and a letter from the Head of Department must be uploaded during registration or emailed to support@conference.com within 24 hours of booking.
                         </p>
                     </div>
                 </Section>
 
-                <Section icon={<Users className="text-indigo-600" />} title="Group Discounts">
+                {/* <Section icon={<Users className="text-indigo-600" />} title="Group Discounts">
                     <p className="mb-4">Planning to attend with your team? We offer special rates for group bookings.</p>
                     <ul className="space-y-2 mb-4">
                         <li className="flex justify-between items-center border-b border-slate-200 pb-2">
@@ -538,10 +584,43 @@ function RegisterPasses() {
                             <span className="font-bold text-[#2b3267]">20% Off</span>
                         </li>
                     </ul>
-                </Section>
+                </Section> */}
+
+                <Section icon={<Users className="text-indigo-600" />} title="Group Discounts">
+    <p className="mb-4 text-gray-600">
+        Planning to attend with your team? We offer special rates for group bookings.
+    </p>
+
+    <div className="overflow-hidden border border-gray-200 rounded-lg">
+        <table className="w-full text-sm text-left border-collapse">
+            <thead className="bg-gray-50">
+                <tr>
+                    <th className="px-4 py-3 font-semibold text-gray-700 border-b border-gray-200">Group Size</th>
+                    <th className="px-4 py-3 font-semibold text-gray-700 border-b border-gray-200 text-right">Discount</th>
+                </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100 bg-white">
+                <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-4 py-3 text-gray-600">3 - 5 Attendees</td>
+                    <td className="px-4 py-3 text-right font-bold text-[#2b3267]">10% Off</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-4 py-3 text-gray-600">6 - 10 Attendees</td>
+                    <td className="px-4 py-3 text-right font-bold text-[#2b3267]">15% Off</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                    <td className="px-4 py-3 text-gray-600">10+ Attendees</td>
+                    <td className="px-4 py-3 text-right font-bold text-[#2b3267]">20% Off</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</Section>
+
+
             </div>
 
-            <Section icon={<ShieldX className="text-red-500" />} title="Refund & Cancellation Policy">
+            {/* <Section icon={<ShieldX className="text-red-500" />} title="Refund & Cancellation Policy">
                 <div className="space-y-4">
                     <p>We understand that plans change. Here is our cancellation timeline:</p>
                     <ul className="list-disc list-inside space-y-2 pl-2">
@@ -554,9 +633,53 @@ function RegisterPasses() {
                         <p>Registrations are transferable to a colleague at any time for free. Please email us to update the attendee name.</p>
                     </div>
                 </div>
-            </Section>
+            </Section> */}
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <Section icon={<ShieldX className="text-red-500" />} title="Refund & Cancellation Policy">
+    <div className="space-y-4">
+        <p className="text-gray-600">We understand that plans change. Here is our cancellation timeline:</p>
+        
+        {/* Basic Table Structure */}
+        <div className="border border-gray-200 rounded overflow-hidden">
+            <table className="w-full text-sm text-left">
+                <thead className="bg-gray-50 text-gray-700 font-semibold border-b border-gray-200">
+                    <tr>
+                        <th className="px-4 py-3">Timeframe</th>
+                        <th className="px-4 py-3">Refund Policy</th>
+                    </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                    <tr>
+                        <td className="px-4 py-3">60 days prior</td>
+                        <td className="px-4 py-3 text-emerald-600 font-medium">
+                            100% Refund <span className="text-gray-500 font-normal text-xs">(minus $50 fee)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-4 py-3">30-59 days prior</td>
+                        <td className="px-4 py-3 text-orange-500 font-medium">
+                            50% Refund
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-4 py-3">Less than 30 days prior</td>
+                        <td className="px-4 py-3 text-red-500 font-medium">
+                            No Refund
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        {/* Transfer Note */}
+        <div className="flex items-start gap-3 mt-4 text-sm text-slate-500 bg-slate-50 p-3 rounded border border-slate-100">
+            <AlertCircle size={18} className="mt-0.5 shrink-0 text-slate-400" />
+            <p>Registrations are transferable to a colleague at any time for free. Please email us to update the attendee name.</p>
+        </div>
+    </div>
+</Section>
+
+            {/* <div className="grid md:grid-cols-2 gap-12">
                  <Section icon={<FileText className="text-indigo-600" />} title="Visa Invitation Letters">
                     <p className="mb-4">
                         Invitation letters for Visa applications are issued only after successful registration and full payment.
@@ -586,7 +709,61 @@ function RegisterPasses() {
                         </div>
                     </div>
                 </Section>
-            </div>
+            </div> */}
+
+
+            <div className="grid md:grid-cols-2 gap-12">
+    
+    {/* Visa Invitation Letters - Clean Step List */}
+    <Section icon={<FileText className="text-indigo-600" />} title="Visa Invitation Letters">
+        <p className="mb-6 text-gray-600 leading-relaxed">
+            Invitation letters are issued only after successful registration. Follow these steps:
+        </p>
+        <div className="space-y-4">
+            {[
+                "Complete your registration and full payment.",
+                "Log in to your dashboard with email credentials.",
+                "Navigate to the 'Visa Letter' section.",
+                "Enter Passport details to generate the letter instantly."
+            ].map((step, index) => (
+                <div key={index} className="flex gap-4">
+                    <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold font-mono">
+                        {index + 1}
+                    </span>
+                    <p className="text-gray-700 text-sm leading-snug pt-0.5">{step}</p>
+                </div>
+            ))}
+        </div>
+    </Section>
+
+    {/* Payment Methods - Professional List */}
+    <Section icon={<CreditCard className="text-indigo-600" />} title="Payment Methods">
+        <p className="mb-6 text-gray-600 leading-relaxed">
+            We ensure secure transactions via Stripe and Bank Transfer. Accepted methods include:
+        </p>
+        <ul className="space-y-3">
+            <li className="flex items-center gap-3 text-gray-700">
+                <Check className="w-5 h-5 text-emerald-500 shrink-0" />
+                <span><strong>Credit/Debit Cards</strong> (Visa, MasterCard, Amex)</span>
+            </li>
+            <li className="flex items-center gap-3 text-gray-700">
+                <Check className="w-5 h-5 text-emerald-500 shrink-0" />
+                <span><strong>Digital Wallets</strong> (PayPal, Stripe)</span>
+            </li>
+            <li className="flex items-center gap-3 text-gray-700">
+                <Check className="w-5 h-5 text-emerald-500 shrink-0" />
+                <span><strong>Direct Bank Transfer</strong> (Invoice provided)</span>
+            </li>
+        </ul>
+        
+        <div className="mt-6 pt-4 border-t border-gray-100">
+            <p className="text-xs text-gray-400">
+                * All payments are processed in USD. Secure 256-bit SSL encryption.
+            </p>
+        </div>
+    </Section>
+
+</div>
 
             <Section icon={<HelpCircle className="text-indigo-600" />} title="Frequently Asked Questions">
                 <div className="space-y-4">

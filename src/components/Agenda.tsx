@@ -321,14 +321,14 @@ const Agenda: React.FC = () => {
 
   const renderSchedule = (day: ScheduleItem[]) =>
     day.map((item, index) => (
-      <div key={index} className="flex flex-col sm:flex-row border-t border-gray-200 py-6">
+      <div key={index} className="flex flex-col sm:flex-row border-t border-gray-200 py-3">
         <div className="w-full sm:w-1/4 pr-4 mb-2 sm:mb-0 sm:text-right">
-          <p className="font-bold text-lg" style={{ color: themeColor }}>
+          <p className="font-bold text-base" style={{ color: themeColor }}>
             {item.time}
           </p>
         </div>
         <div className="w-full sm:w-3/4 pl-4 sm:border-l border-gray-200">
-          <h3 className="text-base font-bold text-gray-800 sm:text-xl" style={{ fontFamily: "'Manrope', sans-serif" }}>{item.title}</h3>
+          <h3 className="text-base font-bold text-gray-800 text-base" style={{ fontFamily: "'Manrope', sans-serif" }}>{item.title}</h3>
           <p className="text-gray-600 mt-1 " style={{ fontFamily: "'Manrope', sans-serif" }}>{item.description}</p>
           {item.room && (
             <div className="mt-2 text-sm text-gray-500">
