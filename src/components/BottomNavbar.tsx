@@ -134,6 +134,8 @@ import { Link } from "react-router-dom";
 
 const BottomNavbar = ({ menuOpen }: { menuOpen: boolean }) => {
   const [hovered, setHovered] = useState<string | null>(null);
+  const [conferenceOpen, setConferenceOpen] = useState(false);
+  const [programOpen, setProgramOpen] = useState(false);
   return (
     <>
       {/* Desktop Navbar */}
@@ -226,15 +228,67 @@ const BottomNavbar = ({ menuOpen }: { menuOpen: boolean }) => {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-md px-6 py-6 space-y-6">
           <div className="space-y-3">
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="block text-gray-800 font-semibold">
+              HOME
+            </Link>
 
-            <Link to="/guidelines" className="block text-gray-800 font-semibold">
-              GUIDELINES
+            {/* CONFERENCE DROPDOWN */}
+            <div>
+              <div
+                onClick={() => setConferenceOpen(!conferenceOpen)}
+                className="flex items-center justify-between cursor-pointer text-gray-800 font-semibold"
+              >
+                CONFERENCE
+                <ChevronDown
+                  className={`transform transition-transform ${conferenceOpen ? 'rotate-180' : ''}`}
+                  size={16}
+                />
+              </div>
+              {conferenceOpen && (
+                <div className="ml-4 space-y-2 mt-2">
+                  <Link to="/about" className="block text-gray-600 hover:text-gray-800">About Conference</Link>
+                  <Link to="/commitee" className="block text-gray-600 hover:text-gray-800">Committee</Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/speakers" className="block text-gray-800 font-semibold">
+              SPEAKERS
             </Link>
-            <Link to="/faq" className="block text-gray-800 font-semibold">
-              FAQ
+
+            <Link to="/call-for-papers" className="block text-gray-800 font-semibold">
+              CALL FOR PAPERS
             </Link>
+
+            {/* PROGRAM DROPDOWN */}
+            <div>
+              <div
+                onClick={() => setProgramOpen(!programOpen)}
+                className="flex items-center justify-between cursor-pointer text-gray-800 font-semibold"
+              >
+                PROGRAM
+                <ChevronDown
+                  className={`transform transition-transform ${programOpen ? 'rotate-180' : ''}`}
+                  size={16}
+                />
+              </div>
+              {programOpen && (
+                <div className="ml-4 space-y-2 mt-2">
+                  <Link to="/schedule" className="block text-gray-600 hover:text-gray-800">Program Schedule</Link>
+                  <Link to="/venue" className="block text-gray-600 hover:text-gray-800">Venue</Link>
+                  <Link to="/sessions" className="block text-gray-600 hover:text-gray-800">Sessions</Link>
+                  <Link to="/guidelines" className="block text-gray-600 hover:text-gray-800">Guidelines</Link>
+                  <Link to="/faq" className="block text-gray-600 hover:text-gray-800">FAQ</Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/register" className="block text-gray-800 font-semibold">
+              REGISTER
+            </Link>
+
             <Link to="/contact" className="block text-gray-800 font-semibold">
-              CONTACT US
+              CONTACT
             </Link>
           </div>
 

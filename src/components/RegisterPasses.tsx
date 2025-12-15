@@ -343,6 +343,7 @@ import {
   Check
 } from "lucide-react";
 import EndFooter from "./EndFooter";
+import PricingCompont from "./PricingCompont";
 
 const passes = [
   {
@@ -447,6 +448,7 @@ function RegisterPasses() {
   return (
     <>
       <Header />
+      <PricingCompont />
 
       <section className="bg-slate-50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

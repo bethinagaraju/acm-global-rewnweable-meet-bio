@@ -207,62 +207,97 @@ import { User } from "lucide-react";
 import EndFooter from "../components/EndFooter";
 
 const speakers = [
-  {
-    image: "speakerone.png",
-    name: "Michael Cafarella",
-    title: "Massachusetts Institute of Technology, USA",
-    company: "EDF Renewables",
-    type: "Plenary Speaker",
-  },
-  {
-    image: "speakertwo.png",
-    name: "Chris Atkenson",
-    title: "Carnegie Mellon University, USA",
-    company: "McKinsey",
-    type: "Plenary Speaker",
-  },
-  {
-    image: "speaker3.png",
-    name: "Yanda Li",
-    title: "Tsinghua University, China",
-    company: "McKinsey",
-    type: "Plenary Speaker",
-  },
-  {
-    image: "speaker04.png",
-    name: "Samuel Coogan",
-    title: "Georgia Institute of Technology, USA",
-    company: "Deloitte",
-    type: "Keynote Speaker",
-  },
-  {
-    image: "Gemini_Generated_Image_v41z06v41z06v41z.png",
-    name: "Leonidas Guibas",
-    title: "Stanford University, USA",
-    company: "KPMG",
-    type: "Keynote Speaker"
-  },
-  {
-    image: "Gemini_Generated_Image_19cov119cov119co.png",
-    name: "Jeannette Bohg",
-    title: "Stanford University, USA",
-    company: "KPMG, UK",
-    type: "Keynote Speaker"
-  },
-  {
-    image: "Gemini_Generated_Image_n1hse1n1hse1n1hs.png",
-    name: "Gustavo Alonso",
-    title: "ETH Zurich, Switzerland",
-    company: "Ministry of Energy & Infrastructure, UAE",
-    type: "Plenary Speaker"
-  },
-  {
-    image: "Gemini_Generated_Image_cksm8zcksm8zcksm.png",
-    name: "Weidong Chen",
+
+    {
+    image: "WhatsApp Image 2025-12-12 at 1.52.43 AM.jpeg",
+    name: "Jan Rosell",
     title: "Shanghai Jiao Tong University, China",
-    company: "Shanghai Jiao Tong University, China",
-    type:"Keynote Speaker"
+    company: "",
+    type:"Speaker"
   },
+
+      {
+    image: "WhatsApp Image 2025-12-12 at 1.39.44 AM.jpeg",
+    name: "Thomas Gärtner",
+    title: "Technical University of Vienna ,austria",
+    company: "",
+    type:"keynote"
+  },
+
+        {
+    image: "WhatsApp Image 2025-12-12 at 1.33.55 AM.jpeg",
+    name: "CUI, Tiejun",
+    title: "southeast universitie china",
+    company: "",
+    type:" Professor"
+  },
+          {
+    image: "WhatsApp Image 2025-12-12 at 2.24.58 AM.jpeg",
+    name: "Katja Hose",
+    title: "technical universty of vienna ,austria",
+    company: "",
+    type:"Professor"
+  },
+
+                  {
+    image: "WhatsApp Image 2025-12-12 at 2.17.38 AM.jpeg",
+    name: "Petia Radeva",
+    title: "Universitat de Barcelona,Spain",
+    company: "",
+    type:"keynote"
+  },
+              {
+    image: "WhatsApp Image 2025-12-12 at 1.57.51 AM.jpeg",
+    name: "Rohit Chadha",
+    title: "university  of missouri,usa",
+    company: "",
+    type:"Speaker"
+  },
+
+
+
+                  {
+    image: "WhatsApp Image 2025-12-12 at 1.56.23 AM.jpeg",
+    name: "Syed Kamrul Islam",
+    title: "University of missouri,usa",
+    company: "",
+    type:"keynote"
+  },
+
+
+  //                 {
+  //   image: "WhatsApp Image 2025-12-12 at 2.15.19 AM.jpeg",
+  //   name: "XU, Xiaoli",
+  //   title: "Southeast university,china",
+  //   company: "",
+  //   type:"Speaker"
+  // },
+
+
+                    {
+    image: "WhatsApp Image 2025-12-12 at 2.18.06 AM (1).jpeg",
+    name: "LIU, Yurong",
+    title: "Southeast university,china",
+    company: "",
+    type:"Speaker"
+  },
+
+                      {
+    image: "WhatsApp Image 2025-12-12 at 1.55.32 AM.jpeg",
+    name: "Alvarado, Noé",
+    title: "Universitat Politècnica de Catalunya,spain",
+    company: "",
+    type:"Keynote"
+  },
+
+                        {
+    image: "WhatsApp Image 2025-12-12 at 1.25.51 AM.jpeg",
+    name: "CHEN, Peng",
+    title: "Southeast university ,china",
+    company: "",
+    type:"Speaker"
+  },
+
 ];
 
 const committee = [
@@ -298,6 +333,7 @@ function SpeakersPage() {
               <p className="text-sm text-gray-500 font-semibold">{speaker.type}</p>
             </div>
           ))}
+          <p className="text-sm text-[#2F2C7C] mt-4 col-span-full text-center">The speakers mentioned are not final and may be updated.</p>
         </div>
 
         {/* Right: Committee - FIXED LAYOUT */}
@@ -309,16 +345,20 @@ function SpeakersPage() {
           {committee.map((member, i) => (
             <div
               key={i}
-              className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition"
+              className="flex items-center gap-4 bg-[#2e2b7a] p-4 shadow-md hover:shadow-lg transition"
             >
-              <User className="w-16 h-16 text-gray-400 flex-shrink-0" />
+              <User className="w-10 h-10 text-white flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-gray-800">{member.name}</h4>
-                <p className="text-sm text-gray-500">{member.university}</p>
+                <h4 className="font-bold text-white">{member.name}</h4>
+                <p className="text-sm text-white">{member.university}</p>
               </div>
             </div>
           ))}
         </div>
+
+
+
+
 
 
       </div>

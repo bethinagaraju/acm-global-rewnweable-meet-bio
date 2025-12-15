@@ -1040,29 +1040,29 @@ function CommitteePage() {
           </div>
         </section> */}
 
-        <Section id="general" icon={<Award />} title="General Chairs">
+        {/* <Section id="general" icon={<Award />} title="General Chairs">
           <ResponsiveGrid>
             {generalChairs.map((chair, index) => (
               <ChairCard key={index} data={chair} />
             ))}
           </ResponsiveGrid>
-        </Section>
+        </Section> */}
 
-        <Section id="program" icon={<Briefcase />} title="Program Chairs">
+        {/* <Section id="program" icon={<Briefcase />} title="Program Chairs">
           <ResponsiveGrid>
             {programChairs.map((chair, index) => (
               <ChairCard key={index} data={chair} />
             ))}
           </ResponsiveGrid>
-        </Section>
-
+        </Section> */}
+{/* 
         <Section id="technical" icon={<Gavel />} title="Technical Committee Members">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {technicalCommittee.map((member, index) => (
               <SimpleMemberCard key={index} member={member} />
             ))}
           </div>
-        </Section>
+        </Section> */}
 
         <div className="grid md:grid-cols-2 gap-10">
           <Section icon={<Globe />} title="Advisory Board">

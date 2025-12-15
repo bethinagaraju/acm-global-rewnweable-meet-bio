@@ -43,6 +43,7 @@ import { TestTube2 } from 'lucide-react';
 import TestimonialCard from './TestimonialCard';
 import Testimonials from './Testimonials';
 import VenueAndContactSection from './VenueAndContactSection';
+import Dashboard from './RegionChartComponent';
 
 
 function HomePage() {
@@ -92,6 +93,8 @@ function HomePage() {
       {/* <KeyTopicsSection /> */}
 
       {/* <ComboKeyDatesAndVenue /> */}
+
+      <Dashboard />
 
       <VenueAndContactSection />
 

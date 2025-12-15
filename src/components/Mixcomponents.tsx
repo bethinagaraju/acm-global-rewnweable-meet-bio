@@ -133,65 +133,134 @@ import Imagedivthree from './Imagedivthree';
 // import SponsorsSection from './SponsorsSection'; // Removed
 
 function Mixcomponents() {
-  const speakersData = [
-    {
-      imageUrl: 'speakerone.png',
-      name: 'Michael Cafarella',
-      title: 'Massachusetts Institute of Technology, USA',
-      company: 'EDF Renewables',
-      type: 'Plenary Speaker'
-    },
-    {
-      imageUrl: 'speakertwo.png',
-      name: 'Chris Atkenson',
-      title: 'Carnegie Mellon University, USA',
-      company: 'McKinsey',
-      type: 'Plenary Speaker'
-    },
-    {
-      imageUrl: 'speaker3.png',
-      name: 'Yanda Li',
-      title: 'Tsinghua University, China',
-      company: 'McKinsey',
-      type: 'Keynote Speaker'
-    },
-    {
-      imageUrl: 'speaker04.png',
-      name: 'Samuel Coogan',
-      title: 'Georgia institute of Technology, USA',
-      company: 'Deloitte',
-      type: 'Keynote Speaker'
-    },
-    {
-      imageUrl: 'Gemini_Generated_Image_v41z06v41z06v41z.png',
-      name: 'Leonidas Guibas',
-      title: 'Stanford University, USA',
-      company: 'KPMG',
-      type: 'Plenary Speaker'
-    },
-    {
-      imageUrl: 'Gemini_Generated_Image_19cov119cov119co.png',
-      name: 'Jeannette Bohg',
-      title: 'Stanford University, USA',
-      company: 'KPMG, UK',
-      type: 'Plenary Speaker'
-    },
-    {
-      imageUrl: 'Gemini_Generated_Image_n1hse1n1hse1n1hs.png',
-      name: 'Gustavo Alonso',
-      title: 'ETH Zurich, Switzerland',
-      company: 'Ministry of Energy & Infrastructure, UAE',
-      type: 'Keynote Speaker'
-    },
-    {
-      imageUrl: 'Gemini_Generated_Image_cksm8zcksm8zcksm.png',
-      name: 'Weidong Chen',
-      title: 'Shanghai Jiao Tong University, China',
-      company: 'Shanghai Jiao Tong University, China',
-      type: 'Plenary Speaker'
-    }
-  ];
+  // const speakersData = [
+  //   {
+  //     imageUrl: 'speakerone.png',
+  //     name: 'Michael Cafarella',
+  //     title: 'Massachusetts Institute of Technology, USA',
+  //     company: 'EDF Renewables',
+  //     type: 'Plenary Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'speakertwo.png',
+  //     name: 'Chris Atkenson',
+  //     title: 'Carnegie Mellon University, USA',
+  //     company: 'McKinsey',
+  //     type: 'Plenary Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'speaker3.png',
+  //     name: 'Yanda Li',
+  //     title: 'Tsinghua University, China',
+  //     company: 'McKinsey',
+  //     type: 'Keynote Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'speaker04.png',
+  //     name: 'Samuel Coogan',
+  //     title: 'Georgia institute of Technology, USA',
+  //     company: 'Deloitte',
+  //     type: 'Keynote Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'Gemini_Generated_Image_v41z06v41z06v41z.png',
+  //     name: 'Leonidas Guibas',
+  //     title: 'Stanford University, USA',
+  //     company: 'KPMG',
+  //     type: 'Plenary Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'Gemini_Generated_Image_19cov119cov119co.png',
+  //     name: 'Jeannette Bohg',
+  //     title: 'Stanford University, USA',
+  //     company: 'KPMG, UK',
+  //     type: 'Plenary Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'Gemini_Generated_Image_n1hse1n1hse1n1hs.png',
+  //     name: 'Gustavo Alonso',
+  //     title: 'ETH Zurich, Switzerland',
+  //     company: 'Ministry of Energy & Infrastructure, UAE',
+  //     type: 'Keynote Speaker'
+  //   },
+  //   {
+  //     imageUrl: 'Gemini_Generated_Image_cksm8zcksm8zcksm.png',
+  //     name: 'Weidong Chen',
+  //     title: 'Shanghai Jiao Tong University, China',
+  //     company: 'Shanghai Jiao Tong University, China',
+  //     type: 'Plenary Speaker'
+  //   }
+  // ];
 
+
+  const speakers = [
+
+    {
+    image: "WhatsApp Image 2025-12-12 at 1.52.43 AM.jpeg",
+    name: "Jan Rosell",
+    title: "Shanghai Jiao Tong University, China",
+    company: "",
+    type:"Speaker"
+  },
+
+      {
+    image: "WhatsApp Image 2025-12-12 at 1.39.44 AM.jpeg",
+    name: "Thomas Gärtner",
+    title: "Technical University of Vienna ,austria",
+    company: "",
+    type:"keynote"
+  },
+
+        {
+    image: "WhatsApp Image 2025-12-12 at 1.33.55 AM.jpeg",
+    name: "CUI, Tiejun",
+    title: "southeast universitie china",
+    company: "",
+    type:" Professor"
+  },
+          {
+    image: "WhatsApp Image 2025-12-12 at 2.24.58 AM.jpeg",
+    name: "Katja Hose",
+    title: "technical universty of vienna ,austria",
+    company: "",
+    type:"Professor"
+  },
+
+                  {
+    image: "WhatsApp Image 2025-12-12 at 2.17.38 AM.jpeg",
+    name: "Petia Radeva",
+    title: "Universitat de Barcelona,Spain",
+    company: "",
+    type:"keynote"
+  },
+              {
+    image: "WhatsApp Image 2025-12-12 at 1.57.51 AM.jpeg",
+    name: "Rohit Chadha",
+    title: "university  of missouri,usa",
+    company: "",
+    type:"Speaker"
+  },
+
+
+
+                  {
+    image: "WhatsApp Image 2025-12-12 at 1.56.23 AM.jpeg",
+    name: "Syed Kamrul Islam",
+    title: "University of missouri,usa",
+    company: "",
+    type:"keynote"
+  },
+
+
+                    {
+    image: "WhatsApp Image 2025-12-12 at 2.18.06 AM (1).jpeg",
+    name: "LIU, Yurong",
+    title: "Southeast university,china",
+    company: "",
+    type:"Speaker"
+  },
+
+];
 
   
 
@@ -212,7 +281,7 @@ function Mixcomponents() {
 
         {/* Speakers Grid 4x2 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {speakersData.slice(0, 8).map((speaker, idx) => (
+          {speakers.slice(0, 8).map((speaker, idx) => (
             <div key={idx} className="flex-shrink-0">
               {/* <GuestCard
                 imageUrl={speaker.imageUrl}
@@ -224,7 +293,7 @@ function Mixcomponents() {
 
                           <div key={idx} className="text-center">
               <img
-                src={speaker.imageUrl}
+                src={speaker.image}
                 className="w-32 h-32 object-cover rounded-full mx-auto mb-3"
                 alt={speaker.name}
               />

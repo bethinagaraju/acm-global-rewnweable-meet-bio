@@ -187,8 +187,8 @@ function AboutPage() {
 
       
 
-      <RegionChartComponent/>
-      <OrganizerOverview />
+      {/* <RegionChartComponent/> */}
+      {/* <OrganizerOverview /> */}
 
       {/* <EthicsValues /> */}
       
