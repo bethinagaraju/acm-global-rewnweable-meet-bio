@@ -23,10 +23,10 @@ const AboutTheCall: React.FC = () => {
           CALL FOR ABSTRACTS 
         </h2> */}
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-          CALL FOR ABSTRACTS – AIMLR 2026
+          CALL FOR ABSTRACTS – AIMLR - 2026
         </h2>
         <p className="mt-2 text-gray-500 text-lg">
-          Submit your research and join the global conversation on AI, ML, and Robotics.
+          Submit your research and join the global conversation on AI, ML and Robotics.
         </p>
       </div>
 
@@ -40,7 +40,7 @@ const AboutTheCall: React.FC = () => {
           We cordially invite researchers, academicians, industry professionals, and students to submit research abstracts for presentation at the International Conference on Artificial Intelligence, Machine Learning & Robotics (AIMLR-2026), scheduled to be held in Rome, Italy, with in-person and virtual participation options.
         </p>
         <p className="text-gray-700 leading-relaxed mt-4">
-          This conference provides a global platform to present innovative ideas, ongoing research, and practical applications in AI, ML, and Robotics.
+          This conference provides a global platform to present innovative ideas, ongoing research, and practical applications in AI, ML and Robotics.
         </p>
       </div>
 

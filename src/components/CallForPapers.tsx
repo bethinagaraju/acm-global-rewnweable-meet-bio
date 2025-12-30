@@ -19,10 +19,10 @@ const CallForPapers: React.FC = () => {
       {/* Page Header */}
       <div className="mb-12 border-b-2 border-[#304278] pb-4">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-          CALL FOR PAPERS – AIMLR 2026
+          CALL FOR PAPERS – AIMLR - 2026
         </h2>
         <p className="mt-2 text-gray-500 text-lg">
-          Submit your research and join the global conversation on AI, ML, and Robotics.
+          Submit your research and join the global conversation on AI, ML and Robotics.
         </p>
       </div>
 
@@ -209,7 +209,7 @@ const CallForPapers: React.FC = () => {
         </Link>
 
         <Link to="/AbstractSubmission" className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors">
-          👉 Submit Full Paper
+          Submit Full Paper
         </Link>
       </div>
     </div>

@@ -101,7 +101,7 @@ function HighletTwo() {
         </div>
       </div>
 
-      {/* Right section */}
+      {/* Right section-a */}
       <div className="w-full md:w-[28vw] flex flex-col gap-4">
         <div className="h-auto md:h-[35vh]">
           <img

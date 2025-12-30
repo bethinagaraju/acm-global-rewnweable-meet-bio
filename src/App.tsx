@@ -128,8 +128,12 @@ function App() {
 
         
         <Route path='/faq' element={<ScrollFaq />} />
+
         <Route path='/committee' element={<ScrollCommiteePage />} />
         <Route path='/schedule' element={<ScrollSchedule />} />
+
+
+        
         <Route path='/poster' element={<Posterpage />} />
         <Route path='/importantdates' element={<ComboKeyDatesAndVenue />} />
         <Route path='/call-for-abstract' element={<AboutTheCallPage />} />

@@ -441,7 +441,7 @@ const ContentSection: React.FC = () => {
 
         {/* --- VIDEO CONTAINER (Floated Right) --- */}
         <div className="w-full md:w-1/2 lg:w-[45%] mb-6 md:mb-4 md:ml-10 md:float-right mt-2">
-          <div className="border-2 border-gray-400 aspect-video shadow-xl rounded-sm overflow-hidden bg-black relative">
+          <div className="overflow-hidden bg-black relative">
             <video
               className="w-full h-full object-cover"
               src="/aimlr-2026-video.mp4"

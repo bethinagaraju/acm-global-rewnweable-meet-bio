@@ -285,7 +285,7 @@ const EndFooter: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#eef2f7] text-[#002d45] text-sm relative border-t border-gray-200">
+    <footer className="bg-[#1E245A] text-sm relative border-t border-[#334155]">
 
       {/* ================= COOKIE SIDEBAR ================= */}
       <Sidebar
@@ -360,28 +360,28 @@ const EndFooter: React.FC = () => {
 
           {/* ================= CONTACT (MOBILE FIRST) ================= */}
           <div className="lg:col-span-3 order-1 lg:order-2">
-            <h3 className="flex items-center gap-2 text-[#2e376d] font-bold text-xl mb-6">
+            <h3 className="flex items-center gap-2 text-[#ffffff] font-bold text-xl mb-6">
               <FaAt className="text-xl" /> Contact Us
             </h3>
 
-            <div className="space-y-2 text-gray-700">
+            <div className="space-y-2 text-[#E0E7FF]">
               <p className="flex gap-2 items-center">
                 <strong>Email:</strong>
-                <span className="text-blue-700">
+                <span className="text-[#E0E7FF]">
                   secretary@roboticsaisummit.com
                 </span>
               </p>
 
               <p className="flex gap-2 items-center">
                 <strong>WhatsApp:</strong>
-                <span className="text-blue-700">
+                <span className="text-[#E0E7FF]">
                   +1 (443) 653-0066
                 </span>
               </p>
 
               <p className="flex gap-2">
                 <strong>Address:</strong>
-                <span className="text-blue-700">
+                <span className="text-[#E0E7FF]">
                   30 N Gould St Ste R Sheridan, WY 82801
                 </span>
               </p>
@@ -390,11 +390,11 @@ const EndFooter: React.FC = () => {
 
           {/* ================= QUICK LINKS ================= */}
           <div className="lg:col-span-9 order-2 lg:order-1">
-            <h3 className="flex items-center gap-2 text-[#2e376d] font-bold text-xl mb-6">
+            <h3 className="flex items-center gap-2 text-[#ffffff] font-bold text-xl mb-6">
               <FaLink /> Quick Links
             </h3>
 
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-2 text-gray-600">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-2">
               {[
                 ["Home", "/"],
                 ["Speakers", "/speakers"],
@@ -425,14 +425,14 @@ const EndFooter: React.FC = () => {
                   <Link
                     key={label as string}
                     to={path as string}
-                    className="text-blue-700 transition hover:translate-x-1 inline-block"
+                    className="text-[#C7D2FE] hover:text-[#60A5FA] transition hover:translate-x-1 inline-block"
                   >
                     {label}
                   </Link>
                 ) : (
                   <span
                     key={label as string}
-                    className="text-blue-700 transition hover:translate-x-1 inline-block cursor-pointer"
+                    className="text-[#C7D2FE] hover:text-[#60A5FA] transition hover:translate-x-1 inline-block cursor-pointer"
                     onClick={() => setCookieVisible(true)}
                   >
                     {label}
@@ -446,8 +446,8 @@ const EndFooter: React.FC = () => {
       </div>
 
       {/* ================= BOTTOM BAR ================= */}
-      <div className="text-center py-4 border-t">
-        <span className="block text-gray-500 text-sm">
+      <div className="text-center py-4 border-t border-[#334155]">
+        <span className="block text-[#94A3B8] text-sm">
           © 2026 All rights reserved. AI, ML & Robotics Conference
         </span>
       </div>

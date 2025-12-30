@@ -35,7 +35,7 @@
     { "planId": "plan_yXp663wSH08sj", "registrationType": "virtual", "presentationType": "Speaker", "nights": 0, "price": 379 },
     { "planId": "plan_Zxu7V6EBRxZHY", "registrationType": "virtual", "presentationType": "Poster", "nights": 0, "price": 299 },
     { "planId": "plan_0TCqbYrV9Iy6R", "registrationType": "virtual", "presentationType": "Delegate", "nights": 0, "price": 429 },
-    { "planId": "plan_iUaESJl6p4uxg", "registrationType": "virtual", "presentationType": "Listener", "nights": 0, "price": 399 },
+    { "planId": "plan_iUaESJl6p4uxg", "registrationType": "virtual", "presentationType": "Listener", "nights": 0, "price": 429 },
     { "planId": "plan_ChDYA3epjZdhP", "registrationType": "virtual", "presentationType": "Student", "nights": 0, "price": 199 }
   ]
 }

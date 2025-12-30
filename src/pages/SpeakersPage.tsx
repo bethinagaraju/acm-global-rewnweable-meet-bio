@@ -313,6 +313,25 @@ import EndFooter from "../components/EndFooter";
   },
 
 
+  
+                                {
+    image: "jeannette-bohg.png",
+    name: "Jeannette Bohg",
+    title: "Stanford University, USA",
+    company: "",
+    type:"Speaker"
+  },
+
+
+                            {
+    image: "michael-cafarella.webp",
+    name: "Michael Cafarella",
+    title: "Massachusetts Institute of Technology, USA",
+    company: "",
+    type:"Speaker"
+  },
+
+
           {
     image: "katja-hose.jpeg",
     name: "Katja Hose",
@@ -333,7 +352,7 @@ import EndFooter from "../components/EndFooter";
   },
 
                   {
-    image: "syed-kamrul-islam.jpeg",
+    image: "syed-kamrul-Islam.jpg",
     name: "Prof. Syed Kamrul Islam",
     title: "University of Missouri, USA",
     company: "",
@@ -410,22 +429,6 @@ import EndFooter from "../components/EndFooter";
 
 
 
-                                {
-    image: "jeannette-bohg.png",
-    name: "Jeannette Bohg",
-    title: "Stanford University, USA",
-    company: "",
-    type:"Speaker"
-  },
-
-
-                            {
-    image: "michael-cafarella.webp",
-    name: "Michael Cafarella",
-    title: "Massachusetts Institute of Technology, USA",
-    company: "",
-    type:"Speaker"
-  },
 
       
 
