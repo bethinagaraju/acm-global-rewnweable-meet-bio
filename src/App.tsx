@@ -8,11 +8,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import BiotechAgenda from './components/BiotechAgenda';
+// import BiotechAgenda from './components/BiotechAgenda';
 import AbstractSubmission from './components/AbstractSubmission';
 import RegisterPage from './pages/RegisterPage';
 import AbstractSubmissionPage from './pages/AbstractSubmissionPage';
-import CheckoutPage from './components/CheckoutPage';
+
 import RegisterPasses from './components/RegisterPasses';
 import ThankyouPage from './pages/ThankyouPage';
 
@@ -23,7 +23,7 @@ import CookiePolicyPage from './pages/CookiePolicyPage';
 import SpeakersPage from './pages/SpeakersPage';
 import AboutPage from './pages/AboutPage';
 import CommitteePage from './pages/CommitteePage';
-import PastConferencesPage from './pages/PastConferencesPage';
+// import PastConferencesPage from './pages/PastConferencesPage';
 import Posterpage from './pages/Posterpage';
 import CallForPapersPage from './pages/CallForPapersPage';
 
@@ -100,17 +100,19 @@ function App() {
 
         <Route path='/AbstractSubmission' element={<AbstractSubmissionPage />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
-        <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/thankyou' element={<ThankyouPage />} />
         <Route path='/terms-and-conditions' element={<TermsAndConditionsPage />} />
+
+
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
         <Route path='/cookie-policy' element={<CookiePolicyPage />} />
 
-        <Route path="/agenda" element={<BiotechAgenda />} />
+        {/* <Route path="/agenda" element={<BiotechAgenda />} /> */}
         <Route path="/speakers" element={<SpeakersPage />} />
         <Route path="/about" element={<AboutPage />} />
         {/* <Route path="/committee" element={<CommitteePage />} /> */}
-        <Route path="/past-conferences" element={<PastConferencesPage />} />
+        {/* <Route path="/past-conferences" element={<PastConferencesPage />} /> */}
+
         <Route path="/call-for-papers" element={<CallForPapersPage />} />
         <Route path="/call-for-posters" element={<CallForPostersPage />} />
         <Route path="/call-for-speakers" element={<CallForSpeakersPage />} />
@@ -134,7 +136,7 @@ function App() {
 
 
 
-        <Route path='/poster' element={<Posterpage />} />
+        {/* <Route path='/poster' element={<Posterpage />} /> */}
         <Route path='/important-dates' element={<ComboKeyDatesAndVenue />} />
         <Route path='/call-for-abstract' element={<AboutTheCallPage />} />
         {/* <Route path='/call-for-papers' element={<CallForPapersPage />} /> */}

@@ -12,7 +12,7 @@ function HighletOne() {
           <img
             // src="Gemini_Generated_Image_j5zwdpj5zwdpj5zw.png"
             src="speaker-virtual.jpg"
-            alt="Main highlight"
+            alt="Virtual Speaker Session"
             className="w-full h-full object-cover lazyload"
           />
         </div>
@@ -21,7 +21,7 @@ function HighletOne() {
           <div className="w-full md:w-1/2 h-auto">
             <img
               src="aimlr-2025-participants-group-photo.jpeg"
-              alt="Highlight 1"
+              alt="AIMLR 2025 Participants Group Photo"
               className="w-full h-full object-cover lazyload"
             />
           </div>
@@ -29,7 +29,7 @@ function HighletOne() {
           <div className="w-full md:w-1/2 h-auto">
             <img
               src="aimlr-2025-poster-presentation.jpeg"
-              alt="Highlight 2"
+              alt="AIMLR 2025 Poster Presentation"
               className="w-full h-full object-cover lazyload"
             />
           </div>
@@ -42,14 +42,14 @@ function HighletOne() {
         <div className="h-auto md:h-[35vh]">
           <img
             src="aimlr-2025-networking-session.png"
-            alt="Highlight 3"
+            alt="AIMLR 2025 Networking Session"
             className="w-full h-full object-cover lazyload"
           />
         </div>
         <div className="h-auto md:h-[38vh]">
           <img
             src="aimlr-2025-poster-explanation-session.jpeg"
-            alt="Highlight 40"
+            alt="AIMLR 2025 Poster Explanation Session"
             className="w-full h-full object-cover lazyload"
           />
         </div>

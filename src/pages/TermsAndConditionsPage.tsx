@@ -710,9 +710,17 @@
 import React from 'react';
 import Header from '../components/Header';
 import EndFooter from '../components/EndFooter';
+// import { Helmet } from 'react-helmet-async';
 
 const TermsAndConditionsPage: React.FC = () => {
   return (
+    <>
+
+      {/* <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet> */}
+
+
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <Header />
 
@@ -963,6 +971,7 @@ const TermsAndConditionsPage: React.FC = () => {
 
       <EndFooter />
     </div>
+    </>
   );
 };
 

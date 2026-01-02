@@ -11,7 +11,7 @@ const TopNavbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: 
         <div className="flex h-full items-center divide-x divide-gray-200">
           {/* Logo */}
           <div className="h-full flex items-center">
-            <Link to="/">
+            <Link to="/" title="Go to AIMLR 2026 Home Page" aria-label="AIMLR 2026 Home Page">
               <img
                 src="aimllogo.jpg"
                 alt="Artificial Intelligence, Machine Learning and Robotics Conference Logo"
@@ -52,14 +52,24 @@ const TopNavbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: 
 
         {/* Right Section (desktop buttons) */}
         <div className="hidden md:flex items-center gap-4 ml-12">
-          <Link to="/register">
-            <button style={{ backgroundImage: "linear-gradient(90deg, rgba(0,72,139,1) 0%, rgba(15,133,255,1) 100%)" }} className="w-[120px] text-white font-bold py-2 hover:bg-[#425a92] transition-colors duration-300">
+          <Link to="/register" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference">
+            <button 
+              style={{ backgroundImage: "linear-gradient(90deg, rgba(0,72,139,1) 0%, rgba(15,133,255,1) 100%)" }} 
+              className="w-[120px] text-white font-bold py-2 hover:bg-[#425a92] transition-colors duration-300"
+              title="Register for AIMLR 2026 Conference"
+              aria-label="Register for AIMLR 2026 Conference"
+            >
               REGISTER
             </button>
           </Link>
 
-          <Link to="/AbstractSubmission">
-            <button style={{ backgroundImage: "linear-gradient(90deg, rgba(0,47,48,1) 0%, rgba(0,0,48,1) 100%)" }} className="w-[232px] text-white font-bold py-2 hover:bg-[#011136] transition-colors duration-300">
+          <Link to="/AbstractSubmission" title="Submit Abstract for AIMLR 2026 Conference" aria-label="Submit Abstract for AIMLR 2026 Conference">
+            <button 
+              style={{ backgroundImage: "linear-gradient(90deg, rgba(0,47,48,1) 0%, rgba(0,0,48,1) 100%)" }} 
+              className="w-[232px] text-white font-bold py-2 hover:bg-[#011136] transition-colors duration-300"
+              title="Submit Abstract for AIMLR 2026 Conference"
+              aria-label="Submit Abstract for AIMLR 2026 Conference"
+            >
               ABSTRACT SUBMISSION
             </button>
           </Link>
@@ -67,7 +77,11 @@ const TopNavbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: 
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden ml-3">
-          <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <button 
+            onClick={() => setMenuOpen(!menuOpen)} 
+            aria-label={menuOpen ? "Close mobile navigation menu" : "Open mobile navigation menu"}
+            title={menuOpen ? "Close mobile navigation menu" : "Open mobile navigation menu"}
+          >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>

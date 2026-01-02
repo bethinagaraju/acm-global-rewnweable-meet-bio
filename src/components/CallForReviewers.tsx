@@ -16,7 +16,7 @@ const CallForReviewers: React.FC = () => {
       {/* Page Header */}
       <div className="mb-12 border-b-2 border-[#304278] pb-4">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-          CALL FOR REVIEWERS – AIMLR - 2026
+          CALL FOR REVIEWERS – AIMLR 2026
         </h2>
         <p className="mt-2 text-gray-500 text-lg">
           Submit your research and join the global conversation on AI, ML and Robotics.
@@ -30,7 +30,7 @@ const CallForReviewers: React.FC = () => {
           <h3 className="text-2xl font-bold text-gray-900">About the Call</h3>
         </div>
         <p className="text-gray-700 leading-relaxed">
-          We invite qualified researchers and academicians to join the Review Committee of AIMLR-2026 and contribute to maintaining the academic quality of the conference.
+          We invite qualified researchers and academicians to join the Review Committee of AIMLR 2026 and contribute to maintaining the academic quality of the conference.
         </p>
       </div>
 

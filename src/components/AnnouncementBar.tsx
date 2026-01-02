@@ -228,6 +228,8 @@ export default function AnnouncementBar() {
                   <Link
                     to="/register"
                     className="underline hover:text-blue-600 transition"
+                    title="Register for AIMLR 2026 Conference - Early Bird Registration"
+                    aria-label="Register for AIMLR 2026 Conference - Early Bird Registration"
                   >
                     {text}
                   </Link>
@@ -235,6 +237,8 @@ export default function AnnouncementBar() {
                   <Link
                     to="/AbstractSubmission"
                     className="underline hover:text-blue-600 transition"
+                    title="Submit Abstract for AIMLR 2026 Conference - Abstract Submission"
+                    aria-label="Submit Abstract for AIMLR 2026 Conference - Abstract Submission"
                   >
                     {text}
                   </Link>

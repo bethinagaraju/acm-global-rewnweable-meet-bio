@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <header ref={headerRef} className="w-full bg-white shadow-md font-sans sticky top-0 z-50">
       <TopNavbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
       <BottomNavbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} headerRef={headerRef} />
+      
       <AnnouncementBar />
     </header>
   );

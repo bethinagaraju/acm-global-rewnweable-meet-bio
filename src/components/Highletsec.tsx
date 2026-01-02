@@ -143,7 +143,7 @@ const Highletsec: React.FC = () => {
 
 
         <h2 className="text-3xl font-bold text-[#00488B] text-center mb-2">
-            AIMLR - 2025 EDITION
+            AIMLR 2025 EDITION
         </h2>
 
       {/* ================= MOBILE VIEW ================= */}

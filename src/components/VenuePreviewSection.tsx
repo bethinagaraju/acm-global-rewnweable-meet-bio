@@ -189,9 +189,11 @@ const VenuePreviewSection = () => {
           <Link
             to="/venue-travel"
             className="inline-flex items-center gap-3 bg-indigo-600 text-white px-10 py-4 hover:bg-indigo-700 transition-all duration-300 text-lg md:text-xl whitespace-nowrap rounded-lg shadow-lg hover:shadow-xl"
+            title="View detailed venue and travel information for AIMLR 2026 Conference in Rome"
+            aria-label="View detailed venue and travel information for AIMLR 2026 Conference in Rome"
           >
             View Venue Details
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="w-6 h-6"/>
           </Link>
 
         </div>

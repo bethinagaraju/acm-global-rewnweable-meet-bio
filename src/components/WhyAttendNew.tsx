@@ -251,7 +251,7 @@ const WhyAttendNew: React.FC = () => {
           </h2> */}
 
           <h2 className="text-3xl font-bold text-[#ffffff] mb-8 text-center">
-           WHY ATTEND AIMLR - 2026 ?
+           WHY ATTEND AIMLR 2026 ?
           </h2>
 
           <p className="

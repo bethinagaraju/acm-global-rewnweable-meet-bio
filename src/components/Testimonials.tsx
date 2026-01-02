@@ -123,7 +123,7 @@ const Testimonials: React.FC = () => {
           {/* <h2 className="text-4xl font-bold">Participants Feedback</h2> */}
 
           <h2 className="text-3xl font-bold text-[#ffffff] mb-4 text-center">
-            AIMLR - 2025 PARTICIPANTS FEEDBACK
+            AIMLR 2025 PARTICIPANTS FEEDBACK
           </h2>
         </div>
 

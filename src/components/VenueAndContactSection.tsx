@@ -90,6 +90,7 @@ const VenueAndContactSection = () => {
           <p className="text-gray-600 text-lg font-medium mb-4">
             Crowne Plaza — St. Peter's Rome
           </p>
+          
           {/* <p className="text-gray-500 text-sm leading-relaxed mb-8">
             Nestled near Vatican City, this 4-star superior hotel features
             advanced conference facilities, modern accommodations, and quick
@@ -99,9 +100,11 @@ const VenueAndContactSection = () => {
           <Link
             to="/venue-travel"
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-7 py-3 hover:bg-indigo-700 transition duration-300 font-semibold"
+            title="View detailed venue and travel information for AIMLR 2026 Conference in Rome"
+            aria-label="View detailed venue and travel information for AIMLR 2026 Conference in Rome"
           >
             View Venue Details
-            <ArrowRight size={18} />
+            <ArrowRight size={18}/>
           </Link>
         </div>
 
@@ -133,8 +136,8 @@ const VenueAndContactSection = () => {
             you shortly.
           </p>
 
-          <Link to="/contact">
-            <button className="bg-white text-[#344278] font-bold py-3 px-10 transition duration-300 hover:bg-gray-200">
+          <Link to="/contact" title="Contact AIMLR 2026 Conference Organizers" aria-label="Contact AIMLR 2026 Conference Organizers">
+            <button className="bg-white text-[#344278] font-bold py-3 px-10 transition duration-300 hover:bg-gray-200" title="Contact AIMLR 2026 Conference Organizers" aria-label="Contact AIMLR 2026 Conference Organizers">
               Contact Us
             </button>
           </Link>

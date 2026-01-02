@@ -138,7 +138,7 @@ const sessions = [
 
 
           <h2 className="text-3xl font-bold text-[#00488B] mb-10 text-center">
-            AIMLR - 2026 CONFERENCE TOPICS
+            AIMLR 2026 CONFERENCE TOPICS
           </h2>
 
       {/* Grid including buttons */}
@@ -153,25 +153,26 @@ const sessions = [
           </div>
         ))}
 
-<Link to="/AbstractSubmission" className="w-full md:w-auto">
-    <button className="p-4 w-full text-center font-semibold bg-[#053047] text-white hover:bg-[#07456a] transition">
-      Submit Abstract
-    </button>
-  </Link>
 
-  {/* Button 2 */}
-  <Link to="/sessions" className="w-full md:w-auto">
-    <button className="p-4 w-full text-center font-semibold border border-[#053047] bg-[#394a81] text-white hover:bg-[#2e3b6b] transition">
-      View All Sessions
-    </button>
-  </Link>
+<Link to="/AbstractSubmission" className="w-full md:w-auto" title="Submit Abstract for AIMLR 2026 Conference" aria-label="Submit Abstract for AIMLR 2026 Conference">
+  <button className="p-4 w-full text-center font-semibold bg-[#053047] text-white hover:bg-[#07456a] transition" title="Submit Abstract for AIMLR 2026 Conference" aria-label="Submit Abstract for AIMLR 2026 Conference">
+    Submit Abstract
+  </button>
+</Link>
 
-  {/* Button 3 */}
-  <Link to="/register" className="w-full md:w-auto">
-    <button className="p-4 w-full text-center font-semibold bg-[#0282b8] text-white hover:bg-[#036a97] transition">
-      Register
-    </button>
-  </Link>
+{/* Button 2 */}
+<Link to="/sessions" className="w-full md:w-auto" title="View All Sessions at AIMLR 2026 Conference" aria-label="View All Sessions at AIMLR 2026 Conference">
+  <button className="p-4 w-full text-center font-semibold border border-[#053047] bg-[#394a81] text-white hover:bg-[#2e3b6b] transition" title="View All Sessions at AIMLR 2026 Conference" aria-label="View All Sessions at AIMLR 2026 Conference">
+    View All Sessions
+  </button>
+</Link>
+
+{/* Button 3 */}
+<Link to="/register" className="w-full md:w-auto" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference">
+  <button className="p-4 w-full text-center font-semibold bg-[#0282b8] text-white hover:bg-[#036a97] transition" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference">
+    Register
+  </button>
+</Link>
 
       </div>
     </section>

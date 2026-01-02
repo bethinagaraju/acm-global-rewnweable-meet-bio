@@ -2,10 +2,15 @@ import EndFooter from '../components/EndFooter';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import PosterBanner from '../components/PosterBanner';
+import { Helmet } from 'react-helmet-async';
 
 const Posterpage: React.FC = () => {
   return (
     <>
+    <Helmet>
+        <meta name="robots" content="noindex, follow" />
+    </Helmet>
+    
     <Header />
     <div className="min-h-screen bg-gray-50">
       <PosterBanner />

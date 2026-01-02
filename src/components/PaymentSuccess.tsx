@@ -24,6 +24,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const PaymentSuccess: React.FC = () => {
 
@@ -56,6 +57,10 @@ const PaymentSuccess: React.FC = () => {
 
   return (
     <div className="py-12 px-4">
+      <Helmet>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      
       <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow">
 
         {status === 'PENDING' && (

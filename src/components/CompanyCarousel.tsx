@@ -5,34 +5,31 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// const logos = [
+//   { src: "purdue-university.png", alt: "University 1" },
+//   { src: "shanghai-jiao-tong-university.webp", alt: "University 2" },
+//   { src: "princeton-university.webp", alt: "University 4" },
+//   { src: "university-of-milan.webp", alt: "University 5" },
+//   { src: "university-of-electronic-science-technology-china.webp", alt: "University 6" },
+//   { src: "copenhagen-university.webp", alt: "University 9" },
+//   { src: "penn-state-university.webp", alt: "University 11" },
+//   { src: "san-jose-state-university.webp", alt: "University 12" },
+//   { src: "hochschule-kempten-university-of-applied-sciences.webp", alt: "University 12" },
+// ];
+
+
 const logos = [
-  { src: "purdue-university.png", alt: "University 1" },
-  { src: "shanghai-jiao-tong-university.webp", alt: "University 2" },
-  // { src: "uc-BurifC2T.webp", alt: "University 3" },
-  { src: "princeton-university.webp", alt: "University 4" },
-
-  
-  { src: "university-of-milan.webp", alt: "University 5" },
-
-  { src: "university-of-electronic-science-technology-china.webp", alt: "University 6" },
-
-
-
-
-  { src: "sunway-university.webp", alt: "University 7" },
-  // { src: "cas-BCQF-O7r.webp", alt: "University 8" },
-
-
-  { src: "copenhagen-university.webp", alt: "University 9" },
-
-  // { src: "buct-BSj0TvuT.webp", alt: "University 10" },
-
-  { src: "penn-state-university.webp", alt: "University 11" },
-
-  { src: "san-jose-state-university.webp", alt: "University 12" },
-
-  { src: "hochschule-kempten-university-of-applied-sciences.webp", alt: "University 12" },
+  { src: "purdue-university.png", alt: "Purdue University logo - Partner of AIMLR 2026" },
+  { src: "shanghai-jiao-tong-university.webp", alt: "Shanghai Jiao Tong University logo - Partner of AIMLR 2026" },
+  { src: "princeton-university.webp", alt: "Princeton University logo - Partner of AIMLR 2026" },
+  { src: "university-of-milan.webp", alt: "University of Milan logo - Partner of AIMLR 2026" },
+  { src: "university-of-electronic-science-technology-china.webp", alt: "University of Electronic Science and Technology of China logo - Partner of AIMLR 2026" },
+  { src: "copenhagen-university.webp", alt: "University of Copenhagen logo - Partner of AIMLR 2026" },
+  { src: "penn-state-university.webp", alt: "Pennsylvania State University logo - Partner of AIMLR 2026" },
+  { src: "san-jose-state-university.webp", alt: "San José State University logo - Partner of AIMLR 2026" },
+  { src: "hochschule-kempten-university-of-applied-sciences.webp", alt: "Kempten University of Applied Sciences logo" },
 ];
+
 
 const CompanyCarousel = () => {
   const settings = {
@@ -74,13 +71,13 @@ const CompanyCarousel = () => {
   };
 
   return (
-    <div className="my-10 px-4 md:px-10 mb-0">
-      <h1
+    <section className="my-10 px-4 md:px-10 mb-0" aria-label="Partner Institutions">
+      <h2
         className="text-center text-2xl md:text-3xl font-bold mb-2"
         style={{ fontFamily: "'Manrope', sans-serif", color: "#2e376c" }}
       >
         PARTNER INSTITUTIONS & SPONSORS
-      </h1>
+      </h2>
 
       <Slider {...settings} className="partner-slider">
         {logos.map((logo, index) => (
@@ -96,7 +93,7 @@ const CompanyCarousel = () => {
           </div>
         ))}
       </Slider>
-    </div>
+    </section>
   );
 };
 

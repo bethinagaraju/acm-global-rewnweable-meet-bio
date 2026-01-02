@@ -122,6 +122,7 @@
 import React from "react";
 import { CheckCircle, XCircle, AlertCircle } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ThankyouPage: React.FC = () => {
   const location = useLocation();
@@ -137,7 +138,13 @@ const ThankyouPage: React.FC = () => {
   const isSuccess = finalStatus === "success";
 
   return (
+    <>
+          <Helmet>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex flex-col items-center justify-center text-center px-6">
+
+
 
       {/* Icon */}
       {isSuccess ? (
@@ -217,6 +224,7 @@ const ThankyouPage: React.FC = () => {
         Artificial Intelligence, Machine Learning and Robotics Conference
       </footer>
     </div>
+    </>
   );
 };
 

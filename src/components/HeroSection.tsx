@@ -24,13 +24,13 @@ const HeroSection: React.FC = () => {
 
           {/* LEFT CONTENT */}
           <div className="max-w-3xl w-full bg-white bg-opacity-40 backdrop-blur-sm py-5 sm:py-6 px-4 sm:px-6 text-center lg:text-left">
-            <p
+            <h1
               className="text-xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-5 text-black uppercase leading-snug"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
               {/* Artificial Intelligence, Machine Learning and Robotics Conference */}
               3rd Global Conference on AI, ML & Robotics – July 2026, Rome, Italy.
-            </p>
+            </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl font-medium mb-5 text-gray-800">
               July 28–30, 2026 | Crowne Plaza – St. Peter's Rome, Italy
@@ -39,30 +39,32 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-row items-center lg:items-start justify-center lg:justify-center gap-3 sm:gap-4 w-full">
 
 
-              <Link to="/register">
+              <Link to="/register" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference">
                 <button
                   className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition hover:opacity-90"
                   style={{
                     backgroundImage:
                       'linear-gradient(90deg, rgba(35,35,87,1) 0%, rgba(76,109,166,1) 100%)',
                   }}
+                  title="Register for AIMLR 2026 Conference"
+                  aria-label="Register for AIMLR 2026 Conference"
                 >
                   REGISTER
                 </button>
               </Link>
 
-                <Link to="/register">
-
+              <Link to="/register" title="Submit Abstract for AIMLR 2026 Conference" aria-label="Submit Abstract for AIMLR 2026 Conference">
                 <button
                   className="w-full sm:w-auto px-5 sm:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base transition hover:opacity-90"
                   style={{
                     backgroundImage:
                       'linear-gradient(90deg, rgba(0,72,139,1) 0%, rgba(15,133,255,1) 100%)',
                   }}
+                  title="Submit Abstract for AIMLR 2026 Conference"
+                  aria-label="Submit Abstract for AIMLR 2026 Conference"
                 >
                   SUBMISSION
                 </button>
-
               </Link>
             </div>
 

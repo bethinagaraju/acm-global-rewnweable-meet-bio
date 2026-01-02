@@ -205,6 +205,7 @@ import SpeakersBanner from "../components/SpeakersBanner";
 import SpeakersBottomSection from "../components/SpeakersBottomSection";
 import { User } from "lucide-react";
 import EndFooter from "../components/EndFooter";
+import { Helmet } from "react-helmet-async";
 
 // const speakers = [
 
@@ -293,146 +294,272 @@ import EndFooter from "../components/EndFooter";
 // ];
 
 
- const speakers = [
+//  const speakers = [
 
 
-  {
-    image: "thomas-gartner.jpeg",
-    name: "Prof. Thomas Gartner",
-    title: "Technical University of Vienna, Austria",
-    company: "",
-    type:"Keynote"
-  },
+//   {
+//     image: "thomas-gartner.jpeg",
+//     name: "Prof. Thomas Gartner",
+//     title: "Technical University of Vienna, Austria",
+//     company: "",
+//     type:"Keynote"
+//   },
 
-                                      {
-    image: "yanda-li.jpg",
-    name: "Prof. Yanda Li",
-    title: "Tsinghua University, China",
-    company: "",
-    type:"Keynote"
-  },
+//                                       {
+//     image: "yanda-li.jpg",
+//     name: "Prof. Yanda Li",
+//     title: "Tsinghua University, China",
+//     company: "",
+//     type:"Keynote"
+//   },
 
 
   
-                                {
-    image: "jeannette-bohg.png",
-    name: "Jeannette Bohg",
-    title: "Stanford University, USA",
-    company: "",
-    type:"Speaker"
-  },
+//                                 {
+//     image: "jeannette-bohg.png",
+//     name: "Jeannette Bohg",
+//     title: "Stanford University, USA",
+//     company: "",
+//     type:"Speaker"
+//   },
 
 
-                            {
-    image: "michael-cafarella.webp",
-    name: "Michael Cafarella",
-    title: "Massachusetts Institute of Technology, USA",
-    company: "",
-    type:"Speaker"
-  },
+//                             {
+//     image: "michael-cafarella.webp",
+//     name: "Michael Cafarella",
+//     title: "Massachusetts Institute of Technology, USA",
+//     company: "",
+//     type:"Speaker"
+//   },
 
 
-          {
-    image: "katja-hose.jpeg",
-    name: "Katja Hose",
-    title: "Technical University of Vienna, Austria",
-    company: "",
-    type:"Speaker"
-  },
-
-
-
-
-                  {
-    image: "petia-radeva.jpeg",
-    name: "Prof. Petia Radeva",
-    title: "Universitat de Barcelona, Spain",
-    company: "",
-    type:"Speaker"
-  },
-
-                  {
-    image: "syed-kamrul-Islam.jpg",
-    name: "Prof. Syed Kamrul Islam",
-    title: "University of Missouri, USA",
-    company: "",
-    type:"Speaker"
-  },
-
-                      {
-    image: "alvarado.jpeg",
-    name: "Alvarado, Noe",
-    title: "Universitat Politècnica de Catalunya, Spain",
-    company: "",
-    type:"Speaker"
-  },
-
-    {
-    image: "jan-rosell.jpeg",
-    name: "Prof. Jan Rosell",
-    title: "Shanghai Jiao Tong University, China",
-    company: "",
-    type:"Speaker"
-  },
+//           {
+//     image: "katja-hose.jpeg",
+//     name: "Katja Hose",
+//     title: "Technical University of Vienna, Austria",
+//     company: "",
+//     type:"Speaker"
+//   },
 
 
 
-              {
-    image: "rohit-chadha.jpeg",
-    name: "Prof. Rohit Chadha",
-    title: "University of Missouri, USA",
-    company: "",
-    type:"Speaker"
-  },
 
-                    {
-    image: "liu-yurong.jpeg",
-    name: "LIU, Yurong",
-    title: "Southeast University, China",
-    company: "",
-    type:"Speaker"
-  },
+//                   {
+//     image: "petia-radeva.jpeg",
+//     name: "Prof. Petia Radeva",
+//     title: "Universitat de Barcelona, Spain",
+//     company: "",
+//     type:"Speaker"
+//   },
 
-                        {
-    image: "chen-peng.jpeg",
-    name: "Prof. CHEN, Peng",
-    title: "Southeast University, China",
-    company: "",
-    type:"Speaker"
-  },
+//                   {
+//     image: "syed-kamrul-Islam.jpg",
+//     name: "Prof. Syed Kamrul Islam",
+//     title: "University of Missouri, USA",
+//     company: "",
+//     type:"Speaker"
+//   },
 
+//                       {
+//     image: "alvarado.jpeg",
+//     name: "Alvarado, Noe",
+//     title: "Universitat Politècnica de Catalunya, Spain",
+//     company: "",
+//     type:"Speaker"
+//   },
 
-                          {
-    image: "Josef-T.Boronski.jpeg",
-    name: "Josef T. Boronski",
-    title: "Imperial College London, UK",
-    company: "",
-    type:"Speaker"
-  },
-
-                            {
-    image: "charles-romain.jpeg",
-    name: "Charles Romain",
-    title: "Imperial College London, UK",
-    company: "",
-    type:"Speaker"
-  },
+//     {
+//     image: "jan-rosell.jpeg",
+//     name: "Prof. Jan Rosell",
+//     title: "Shanghai Jiao Tong University, China",
+//     company: "",
+//     type:"Speaker"
+//   },
 
 
-                              {
-    image: "muhammad-bilal-munir.jpeg",
-    name: "Prof. Muhammad Bilal Munir",
-    title: "University of California, San Francisco, USA",
-    company: "",
-    type:"Speaker"
-  },
+
+//               {
+//     image: "rohit-chadha.jpeg",
+//     name: "Prof. Rohit Chadha",
+//     title: "University of Missouri, USA",
+//     company: "",
+//     type:"Speaker"
+//   },
+
+//                     {
+//     image: "liu-yurong.jpeg",
+//     name: "LIU, Yurong",
+//     title: "Southeast University, China",
+//     company: "",
+//     type:"Speaker"
+//   },
+
+//                         {
+//     image: "chen-peng.jpeg",
+//     name: "Prof. CHEN, Peng",
+//     title: "Southeast University, China",
+//     company: "",
+//     type:"Speaker"
+//   },
+
+
+//                           {
+//     image: "Josef-T.Boronski.jpeg",
+//     name: "Josef T. Boronski",
+//     title: "Imperial College London, UK",
+//     company: "",
+//     type:"Speaker"
+//   },
+
+//                             {
+//     image: "charles-romain.jpeg",
+//     name: "Charles Romain",
+//     title: "Imperial College London, UK",
+//     company: "",
+//     type:"Speaker"
+//   },
+
+
+//                               {
+//     image: "muhammad-bilal-munir.jpeg",
+//     name: "Prof. Muhammad Bilal Munir",
+//     title: "University of California, San Francisco, USA",
+//     company: "",
+//     type:"Speaker"
+//   },
 
 
 
 
       
 
+// ];
+
+const speakers = [
+  {
+    image: "thomas-gartner.jpeg",
+    alt: "Prof. Thomas Gartner – Keynote Speaker at AIMLR 2026 | Technical University of Vienna, Austria",
+    name: "Prof. Thomas Gartner",
+    title: "Technical University of Vienna, Austria",
+    company: "",
+    type: "Keynote",
+  },
+  {
+    image: "yanda-li.jpg",
+    alt: "Prof. Yanda Li – Keynote Speaker at AIMLR 2026 | Tsinghua University, China",
+    name: "Prof. Yanda Li",
+    title: "Tsinghua University, China",
+    company: "",
+    type: "Keynote",
+  },
+  {
+    image: "jeannette-bohg.png",
+    alt: "Jeannette Bohg – Speaker at AIMLR 2026 | Stanford University, USA",
+    name: "Jeannette Bohg",
+    title: "Stanford University, USA",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "michael-cafarella.webp",
+    alt: "Michael Cafarella – Speaker at AIMLR 2026 | Massachusetts Institute of Technology, USA",
+    name: "Michael Cafarella",
+    title: "Massachusetts Institute of Technology, USA",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "katja-hose.jpeg",
+    alt: "Katja Hose – Speaker at AIMLR 2026 | Technical University of Vienna, Austria",
+    name: "Katja Hose",
+    title: "Technical University of Vienna, Austria",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "petia-radeva.jpeg",
+    alt: "Prof. Petia Radeva – Speaker at AIMLR 2026 | Universitat de Barcelona, Spain",
+    name: "Prof. Petia Radeva",
+    title: "Universitat de Barcelona, Spain",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "syed-kamrul-Islam.jpg",
+    alt: "Prof. Syed Kamrul Islam – Speaker at AIMLR 2026 | University of Missouri, USA",
+    name: "Prof. Syed Kamrul Islam",
+    title: "University of Missouri, USA",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "alvarado.jpeg",
+    alt: "Noe Alvarado – Speaker at AIMLR 2026 | Universitat Politècnica de Catalunya, Spain",
+    name: "Alvarado, Noe",
+    title: "Universitat Politècnica de Catalunya, Spain",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "jan-rosell.jpeg",
+    alt: "Prof. Jan Rosell – Speaker at AIMLR 2026 | Shanghai Jiao Tong University, China",
+    name: "Prof. Jan Rosell",
+    title: "Shanghai Jiao Tong University, China",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "rohit-chadha.jpeg",
+    alt: "Prof. Rohit Chadha – Speaker at AIMLR 2026 | University of Missouri, USA",
+    name: "Prof. Rohit Chadha",
+    title: "University of Missouri, USA",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "liu-yurong.jpeg",
+    alt: "Yurong Liu – Speaker at AIMLR 2026 | Southeast University, China",
+    name: "LIU, Yurong",
+    title: "Southeast University, China",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "chen-peng.jpeg",
+    alt: "Prof. Peng Chen – Speaker at AIMLR 2026 | Southeast University, China",
+    name: "Prof. CHEN, Peng",
+    title: "Southeast University, China",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "Josef-T.Boronski.jpeg",
+    alt: "Josef T. Boronski – Speaker at AIMLR 2026 | Imperial College London, UK",
+    name: "Josef T. Boronski",
+    title: "Imperial College London, UK",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "charles-romain.jpeg",
+    alt: "Charles Romain – Speaker at AIMLR 2026 | Imperial College London, UK",
+    name: "Charles Romain",
+    title: "Imperial College London, UK",
+    company: "",
+    type: "Speaker",
+  },
+  {
+    image: "muhammad-bilal-munir.jpeg",
+    alt: "Prof. Muhammad Bilal Munir – Speaker at AIMLR 2026 | University of California, San Francisco, USA",
+    name: "Prof. Muhammad Bilal Munir",
+    title: "University of California, San Francisco, USA",
+    company: "",
+    type: "Speaker",
+  },
 ];
+
+
+
 const committee = [
   { image: "commit1.png", name: "Prof. Thomas Gartner", university: "Technical University of Vienna, Austria" },
   { image: "commit2.png", name: "Prof. Petia Radeva", university: "Universitat de Barcelona, Spain" },
@@ -442,7 +569,15 @@ const committee = [
 
 function SpeakersPage() {
   return (
+    <>
+
+          <Helmet>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+
     <div>
+
+
       <Header />
 
       {/* Hero Section */}
@@ -455,19 +590,19 @@ function SpeakersPage() {
         {/* Left: Speakers */}
         <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-10 text-center">
           {/* <h1 className="text-3xl font-bold text-gray-800 mb-8 col-span-full">
-            AIMLR-2026 SPEAKERS
+            AIMLR 2026 SPEAKERS
           </h1> */}
 
             <h2 className="text-3xl font-bold text-[#00488B] mb-6 col-span-full">
-            {/* ABOUT AIMLR - 2026  HYBRID EVENT */}
-            AIMLR-2026 SPEAKERS
+            {/* ABOUT AIMLR 2026  HYBRID EVENT */}
+            AIMLR 2026 SPEAKERS
           </h2>
           {speakers.map((speaker, i) => (
             <div key={i} className="text-center">
               <img
                 src={speaker.image}
                 className="w-32 h-32 object-cover rounded-full mx-auto mb-3"
-                alt={speaker.name}
+                alt={speaker.alt}
               />
               <h3 className="font-semibold">{speaker.name}</h3>
               <p className="text-sm text-gray-600">{speaker.title}</p>
@@ -509,6 +644,7 @@ function SpeakersPage() {
       <SpeakersBottomSection />
       <EndFooter />
     </div>
+    </>
   );
 }
 
