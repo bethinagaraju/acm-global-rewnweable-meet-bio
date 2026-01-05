@@ -237,7 +237,7 @@ function AboutPage() {
             
             {/* Text Side */}
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900 border-l-4 border-blue-600 pl-4">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900 border-l-4 border-green-600 pl-4">
                 Shaping the Intelligent Era
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
@@ -276,7 +276,7 @@ function AboutPage() {
       
 
       {/* --- CTA SECTION --- */}
-      <div className="py-12 bg-gradient-to-r from-indigo-900 to-blue-900 text-white">
+      {/* <div className="py-12 bg-gradient-to-r from-indigo-900 to-blue-900 text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">JOIN AIMLR 2026</h2>
           <p className="text-lg text-indigo-200 mb-8 max-w-2xl mx-auto">
@@ -288,7 +288,46 @@ function AboutPage() {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
+
+
+<div className="bg-[#ECFDF5] border-t border-[#D1FAE5]">
+  <div className="max-w-6xl mx-auto px-6 py-16 text-center">
+
+    {/* Badge */}
+    <span
+      className="inline-block mb-4 px-4 py-1 text-xs font-semibold tracking-wider uppercase
+      text-[#047857] bg-[#D1FAE5] rounded-full"
+    >
+      AIMLR 2026
+    </span>
+
+    {/* Heading */}
+    <h2 className="text-2xl md:text-3xl font-extrabold text-[#1E293B] mb-4">
+      Join AIMLR 2026
+    </h2>
+
+    {/* Description */}
+    <p className="text-[#475569] text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+      Participate in a premier international academic forum dedicated to
+      Artificial Intelligence, Machine Learning, and Robotics.
+    </p>
+
+    {/* CTA */}
+    <Link to="/register">
+      <button
+        className="inline-flex items-center justify-center gap-2 px-10 py-4
+        bg-[#047857] text-white font-bold rounded-md
+        hover:bg-[#065F46] transition shadow-sm"
+      >
+        Register Now
+      </button>
+    </Link>
+
+  </div>
+</div>
+
+
       
 </main>
 

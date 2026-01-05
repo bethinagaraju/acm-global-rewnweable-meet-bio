@@ -630,49 +630,79 @@ function VenueTravelPage() {
 
 
             {/* --- 5. IMPROVED TRAVEL & VISA INFO --- */}
-            <div className="grid md:grid-cols-2 gap-8">
-               {/* Airport Info */}
-               <div className="bg-gray-50 p-8 border border-gray-100">
-                  <div className="flex items-start gap-4">
-                    <Plane className="w-8 h-8 text-blue-600 mt-1" />
-                    <div className="w-full">
-                       <h3 className="text-2xl font-bold mb-4 text-gray-900">Nearest Airport</h3>
-                       <p className="text-gray-700 mb-4">
-                         <strong>Rome Fiumicino Airport (FCO)</strong> is approximately 30 km from the conference venue.
-                       </p>
-                       <ul className="space-y-3">
-                         <TransportOption label="Taxi (Fixed Rate)" value="" time="" />
-                         <TransportOption label="Leonardo Express" value="" time="" />
-                         <TransportOption label="Bus Shuttle" value="" time="" />
-                       </ul>
-                      <p className="text-gray-600 mt-4 text-sm">Travel time and fares may vary depending on traffic and service provider.</p>
-                    </div>
-                    
-                  </div>
-               </div>
 
-               {/* Local Transport */}
-               <div className="bg-gray-50 p-8 border border-gray-100">
-                  <div className="flex items-start gap-4">
-                    <Car className="w-8 h-8 text-green-600 mt-1" />
-                    <div className="w-full">
-                       <h3 className="text-2xl font-bold mb-4 text-gray-900">Local Transport</h3>
-                       <p className="text-gray-700 mb-4">
-                         Rome offers excellent public transportation.
-                       </p>
-                       <ul className="space-y-3">
-                         <TransportOption label="Metro/Bus Ticket" value="" time="" />
-                         <TransportOption label="Roma Pass" value="" time="" />
-                         <TransportOption label="Rideshare" value="" time="" />
-                       </ul>
-                       <p className="text-gray-600 mt-4 text-sm">Availability and fares depend on provider and duration.</p>
-                    </div>
-                  </div>
-               </div>
-            </div>
+<div className="grid md:grid-cols-2 gap-8">
+
+  {/* ================= AIRPORT INFO (STRUCTURED CARD) ================= */}
+  <div className="relative bg-white border border-slate-200 rounded-xl p-7 shadow-sm">
+    
+    {/* Header */}
+    <div className="flex items-center gap-4 mb-6">
+      <div className="p-3 rounded-lg bg-sky-100">
+        <Plane className="w-6 h-6 text-sky-700" />
+      </div>
+      <h3 className="text-xl font-bold text-slate-900">
+        Nearest Airport
+      </h3>
+    </div>
+
+    {/* Content */}
+    <p className="text-slate-700 mb-5 leading-relaxed">
+      <strong>Rome Fiumicino Airport (FCO)</strong> is approximately
+      <span className="font-semibold"> 30 km </span>
+      from the conference venue.
+    </p>
+
+    {/* Transport Options */}
+    <ul className="space-y-3">
+      <TransportOption label="Taxi (Fixed Rate)" value="" time="" />
+      <TransportOption label="Leonardo Express" value="" time="" />
+      <TransportOption label="Bus Shuttle" value="" time="" />
+    </ul>
+
+    {/* Footer note */}
+    <p className="mt-5 text-xs text-slate-500 border-t pt-4">
+      Travel time and fares may vary depending on traffic and service provider.
+    </p>
+  </div>
+
+  {/* ================= LOCAL TRANSPORT (LIGHT / LIST CARD) ================= */}
+  <div className="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-7">
+
+    {/* Header */}
+    <div className="flex items-center gap-4 mb-6">
+      <div className="p-3 rounded-full bg-emerald-100">
+        <Car className="w-6 h-6 text-emerald-700" />
+      </div>
+      <h3 className="text-xl font-bold text-slate-900">
+        Local Transport
+      </h3>
+    </div>
+
+    {/* Content */}
+    <p className="text-slate-700 mb-5 leading-relaxed">
+      Rome offers an efficient and affordable public transportation network
+      connecting major attractions and the conference venue.
+    </p>
+
+    {/* Transport Options */}
+    <ul className="space-y-3">
+      <TransportOption label="Metro / Bus Ticket" value="" time="" />
+      <TransportOption label="Roma Pass" value="" time="" />
+      <TransportOption label="Rideshare Services" value="" time="" />
+    </ul>
+
+    {/* Footer note */}
+    <p className="mt-5 text-xs text-slate-500">
+      Availability and fares depend on provider and duration.
+    </p>
+  </div>
+
+</div>
+
 
             {/* Visa Section */}
-            <div className="bg-indigo-50 p-8 rounded-lg border border-indigo-100">
+            {/* <div className="bg-indigo-50 p-8 rounded-lg border border-indigo-100">
                <h2 className="text-2xl font-bold mb-6 text-center text-indigo-900">Visa & Support</h2>
                <div className="grid md:grid-cols-2 gap-8">
                   <div>
@@ -698,7 +728,81 @@ function VenueTravelPage() {
                     </button>
                   </div>
                </div>
-            </div>
+            </div> */}
+
+
+            <div className="bg-[#ECFDF5] border border-[#D1FAE5] rounded-xl p-8">
+
+  {/* Section Title */}
+  <h2 className="text-2xl font-bold text-center text-[#065F46] mb-10">
+    Visa & Conference Support
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-8">
+
+    {/* ================= VISA REQUIREMENTS ================= */}
+    <div className="bg-white rounded-lg border border-slate-200 p-6 shadow-sm">
+      <h3 className="text-lg font-semibold text-[#047857] mb-4">
+        Visa Requirements
+      </h3>
+
+      <ul className="space-y-3 text-slate-700 text-sm leading-relaxed">
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="w-4 h-4 text-[#22C55E] mt-0.5" />
+          Visa on Arrival available for 169 countries
+        </li>
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="w-4 h-4 text-[#22C55E] mt-0.5" />
+          30-day tourist visa: <strong>$35 USD</strong>
+        </li>
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="w-4 h-4 text-[#22C55E] mt-0.5" />
+          Passport validity of at least 6 months
+        </li>
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="w-4 h-4 text-[#22C55E] mt-0.5" />
+          Return or onward ticket required
+        </li>
+      </ul>
+    </div>
+
+    {/* ================= CONFERENCE SUPPORT ================= */}
+    <div className="bg-white rounded-lg border border-slate-200 p-6 shadow-sm">
+      <h3 className="text-lg font-semibold text-[#047857] mb-4">
+        Conference Support
+      </h3>
+
+      <ul className="space-y-3 text-slate-700 text-sm leading-relaxed">
+        <li className="flex items-start gap-2">
+          <Mail className="w-4 h-4 text-[#0F766E] mt-0.5" />
+          Official invitation letter provided upon request
+        </li>
+        <li className="flex items-start gap-2">
+          <Phone className="w-4 h-4 text-[#0F766E] mt-0.5" />
+          Dedicated support team for visa assistance
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  {/* ================= CTA ================= */}
+  <div className="flex justify-center mt-10">
+    <button
+      className="
+        inline-flex items-center gap-2
+        bg-[#84CC16] text-[#1E293B]
+        font-bold px-8 py-3 rounded-md
+        hover:brightness-95 hover:scale-[1.02]
+        transition-all duration-300 shadow-md
+      "
+    >
+      Request Invitation Letter
+    </button>
+  </div>
+
+</div>
+
 
 
                         {/* --- 3. NEW HOTEL SUGGESTIONS (With Real Images) --- */}
@@ -795,38 +899,129 @@ function VenueTravelPage() {
 
 // --- SUB-COMPONENTS ---
 
+// function HotelCard({ name, stars, image, distance, price, tag }) {
+//   return (
+//     <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+//       <div className="relative h-48 overflow-hidden">
+//         <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+//         <div className="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-gray-800 shadow-sm">
+//           {tag}
+//         </div>
+//       </div>
+//       <div className="p-5">
+//         <div className="flex justify-between items-start mb-2">
+//           <div>
+//             <h3 className="font-bold text-gray-900 text-lg">{name}</h3>
+//             <div className="flex text-yellow-400 mb-1">
+//               {[...Array(stars)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
+//             </div>
+//           </div>
+//           <span className="text-gray-400 text-xs font-medium border border-gray-200 px-2 py-1 rounded">{price}</span>
+//         </div>
+        
+//         <div className="flex items-center gap-1 text-sm text-gray-500 mb-4">
+//           <MapPin className="w-3 h-3" />
+//           {distance}
+//         </div>
+        
+//         <button className="w-full py-2 rounded-lg border border-indigo-600 text-indigo-600 font-semibold text-sm hover:bg-indigo-50 transition-colors">
+//           View Details
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
 function HotelCard({ name, stars, image, distance, price, tag }) {
   return (
-    <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div className="
+      group bg-white rounded-xl overflow-hidden
+      border border-slate-200
+      hover:shadow-xl transition-all duration-300
+      hover:-translate-y-1
+    ">
+      {/* IMAGE */}
       <div className="relative h-48 overflow-hidden">
-        <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div className="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-gray-800 shadow-sm">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        {/* TAG */}
+        <div className="
+          absolute top-3 left-3
+          bg-[#ECFDF5] text-[#065F46]
+          text-xs font-semibold px-3 py-1 rounded-full
+          border border-[#D1FAE5]
+        ">
           {tag}
         </div>
       </div>
-      <div className="p-5">
-        <div className="flex justify-between items-start mb-2">
+
+      {/* CONTENT */}
+      <div className="p-5 space-y-3">
+
+        {/* TITLE + PRICE */}
+        <div className="flex justify-between items-start gap-3">
           <div>
-            <h3 className="font-bold text-gray-900 text-lg">{name}</h3>
-            <div className="flex text-yellow-400 mb-1">
-              {[...Array(stars)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
+            <h3 className="font-semibold text-[#1E293B] text-base leading-tight">
+              {name}
+            </h3>
+
+            {/* STARS */}
+            <div className="flex items-center gap-1 mt-1">
+              {[...Array(stars)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-3.5 h-3.5 fill-[#FACC15] text-[#FACC15]"
+                />
+              ))}
             </div>
           </div>
-          <span className="text-gray-400 text-xs font-medium border border-gray-200 px-2 py-1 rounded">{price}</span>
+
+          {/* PRICE BADGE */}
+          <span className="
+            text-xs font-bold
+            bg-[#ECFDF5] text-[#047857]
+            px-3 py-1 rounded-md
+            border border-[#D1FAE5]
+            whitespace-nowrap
+          ">
+            {price}
+          </span>
         </div>
-        
-        <div className="flex items-center gap-1 text-sm text-gray-500 mb-4">
-          <MapPin className="w-3 h-3" />
+
+        {/* DISTANCE */}
+        <div className="flex items-center gap-2 text-sm text-[#64748B]">
+          <MapPin className="w-4 h-4 text-[#0F766E]" />
           {distance}
         </div>
-        
-        <button className="w-full py-2 rounded-lg border border-indigo-600 text-indigo-600 font-semibold text-sm hover:bg-indigo-50 transition-colors">
+
+        {/* CTA */}
+        <button
+          className="
+            w-full mt-2
+            py-2.5 rounded-md
+            text-sm font-semibold
+            bg-white text-[#047857]
+            border border-[#047857]
+            hover:bg-[#047857] hover:text-white
+            transition-all duration-300
+          "
+        >
           View Details
         </button>
       </div>
     </div>
   );
 }
+
+
+
 
 function AttractionCard({ name, location, image }) {
   return (

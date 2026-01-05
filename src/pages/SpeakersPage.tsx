@@ -207,233 +207,6 @@ import { User } from "lucide-react";
 import EndFooter from "../components/EndFooter";
 import { Helmet } from "react-helmet-async";
 
-// const speakers = [
-
-
-//   {
-//     image: "WhatsApp Image 2025-12-12 at 1.39.44 AM.jpeg",
-//     name: "Thomas Gärtner",
-//     title: "Technical University of Vienna ,austria",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-//         {
-//     image: "WhatsApp Image 2025-12-12 at 1.33.55 AM.jpeg",
-//     name: "CUI, Tiejun",
-//     title: "southeast universitie china",
-//     company: "",
-//     type:"Keynote"
-//   },
-//           {
-//     image: "WhatsApp Image 2025-12-12 at 2.24.58 AM.jpeg",
-//     name: "Katja Hose",
-//     title: "technical universty of vienna ,austria",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-//                   {
-//     image: "WhatsApp Image 2025-12-12 at 2.17.38 AM.jpeg",
-//     name: "Petia Radeva",
-//     title: "Universitat de Barcelona,Spain",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-//                   {
-//     image: "WhatsApp Image 2025-12-12 at 1.56.23 AM.jpeg",
-//     name: "Syed Kamrul Islam",
-//     title: "University of missouri,usa",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-//                       {
-//     image: "WhatsApp Image 2025-12-12 at 1.55.32 AM.jpeg",
-//     name: "Alvarado, Noé",
-//     title: "Universitat Politècnica de Catalunya,spain",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-//     {
-//     image: "WhatsApp Image 2025-12-12 at 1.52.43 AM.jpeg",
-//     name: "Jan Rosell",
-//     title: "Shanghai Jiao Tong University, China",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//               {
-//     image: "WhatsApp Image 2025-12-12 at 1.57.51 AM.jpeg",
-//     name: "Rohit Chadha",
-//     title: "university  of missouri,usa",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                     {
-//     image: "WhatsApp Image 2025-12-12 at 2.18.06 AM (1).jpeg",
-//     name: "LIU, Yurong",
-//     title: "Southeast university,china",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                         {
-//     image: "WhatsApp Image 2025-12-12 at 1.25.51 AM.jpeg",
-//     name: "CHEN, Peng",
-//     title: "Southeast university ,china",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-      
-
-// ];
-
-
-//  const speakers = [
-
-
-//   {
-//     image: "thomas-gartner.jpeg",
-//     name: "Prof. Thomas Gartner",
-//     title: "Technical University of Vienna, Austria",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-//                                       {
-//     image: "yanda-li.jpg",
-//     name: "Prof. Yanda Li",
-//     title: "Tsinghua University, China",
-//     company: "",
-//     type:"Keynote"
-//   },
-
-
-  
-//                                 {
-//     image: "jeannette-bohg.png",
-//     name: "Jeannette Bohg",
-//     title: "Stanford University, USA",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-//                             {
-//     image: "michael-cafarella.webp",
-//     name: "Michael Cafarella",
-//     title: "Massachusetts Institute of Technology, USA",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-//           {
-//     image: "katja-hose.jpeg",
-//     name: "Katja Hose",
-//     title: "Technical University of Vienna, Austria",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-
-
-//                   {
-//     image: "petia-radeva.jpeg",
-//     name: "Prof. Petia Radeva",
-//     title: "Universitat de Barcelona, Spain",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                   {
-//     image: "syed-kamrul-Islam.jpg",
-//     name: "Prof. Syed Kamrul Islam",
-//     title: "University of Missouri, USA",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                       {
-//     image: "alvarado.jpeg",
-//     name: "Alvarado, Noe",
-//     title: "Universitat Politècnica de Catalunya, Spain",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//     {
-//     image: "jan-rosell.jpeg",
-//     name: "Prof. Jan Rosell",
-//     title: "Shanghai Jiao Tong University, China",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-
-//               {
-//     image: "rohit-chadha.jpeg",
-//     name: "Prof. Rohit Chadha",
-//     title: "University of Missouri, USA",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                     {
-//     image: "liu-yurong.jpeg",
-//     name: "LIU, Yurong",
-//     title: "Southeast University, China",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                         {
-//     image: "chen-peng.jpeg",
-//     name: "Prof. CHEN, Peng",
-//     title: "Southeast University, China",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-//                           {
-//     image: "Josef-T.Boronski.jpeg",
-//     name: "Josef T. Boronski",
-//     title: "Imperial College London, UK",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-//                             {
-//     image: "charles-romain.jpeg",
-//     name: "Charles Romain",
-//     title: "Imperial College London, UK",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-//                               {
-//     image: "muhammad-bilal-munir.jpeg",
-//     name: "Prof. Muhammad Bilal Munir",
-//     title: "University of California, San Francisco, USA",
-//     company: "",
-//     type:"Speaker"
-//   },
-
-
-
-
-      
-
-// ];
 
 const speakers = [
 
@@ -515,6 +288,16 @@ const speakers = [
   },
 
 
+    {
+    image: "James-Berger.jpeg",
+    alt: "Dr. James Berger – Keynote Speaker at AIMLR 2026 | Yale University, USA",
+    name: "Dr. James Berger",
+    title: "Yale University, USA",
+    company: "",
+    type: "Speaker",
+  },
+
+
 
 ];
 
@@ -527,85 +310,183 @@ const committee = [
   { image: "commit4.png", name: "Dr. Michael Cafarella", university: "Massachusetts Institute of Technology, USA" },
 ];
 
+// function SpeakersPage() {
+//   return (
+//     <>
+
+//           <Helmet>
+//         <meta name="robots" content="noindex, follow" />
+//       </Helmet>
+
+//     <div>
+
+
+//       <Header />
+
+//       {/* Hero Section */}
+//       {/* <SpeakersBanner /> */}
+
+//       {/* Speakers + Committee */}
+//       <div className="container mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+        
+
+//         {/* Left: Speakers */}
+//         <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-10 text-center">
+//           {/* <h1 className="text-3xl font-bold text-gray-800 mb-8 col-span-full">
+//             AIMLR 2026 SPEAKERS
+//           </h1> */}
+
+//             <h2 className="text-3xl font-bold text-[#00488B] mb-6 col-span-full">
+//             {/* ABOUT AIMLR 2026  HYBRID EVENT */}
+//             AIMLR 2026 SPEAKERS
+//           </h2>
+//           {speakers.map((speaker, i) => (
+//             <div key={i} className="text-center">
+//               <img
+//                 src={speaker.image}
+//                 className="w-32 h-32 object-cover rounded-full mx-auto mb-3"
+//                 alt={speaker.alt}
+//               />
+//               <h3 className="font-semibold">{speaker.name}</h3>
+//               <p className="text-sm text-gray-600">{speaker.title}</p>
+//               {/* <p className="text-xs text-gray-500">{speaker.company}</p> */}
+//               <p className="text-sm text-[#292e63] font-semibold">{speaker.type}</p>
+//             </div>
+//           ))}
+//           <p className="text-sm text-[#2F2C7C] mt-4 col-span-full text-center">Additional speakers and session details will be announced shortly</p>
+//         </div>
+
+//         {/* Right: Committee - FIXED LAYOUT */}
+//         <div className="border-l pl-6 flex flex-col gap-6">
+//           <h2 className="text-xl font-semibold text-gray-800 mb-2 border-b pb-2">
+//             Scientific Committee
+//           </h2>
+
+//           {committee.map((member, i) => (
+//             <div
+//               key={i}
+//               className="flex items-center gap-4 bg-[#2e2b7a] p-4 shadow-md hover:shadow-lg transition"
+//             >
+//               {/* <User className="w-10 h-10 text-white flex-shrink-0" /> */}
+//               <div className=" gap-4 items-center">
+//                 <h4 className="font-bold text-white">{member.name}</h4>
+//                 <p className="text-sm text-white">{member.university}</p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+
+
+
+
+
+//       </div>
+
+//       {/* CTA Section */}
+//       <SpeakersBottomSection />
+//       <EndFooter />
+//     </div>
+//     </>
+//   );
+// }
+
+
 function SpeakersPage() {
   return (
     <>
-
-          <Helmet>
+      <Helmet>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
-    <div>
+      <div>
+        <Header />
 
+        {/* ================= SPEAKERS + COMMITTEE ================= */}
+        <div className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-3 gap-12">
 
-      <Header />
+          {/* ================= LEFT: SPEAKERS ================= */}
+          <div className="lg:col-span-2">
+            <h2 className="text-3xl font-bold text-[#047857] mb-8">
+              AIMLR 2026 Speakers
+            </h2>
 
-      {/* Hero Section */}
-      {/* <SpeakersBanner /> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {speakers.map((speaker, idx) => (
+                <div
+                  key={idx}
+                  className="flex gap-4 p-5 bg-white border border-[#E5E7EB]
+                  shadow-sm hover:shadow-lg transition rounded-xl"
+                >
+                  {/* Image */}
+                  <img
+                    src={speaker.image}
+                    alt={speaker.alt}
+                    className="w-28 h-28 object-cover rounded-lg"
+                  />
 
-      {/* Speakers + Committee */}
-      <div className="container mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
-        
+                  {/* Content */}
+                  <div className="flex flex-col justify-center">
+                    <h3 className="font-semibold text-[#1E293B] text-sm md:text-base">
+                      {speaker.name}
+                    </h3>
 
-        {/* Left: Speakers */}
-        <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-10 text-center">
-          {/* <h1 className="text-3xl font-bold text-gray-800 mb-8 col-span-full">
-            AIMLR 2026 SPEAKERS
-          </h1> */}
+                    <p className="text-xs md:text-sm text-[#64748B] leading-snug">
+                      {speaker.title}
+                    </p>
 
-            <h2 className="text-3xl font-bold text-[#00488B] mb-6 col-span-full">
-            {/* ABOUT AIMLR 2026  HYBRID EVENT */}
-            AIMLR 2026 SPEAKERS
-          </h2>
-          {speakers.map((speaker, i) => (
-            <div key={i} className="text-center">
-              <img
-                src={speaker.image}
-                className="w-32 h-32 object-cover rounded-full mx-auto mb-3"
-                alt={speaker.alt}
-              />
-              <h3 className="font-semibold">{speaker.name}</h3>
-              <p className="text-sm text-gray-600">{speaker.title}</p>
-              {/* <p className="text-xs text-gray-500">{speaker.company}</p> */}
-              <p className="text-sm text-[#292e63] font-semibold">{speaker.type}</p>
+                    <span
+                      className={`mt-2 inline-block w-fit text-xs font-semibold px-3 py-1 rounded-full
+                      ${
+                        speaker.type === "Keynote"
+                          ? "bg-[#D1FAE5] text-[#047857]"
+                          : "bg-[#ECFDF5] text-[#1E293B]"
+                      }`}
+                    >
+                      {speaker.type}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-          <p className="text-sm text-[#2F2C7C] mt-4 col-span-full text-center">Additional speakers and session details will be announced shortly</p>
+
+            <p className="text-sm text-[#475569] mt-8 text-center">
+              Additional speakers and session details will be announced shortly.
+            </p>
+          </div>
+
+          {/* ================= RIGHT: SCIENTIFIC COMMITTEE ================= */}
+          <div className="border-l pl-8">
+            <h3 className="text-xl font-bold text-[#1E293B] mb-6">
+              Scientific Committee
+            </h3>
+
+            <div className="space-y-4">
+              {committee.map((member, i) => (
+                <div
+                  key={i}
+                  className="p-4 rounded-lg bg-[#ECFDF5] border border-[#D1FAE5]"
+                >
+                  <h4 className="font-semibold text-[#047857]">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-[#475569]">
+                    {member.university}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
 
-        {/* Right: Committee - FIXED LAYOUT */}
-        <div className="border-l pl-6 flex flex-col gap-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2 border-b pb-2">
-            Scientific Committee
-          </h2>
-
-          {committee.map((member, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-4 bg-[#2e2b7a] p-4 shadow-md hover:shadow-lg transition"
-            >
-              {/* <User className="w-10 h-10 text-white flex-shrink-0" /> */}
-              <div className=" gap-4 items-center">
-                <h4 className="font-bold text-white">{member.name}</h4>
-                <p className="text-sm text-white">{member.university}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-
-
-
-
-
+        {/* CTA + Footer */}
+        <SpeakersBottomSection />
+        <EndFooter />
       </div>
-
-      {/* CTA Section */}
-      <SpeakersBottomSection />
-      <EndFooter />
-    </div>
     </>
   );
 }
+
 
 export default SpeakersPage;

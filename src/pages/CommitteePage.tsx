@@ -1008,75 +1008,159 @@
 
 
 
+// import React from "react";
+// import { ScrollText } from "lucide-react";
+// import { Link } from "react-router-dom";
+
+// // ---------------- DATA ----------------
+
+// const committeeMembers = [
+//   { name: "Prof. Yanda Li", affiliation: "Tsinghua University, China" },
+//   { name: "Prof. Felisa Baynes-Ross", affiliation: "Yale University, USA" },
+//   { name: "Prof. Athanasios Paschalis", affiliation: "Imperial College London, UK" },
+//   { name: "Dr. Michael Cafarella", affiliation: "Massachusetts Institute of Technology, USA" },
+//   { name: "Dr. f. Jan Rosell", affiliation: "Shanghai Jiao Tong University, China" },
+//   { name: "LIU, Yurong", affiliation: "Southeast University, China" },
+// ];
+
+// // ---------------- PAGE ----------------
+
+// function CommitteePage() {
+//   return (
+//     <div className="font-sans text-gray-800">
+//       <div className="container mx-auto px-4 md:px-6 max-w-6xl py-12">
+
+//         <Section icon={<ScrollText />} title="Committee Members">
+//           <CommitteeList members={committeeMembers} />
+//         </Section>
+
+//         <div className="text-center mt-16">
+//           <Link
+//             to="/contact"
+//             className="inline-block bg-[#2e376c] hover:bg-[#1f254b] text-white font-bold py-3 px-8 transition-colors duration-300"
+//           >
+//             Register for Committee
+//           </Link>
+//         </div>
+
+//       </div>
+
+//     </div>
+//   );
+// }
+
+// // ---------------- COMPONENTS ----------------
+
+// const Section = ({ icon, title, children }) => (
+//   <section className="scroll-mt-20">
+//     <div className="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+//       <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
+//         {icon}
+//       </div>
+//       <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+//         {title}
+//       </h2>
+//     </div>
+//     {children}
+//   </section>
+// );
+
+// const CommitteeList = ({ members }) => (
+//   <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 text-sm md:text-base">
+//     {members.map((member, index) => (
+//       <div key={index} className="text-slate-700 leading-relaxed">
+//         <span className="font-medium text-slate-900">
+//           {member.name}
+//         </span>
+//         <span className="mx-2 text-slate-400">|</span>
+//         <span>{member.affiliation}</span>
+//       </div>
+//     ))}
+//   </div>
+// );
+
+// export default CommitteePage;
+
+
+
 import React from "react";
 import { ScrollText } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// ---------------- DATA ----------------
+/* ---------------- DATA ---------------- */
 
 const committeeMembers = [
   { name: "Prof. Yanda Li", affiliation: "Tsinghua University, China" },
   { name: "Prof. Felisa Baynes-Ross", affiliation: "Yale University, USA" },
   { name: "Prof. Athanasios Paschalis", affiliation: "Imperial College London, UK" },
   { name: "Dr. Michael Cafarella", affiliation: "Massachusetts Institute of Technology, USA" },
-  { name: "Dr. f. Jan Rosell", affiliation: "Shanghai Jiao Tong University, China" },
+  { name: "Dr. F. Jan Rosell", affiliation: "Shanghai Jiao Tong University, China" },
   { name: "LIU, Yurong", affiliation: "Southeast University, China" },
 ];
 
-// ---------------- PAGE ----------------
+/* ---------------- PAGE ---------------- */
 
 function CommitteePage() {
   return (
-    <div className="font-sans text-gray-800">
-      <div className="container mx-auto px-4 md:px-6 max-w-6xl py-12">
+    <section className="font-sans text-[#1E293B]">
+      <div className="max-w-6xl mx-auto px-6 py-12">
 
-        <Section icon={<ScrollText />} title="Committee Members">
-          <CommitteeList members={committeeMembers} />
-        </Section>
+        {/* ===== PAGE HEADER ===== */}
+        <header className="mb-12">
+          <div className="flex items-center gap-3 mb-3">
+            <ScrollText className="w-6 h-6 text-[#047857]" />
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Committee Members
+            </h1>
+          </div>
 
-        <div className="text-center mt-16">
+          <p className="text-gray-600 max-w-3xl">
+            The organizing and scientific committees consist of distinguished
+            researchers and professionals from leading institutions worldwide.
+          </p>
+        </header>
+
+        {/* ===== COMMITTEE LIST ===== */}
+        <div className="pl-4 border-l-4 border-[#047857]">
+          <ul className="space-y-4">
+            {committeeMembers.map((member, index) => (
+              <li
+                key={index}
+                className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3"
+              >
+                <span className="font-semibold text-slate-900">
+                  {member.name}
+                </span>
+                <span className="hidden sm:inline text-slate-400">—</span>
+                <span className="text-slate-600 text-sm sm:text-base">
+                  {member.affiliation}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* ===== CTA ===== */}
+        <div className="mt-16 flex justify-center">
           <Link
             to="/contact"
-            className="inline-block bg-[#2e376c] hover:bg-[#1f254b] text-white font-bold py-3 px-8 transition-colors duration-300"
+            className="
+              inline-flex items-center justify-center
+              px-10 py-3
+              font-semibold text-white
+              bg-[#047857]
+              hover:bg-[#065F46]
+              transition-colors
+              rounded-md
+            "
           >
-            Register for Committee
+            Apply to Join the Committee
           </Link>
         </div>
 
       </div>
-
-    </div>
+    </section>
   );
 }
-
-// ---------------- COMPONENTS ----------------
-
-const Section = ({ icon, title, children }) => (
-  <section className="scroll-mt-20">
-    <div className="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
-      <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
-        {icon}
-      </div>
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-        {title}
-      </h2>
-    </div>
-    {children}
-  </section>
-);
-
-const CommitteeList = ({ members }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 text-sm md:text-base">
-    {members.map((member, index) => (
-      <div key={index} className="text-slate-700 leading-relaxed">
-        <span className="font-medium text-slate-900">
-          {member.name}
-        </span>
-        <span className="mx-2 text-slate-400">|</span>
-        <span>{member.affiliation}</span>
-      </div>
-    ))}
-  </div>
-);
 
 export default CommitteePage;
