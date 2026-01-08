@@ -335,7 +335,7 @@
 // // //         <div className="container mx-auto px-6 text-center relative z-10">
 // // //           <div className="inline-flex items-center gap-2 bg-indigo-500/30 rounded-full px-4 py-1 mb-6 border border-indigo-400/30 backdrop-blur-md">
 // // //             <Users className="w-4 h-4 text-indigo-200" />
-// // //             <span className="text-xs font-semibold tracking-wider uppercase text-indigo-100">AIMLR 2026 Organization</span>
+// // //             <span className="text-xs font-semibold tracking-wider uppercase text-indigo-100">ICBME 2026 Organization</span>
 // // //           </div>
 // // //           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Organizing Committee</h1>
 // // //           <p className="text-xl text-indigo-100 max-w-2xl mx-auto font-light leading-relaxed">
@@ -666,7 +666,7 @@
 // //         <div className="container mx-auto px-6 text-center relative z-10">
 // //           <div className="inline-flex items-center gap-2 bg-indigo-500/30 rounded-full px-4 py-1 mb-6 border border-indigo-400/30 backdrop-blur-md">
 // //             <Users className="w-4 h-4 text-indigo-200" />
-// //             <span className="text-xs font-semibold tracking-wider uppercase text-indigo-100">AIMLR 2026 Organization</span>
+// //             <span className="text-xs font-semibold tracking-wider uppercase text-indigo-100">ICBME 2026 Organization</span>
 // //           </div>
 // //           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Organizing Committee</h1>
 // //           <p className="text-xl text-indigo-100 max-w-2xl mx-auto font-light leading-relaxed">
@@ -682,7 +682,7 @@
 // //           <div className="text-center mb-8">
 // //             <h2 className="text-3xl font-bold text-gray-900 mb-4">About Magnus Group</h2>
 // //             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-// //               The driving force behind AIMLR 2026
+// //               The driving force behind ICBME 2026
 // //             </p>
 // //           </div>
 
@@ -1090,12 +1090,13 @@ import { Link } from "react-router-dom";
 /* ---------------- DATA ---------------- */
 
 const committeeMembers = [
-  { name: "Prof. Yanda Li", affiliation: "Tsinghua University, China" },
-  { name: "Prof. Felisa Baynes-Ross", affiliation: "Yale University, USA" },
-  { name: "Prof. Athanasios Paschalis", affiliation: "Imperial College London, UK" },
-  { name: "Dr. Michael Cafarella", affiliation: "Massachusetts Institute of Technology, USA" },
-  { name: "Dr. F. Jan Rosell", affiliation: "Shanghai Jiao Tong University, China" },
-  { name: "LIU, Yurong", affiliation: "Southeast University, China" },
+  { name: "Dr. George Q. Daley", affiliation: "Harvard Medical School" },
+  { name: "Douglas A. Melton, Ph.D.", affiliation: "Harvard Stem Cell Institute (HSCI)" },
+  { name: "Wendy Post, M.D.", affiliation: "Johns Hopkins University" },
+  { name: "Victor J. Dzau, M.D.", affiliation: "National Academy of Medicine" },
+  { name: "Aliya Saperstein, Ph.D.", affiliation: "Stanford University" },
+  { name: "Amy Moran-Thomas, Ph.D.", affiliation: "Massachusetts Institute of Technology" },
+  { name: "Harold E. Varmus, M.D.", affiliation: "Weill Cornell Medicine" },
 ];
 
 /* ---------------- PAGE ---------------- */

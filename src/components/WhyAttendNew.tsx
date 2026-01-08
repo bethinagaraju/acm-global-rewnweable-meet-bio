@@ -1,142 +1,512 @@
 
 
-// // // import React from 'react';
-// // // import { 
-// // //   Cpu, 
-// // //   Globe, 
-// // //   Mic2, 
-// // //   FileText, 
-// // //   Bot, 
-// // //   Briefcase 
-// // // } from 'lucide-react';
+// // // // // // import React from 'react';
+// // // // // // import { 
+// // // // // //   Cpu, 
+// // // // // //   Globe, 
+// // // // // //   Mic2, 
+// // // // // //   FileText, 
+// // // // // //   Bot, 
+// // // // // //   Briefcase 
+// // // // // // } from 'lucide-react';
 
-// // // // Interface for the FeatureCard props
-// // // interface FeatureCardProps {
+// // // // // // // Interface for the FeatureCard props
+// // // // // // interface FeatureCardProps {
+// // // // // //   icon: React.ReactNode;
+// // // // // //   title: string;
+// // // // // //   description: string;
+// // // // // // }
+
+// // // // // // // Reusable FeatureCard component
+// // // // // // const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
+// // // // // //   return (
+// // // // // //     <div className="group relative bg-[#0f172a]/30 backdrop-blur-md rounded-2xl p-8 border border-blue-400/30 shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:border-blue-400/50 hover:bg-[#0f172a]/50 hover:shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 overflow-hidden">
+      
+// // // // // //       {/* Top subtle glow line for glass effect */}
+// // // // // //       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent opacity-70" />
+      
+// // // // // //       {/* Icon Container with Gradient Border/Glow */}
+// // // // // //       <div className="mb-6 relative inline-block">
+// // // // // //         {/* Permanent Glow behind the icon */}
+// // // // // //         <div className="absolute inset-0 bg-blue-500 blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300 rounded-full"></div>
+        
+// // // // // //         {/* Icon Circle with permanent glowing border */}
+// // // // // //         <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[#1e3a8a] to-[#581c87] flex items-center justify-center border-2 border-blue-400/40 shadow-[0_0_15px_rgba(59,130,246,0.4)] group-hover:scale-105 transition-transform duration-300">
+// // // // // //           {React.cloneElement(icon as React.ReactElement, { size: 26, className: "text-blue-50 drop-shadow-lg" })}
+// // // // // //         </div>
+// // // // // //       </div>
+      
+// // // // // //       <h3 className="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-blue-200 transition-colors">
+// // // // // //         {title}
+// // // // // //       </h3>
+      
+// // // // // //       <p className="text-white text-sm leading-relaxed font-light">
+// // // // // //         {description}
+// // // // // //       </p>
+// // // // // //     </div>
+// // // // // //   );
+// // // // // // };
+
+// // // // // // // Main WhyAttend component
+// // // // // // const WhyAttendNew: React.FC = () => {
+  
+// // // // // //   const features = [
+// // // // // //     {
+// // // // // //       icon: <Cpu />,
+// // // // // //       title: "Cutting-Edge Research",
+// // // // // //       description: "Explore recent advances, emerging ideas, and practical innovations across AI, Machine Learning, and Robotics through peer-reviewed presentations."
+// // // // // //     },
+// // // // // //     {
+// // // // // //       icon: <Globe />,
+// // // // // //       title: "Global Networking",
+// // // // // //       description: "Connect with researchers, faculty members, students, and industry professionals from around the world in a collaborative academic environment."
+// // // // // //     },
+// // // // // //     {
+// // // // // //       icon: <Mic2 />,
+// // // // // //       title: "World-Class Speakers",
+// // // // // //       description: "Gain insights from experienced researchers, technical speakers, and industry practitioners sharing real-world applications and research perspectives."
+// // // // // //     },
+// // // // // //     {
+// // // // // //       icon: <FileText />,
+// // // // // //       title: "Publication Opportunities",
+// // // // // //       description: "Present your research, case study, or academic work through oral or poster presentations and receive official conference recognition."
+// // // // // //     },
+// // // // // //     {
+// // // // // //       icon: <Bot />,
+// // // // // //       title: "Industry & Innovation",
+// // // // // //       description: "Engage with applied research, emerging technologies, and real-world use cases in AI, robotics, and intelligent systems."
+// // // // // //     },
+// // // // // //     {
+// // // // // //       icon: <Briefcase />,
+// // // // // //       title: "Career & Academic Growth",
+// // // // // //       description: "Strengthen your academic profile, improve presentation skills, receive peer feedback, and expand professional connections."
+// // // // // //     }
+// // // // // //   ];
+
+// // // // // //   return (
+// // // // // //     <section className="relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-[#020617] overflow-hidden flex flex-col justify-center">
+      
+// // // // // //       {/* --- BACKGROUND LIGHTING EFFECTS --- */}
+      
+// // // // // //       {/* 1. Base Dark Background */}
+// // // // // //       <div className="absolute inset-0 bg-[#020617] z-0"></div>
+
+// // // // // //       {/* 2. Top-Left: Bright Blue/Cyan Light Source */}
+// // // // // //       <div className="absolute -top-[10%] -left-[10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[130px] pointer-events-none z-0 mix-blend-screen"></div>
+// // // // // //       <div className="absolute top-[0%] left-[0%] w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-screen"></div>
+
+// // // // // //       {/* 3. Bottom-Right: Purple/Magenta Light Source */}
+// // // // // //       <div className="absolute -bottom-[10%] -right-[5%] w-[600px] h-[600px] bg-purple-700/20 rounded-full blur-[130px] pointer-events-none z-0 mix-blend-screen"></div>
+// // // // // //       <div className="absolute bottom-[0%] right-[0%] w-[300px] h-[300px] bg-fuchsia-600/10 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-screen"></div>
+      
+// // // // // //       {/* 4. Tech/Star Grid Pattern */}
+// // // // // //       <div className="absolute inset-0 opacity-[0.15] z-0" 
+// // // // // //            style={{ 
+// // // // // //              backgroundImage: 'radial-gradient(circle at center, #60a5fa 0.5px, transparent 0.5px)', 
+// // // // // //              backgroundSize: '30px 30px' 
+// // // // // //            }}>
+// // // // // //       </div>
+      
+// // // // // //       {/* 5. Subtle horizontal circuit lines */}
+// // // // // //       <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/10 to-transparent"></div>
+// // // // // //       <div className="absolute bottom-1/3 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500/10 to-transparent"></div>
+
+
+// // // // // //       {/* --- CONTENT --- */}
+// // // // // //       <div className="max-w-7xl mx-auto relative z-10 w-full">
+        
+// // // // // //         {/* Header Section */}
+// // // // // //         <div className="text-center mb-16">
+// // // // // //           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg tracking-tight">
+// // // // // //             Why Attend ICBME 2026?
+// // // // // //           </h2>
+// // // // // //           <p className="text-lg text-blue-200/70 max-w-2xl mx-auto font-light">
+// // // // // //             A global platform advancing Artificial Intelligence, Machine Learning & Robotics.
+// // // // // //           </p>
+// // // // // //         </div>
+
+// // // // // //         {/* Grid Section */}
+// // // // // //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-12 px-16">
+// // // // // //           {features.map((feature, index) => (
+// // // // // //             <FeatureCard
+// // // // // //               key={index}
+// // // // // //               icon={feature.icon}
+// // // // // //               title={feature.title}
+// // // // // //               description={feature.description}
+// // // // // //             />
+// // // // // //           ))}
+// // // // // //         </div>
+        
+// // // // // //       </div>
+// // // // // //     </section>
+// // // // // //   );
+// // // // // // };
+
+// // // // // // export default WhyAttendNew;
+
+
+
+
+
+// // // // // import React from 'react';
+// // // // // import { Cpu, Globe, Mic2, FileText, Bot, Briefcase } from 'lucide-react';
+
+// // // // // interface FeatureCardProps {
+// // // // //   icon: React.ReactNode;
+// // // // //   title: string;
+// // // // //   description: string;
+// // // // // }
+
+// // // // // const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
+// // // // //   return (
+// // // // //     <div className="
+// // // // //       group relative 
+// // // // //       bg-[#0f172a]/30 backdrop-blur-md 
+// // // // //       p-6 sm:p-7 lg:p-8              /* ✅ responsive padding */
+// // // // //       border border-blue-400/30 
+// // // // //       shadow-[0_0_25px_rgba(59,130,246,0.2)]
+// // // // //       hover:border-blue-400/50 
+// // // // //       hover:bg-[#0f172a]/50 
+// // // // //       hover:shadow-[0_0_35px_rgba(59,130,246,0.3)] 
+// // // // //       transition-all duration-300
+// // // // //       overflow-hidden
+// // // // //     ">
+// // // // //       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent opacity-70" />
+
+// // // // //       {/* Icon and Title in same row */}
+// // // // //       <div className="flex items-center mb-4 sm:mb-6">
+// // // // //         <div className="relative inline-block mr-4">
+// // // // //           <div className="absolute inset-0 bg-blue-500 blur-xl opacity-40 group-hover:opacity-60 transition-opacity rounded-full"></div>
+
+// // // // //           <div className="
+// // // // //             relative 
+// // // // //             w-12 h-12 sm:w-14 sm:h-14     
+// // // // //             rounded-full 
+// // // // //             bg-gradient-to-br from-[#1e3a8a] to-[#581c87]
+// // // // //             flex items-center justify-center 
+// // // // //             border-2 border-blue-400/40 
+// // // // //             shadow-[0_0_15px_rgba(59,130,246,0.4)]
+// // // // //             group-hover:scale-105 transition-transform
+// // // // //           ">
+// // // // //             {React.cloneElement(icon as React.ReactElement, {
+// // // // //               size: 22,                  
+// // // // //               className: "text-blue-50 drop-shadow-lg sm:size-[26px]"
+// // // // //             })}
+// // // // //           </div>
+// // // // //         </div>
+
+// // // // //         <h3 className="
+// // // // //           text-xl sm:text-xl             
+// // // // //           font-bold text-white 
+// // // // //           tracking-wide 
+// // // // //           group-hover:text-blue-200
+// // // // //         ">
+// // // // //           {title}
+// // // // //         </h3>
+// // // // //       </div>
+
+// // // // //       <p className="
+// // // // //         text-lg sm:text-lg
+// // // // //         text-white/90 
+// // // // //         leading-relaxed 
+// // // // //         font-light
+// // // // //       "
+// // // // //       style={{ fontFamily: 'sans-serif' }}
+// // // // //       >
+// // // // //         {description}
+// // // // //       </p>
+      
+// // // // //     </div>
+// // // // //   );
+// // // // // };
+
+// // // // // const WhyAttendNew: React.FC = () => {
+// // // // //   const features = [
+// // // // //     { icon: <Cpu />, title: "Cutting-Edge Research", description: "Explore recent advances, emerging ideas, and practical innovations across AI, Machine Learning, and Robotics through peer-reviewed presentations." },
+// // // // //     { icon: <Globe />, title: "Global Networking", description: "Connect with researchers, faculty members, students, and industry professionals from around the world in a collaborative academic environment." },
+// // // // //     { icon: <Mic2 />, title: "World-Class Speakers", description: "Gain insights from experienced researchers, technical speakers, and industry practitioners sharing real-world applications and research perspectives." },
+// // // // //     { icon: <FileText />, title: "Publication Opportunities", description: "Present your research, case study, or academic work through oral or poster presentations and receive official conference recognition." },
+// // // // //     { icon: <Bot />, title: "Industry & Innovation", description: "Engage with applied research, emerging technologies, and real-world use cases in AI, robotics, and intelligent systems." },
+// // // // //     { icon: <Briefcase />, title: "Career & Academic Growth", description: "Strengthen your academic profile, improve presentation skills, receive peer feedback, and expand professional connections." }
+// // // // //   ];
+
+// // // // //   return (
+// // // // //     <section className="
+// // // // //       relative min-h-screen 
+// // // // //       py-16 sm:py-8 lg:py-16       /* ✅ mobile-first spacing */
+// // // // //       px-4 sm:px-6 lg:px-8
+// // // // //       bg-[#020617] overflow-hidden
+// // // // //       flex flex-col justify-center
+// // // // //     ">
+// // // // //       <div className="max-w-7xl mx-auto relative z-10 w-full">
+
+// // // // //         {/* Header */}
+// // // // //         <div className="text-center mb-12 sm:mb-16">
+// // // // //           {/* <h2 className="
+// // // // //             text-3xl sm:text-4xl md:text-5xl 
+// // // // //             font-bold text-white 
+// // // // //             mb-3 sm:mb-4
+// // // // //           ">
+// // // // //             Why Attend ICBME 2026?
+// // // // //           </h2> */}
+
+// // // // //           <h2 className="text-3xl font-bold text-[#ffffff] mb-8 text-center">
+// // // // //            WHY ATTEND ICBME 2026 ?
+// // // // //           </h2>
+
+// // // // //           <p className="
+// // // // //             text-sm sm:text-base md:text-lg
+// // // // //             text-blue-200/70 
+// // // // //             max-w-2xl mx-auto
+// // // // //           ">
+// // // // //             A global platform advancing Artificial Intelligence, Machine Learning & Robotics.
+// // // // //           </p>
+// // // // //         </div>
+
+// // // // //         {/* Grid */}
+// // // // //         <div className="
+// // // // //           grid grid-cols-1 
+// // // // //           sm:grid-cols-2 
+// // // // //           lg:grid-cols-3
+// // // // //           gap-6 sm:gap-4 lg:gap-6   /* ✅ tighter on mobile */
+// // // // //           px-0 sm:px-4 lg:px-16
+// // // // //         ">
+// // // // //           {features.map((feature, index) => (
+// // // // //             <FeatureCard key={index} {...feature} />
+// // // // //           ))}
+// // // // //         </div>
+
+// // // // //       </div>
+// // // // //     </section>
+// // // // //   );
+// // // // // };
+
+// // // // // export default WhyAttendNew;
+
+
+
+
+
+
+// // // // import React from "react";
+// // // // import {
+// // // //   Cpu,
+// // // //   Globe,
+// // // //   Mic2,
+// // // //   FileText,
+// // // //   Bot,
+// // // //   Briefcase,
+// // // // } from "lucide-react";
+
+// // // // interface Feature {
+// // // //   icon: React.ReactNode;
+// // // //   title: string;
+// // // //   description: string;
+// // // // }
+
+// // // // const features: Feature[] = [
+// // // //   {
+// // // //     icon: <Cpu />,
+// // // //     title: "Cutting-Edge Research",
+// // // //     description:
+// // // //       "Explore recent advances, emerging ideas, and practical innovations across Artificial Intelligence, Machine Learning, and Robotics.",
+// // // //   },
+// // // //   {
+// // // //     icon: <Globe />,
+// // // //     title: "Global Networking",
+// // // //     description:
+// // // //       "Connect with researchers, faculty members, students, and industry professionals from around the world.",
+// // // //   },
+// // // //   {
+// // // //     icon: <Mic2 />,
+// // // //     title: "World-Class Speakers",
+// // // //     description:
+// // // //       "Gain insights from experienced researchers and industry practitioners sharing real-world applications.",
+// // // //   },
+// // // //   {
+// // // //     icon: <FileText />,
+// // // //     title: "Publication Opportunities",
+// // // //     description:
+// // // //       "Present your research through oral or poster sessions and receive official conference recognition.",
+// // // //   },
+// // // //   {
+// // // //     icon: <Bot />,
+// // // //     title: "Industry & Innovation",
+// // // //     description:
+// // // //       "Engage with applied research, emerging technologies, and real-world use cases in AI and robotics.",
+// // // //   },
+// // // //   {
+// // // //     icon: <Briefcase />,
+// // // //     title: "Career & Academic Growth",
+// // // //     description:
+// // // //       "Strengthen your academic profile, receive peer feedback, and expand your professional network.",
+// // // //   },
+// // // // ];
+
+// // // // const WhyAttendNew: React.FC = () => {
+// // // //   return (
+// // // //     <section className="bg-white py-20 px-4">
+// // // //       <div className="max-w-7xl mx-auto">
+
+// // // //         {/* Header */}
+// // // //         <div className="text-center mb-16">
+// // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#0B5ED7] mb-4">
+// // // //             Why Attend ICBME 2026?
+// // // //           </h2>
+// // // //           <p className="text-[#1F2937]/70 max-w-2xl mx-auto text-lg">
+// // // //             A premier international platform advancing Artificial Intelligence,
+// // // //             Machine Learning, and Robotics research.
+// // // //           </p>
+// // // //         </div>
+
+// // // //         {/* Features List */}
+// // // //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+// // // //           {features.map((feature, index) => (
+// // // //             <div
+// // // //               key={index}
+// // // //               className="relative pl-6 border-l-4 border-[#00B4D8] bg-[#EAF2FF]/40
+// // // //               p-6 rounded-lg hover:bg-[#EAF2FF]/70 transition-all"
+// // // //             >
+// // // //               {/* Icon */}
+// // // //               <div className="mb-4">
+// // // //                 <div
+// // // //                   className="w-12 h-12 rounded-full flex items-center justify-center
+// // // //                   bg-[#0B5ED7]/10 text-[#0B5ED7]"
+// // // //                 >
+// // // //                   {React.cloneElement(feature.icon as React.ReactElement, {
+// // // //                     size: 22,
+// // // //                   })}
+// // // //                 </div>
+// // // //               </div>
+
+// // // //               {/* Content */}
+// // // //               <h3 className="text-xl font-semibold text-[#1F2937] mb-2">
+// // // //                 {feature.title}
+// // // //               </h3>
+
+// // // //               <p className="text-[#1F2937]/70 leading-relaxed">
+// // // //                 {feature.description}
+// // // //               </p>
+// // // //             </div>
+// // // //           ))}
+
+// // // //         </div>
+// // // //       </div>
+// // // //     </section>
+// // // //   );
+// // // // };
+
+// // // // export default WhyAttendNew;
+
+
+
+// // // import React from "react";
+// // // import {
+// // //   Cpu,
+// // //   Globe,
+// // //   Mic2,
+// // //   FileText,
+// // //   Bot,
+// // //   Briefcase,
+// // // } from "lucide-react";
+
+// // // interface Feature {
 // // //   icon: React.ReactNode;
 // // //   title: string;
 // // //   description: string;
 // // // }
 
-// // // // Reusable FeatureCard component
-// // // const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
-// // //   return (
-// // //     <div className="group relative bg-[#0f172a]/30 backdrop-blur-md rounded-2xl p-8 border border-blue-400/30 shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:border-blue-400/50 hover:bg-[#0f172a]/50 hover:shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 overflow-hidden">
-      
-// // //       {/* Top subtle glow line for glass effect */}
-// // //       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent opacity-70" />
-      
-// // //       {/* Icon Container with Gradient Border/Glow */}
-// // //       <div className="mb-6 relative inline-block">
-// // //         {/* Permanent Glow behind the icon */}
-// // //         <div className="absolute inset-0 bg-blue-500 blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300 rounded-full"></div>
-        
-// // //         {/* Icon Circle with permanent glowing border */}
-// // //         <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[#1e3a8a] to-[#581c87] flex items-center justify-center border-2 border-blue-400/40 shadow-[0_0_15px_rgba(59,130,246,0.4)] group-hover:scale-105 transition-transform duration-300">
-// // //           {React.cloneElement(icon as React.ReactElement, { size: 26, className: "text-blue-50 drop-shadow-lg" })}
-// // //         </div>
-// // //       </div>
-      
-// // //       <h3 className="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-blue-200 transition-colors">
-// // //         {title}
-// // //       </h3>
-      
-// // //       <p className="text-white text-sm leading-relaxed font-light">
-// // //         {description}
-// // //       </p>
-// // //     </div>
-// // //   );
-// // // };
+// // // const features: Feature[] = [
+// // //   {
+// // //     icon: <Cpu />,
+// // //     title: "Cutting-Edge Research",
+// // //     description:
+// // //       "Explore recent advances, emerging ideas, and practical innovations across Artificial Intelligence, Machine Learning, and Robotics.",
+// // //   },
+// // //   {
+// // //     icon: <Globe />,
+// // //     title: "Global Networking",
+// // //     description:
+// // //       "Connect with researchers, faculty members, students, and industry professionals from around the world.",
+// // //   },
+// // //   {
+// // //     icon: <Mic2 />,
+// // //     title: "World-Class Speakers",
+// // //     description:
+// // //       "Gain insights from experienced researchers and industry practitioners sharing real-world applications.",
+// // //   },
+// // //   {
+// // //     icon: <FileText />,
+// // //     title: "Publication Opportunities",
+// // //     description:
+// // //       "Present your research through oral or poster sessions and receive official conference recognition.",
+// // //   },
+// // //   {
+// // //     icon: <Bot />,
+// // //     title: "Industry & Innovation",
+// // //     description:
+// // //       "Engage with applied research, emerging technologies, and real-world use cases in AI and robotics.",
+// // //   },
+// // //   {
+// // //     icon: <Briefcase />,
+// // //     title: "Career & Academic Growth",
+// // //     description:
+// // //       "Strengthen your academic profile, receive peer feedback, and expand your professional network.",
+// // //   },
+// // // ];
 
-// // // // Main WhyAttend component
 // // // const WhyAttendNew: React.FC = () => {
-  
-// // //   const features = [
-// // //     {
-// // //       icon: <Cpu />,
-// // //       title: "Cutting-Edge Research",
-// // //       description: "Explore recent advances, emerging ideas, and practical innovations across AI, Machine Learning, and Robotics through peer-reviewed presentations."
-// // //     },
-// // //     {
-// // //       icon: <Globe />,
-// // //       title: "Global Networking",
-// // //       description: "Connect with researchers, faculty members, students, and industry professionals from around the world in a collaborative academic environment."
-// // //     },
-// // //     {
-// // //       icon: <Mic2 />,
-// // //       title: "World-Class Speakers",
-// // //       description: "Gain insights from experienced researchers, technical speakers, and industry practitioners sharing real-world applications and research perspectives."
-// // //     },
-// // //     {
-// // //       icon: <FileText />,
-// // //       title: "Publication Opportunities",
-// // //       description: "Present your research, case study, or academic work through oral or poster presentations and receive official conference recognition."
-// // //     },
-// // //     {
-// // //       icon: <Bot />,
-// // //       title: "Industry & Innovation",
-// // //       description: "Engage with applied research, emerging technologies, and real-world use cases in AI, robotics, and intelligent systems."
-// // //     },
-// // //     {
-// // //       icon: <Briefcase />,
-// // //       title: "Career & Academic Growth",
-// // //       description: "Strengthen your academic profile, improve presentation skills, receive peer feedback, and expand professional connections."
-// // //     }
-// // //   ];
-
 // // //   return (
-// // //     <section className="relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-[#020617] overflow-hidden flex flex-col justify-center">
-      
-// // //       {/* --- BACKGROUND LIGHTING EFFECTS --- */}
-      
-// // //       {/* 1. Base Dark Background */}
-// // //       <div className="absolute inset-0 bg-[#020617] z-0"></div>
+// // //     <section className="bg-gradient-to-b from-[#ECFDF5] to-white py-20 px-4">
+// // //       <div className="max-w-7xl mx-auto">
 
-// // //       {/* 2. Top-Left: Bright Blue/Cyan Light Source */}
-// // //       <div className="absolute -top-[10%] -left-[10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[130px] pointer-events-none z-0 mix-blend-screen"></div>
-// // //       <div className="absolute top-[0%] left-[0%] w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-screen"></div>
-
-// // //       {/* 3. Bottom-Right: Purple/Magenta Light Source */}
-// // //       <div className="absolute -bottom-[10%] -right-[5%] w-[600px] h-[600px] bg-purple-700/20 rounded-full blur-[130px] pointer-events-none z-0 mix-blend-screen"></div>
-// // //       <div className="absolute bottom-[0%] right-[0%] w-[300px] h-[300px] bg-fuchsia-600/10 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-screen"></div>
-      
-// // //       {/* 4. Tech/Star Grid Pattern */}
-// // //       <div className="absolute inset-0 opacity-[0.15] z-0" 
-// // //            style={{ 
-// // //              backgroundImage: 'radial-gradient(circle at center, #60a5fa 0.5px, transparent 0.5px)', 
-// // //              backgroundSize: '30px 30px' 
-// // //            }}>
-// // //       </div>
-      
-// // //       {/* 5. Subtle horizontal circuit lines */}
-// // //       <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/10 to-transparent"></div>
-// // //       <div className="absolute bottom-1/3 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500/10 to-transparent"></div>
-
-
-// // //       {/* --- CONTENT --- */}
-// // //       <div className="max-w-7xl mx-auto relative z-10 w-full">
-        
-// // //         {/* Header Section */}
+// // //         {/* Header */}
 // // //         <div className="text-center mb-16">
-// // //           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg tracking-tight">
-// // //             Why Attend AIMLR 2026?
+// // //           <h2 className="text-3xl md:text-4xl font-bold text-[#047857] mb-4">
+// // //             Why Attend ICBME 2026?
 // // //           </h2>
-// // //           <p className="text-lg text-blue-200/70 max-w-2xl mx-auto font-light">
-// // //             A global platform advancing Artificial Intelligence, Machine Learning & Robotics.
+// // //           <p className="text-[#64748B] max-w-2xl mx-auto text-lg">
+// // //             A premier international platform advancing Artificial Intelligence,
+// // //             Machine Learning, and Robotics research.
 // // //           </p>
 // // //         </div>
 
-// // //         {/* Grid Section */}
-// // //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-12 px-16">
+// // //         {/* Features List */}
+// // //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
 // // //           {features.map((feature, index) => (
-// // //             <FeatureCard
+// // //             <div
 // // //               key={index}
-// // //               icon={feature.icon}
-// // //               title={feature.title}
-// // //               description={feature.description}
-// // //             />
+// // //               className="relative pl-6 border-l-4 border-[#A7F3D0]
+// // //               bg-white p-6 rounded-xl shadow-sm
+// // //               hover:shadow-lg hover:border-[#047857]
+// // //               transition-all"
+// // //             >
+// // //               {/* Icon */}
+// // //               <div className="mb-4">
+// // //                 <div
+// // //                   className="w-12 h-12 rounded-full flex items-center justify-center
+// // //                   bg-[#ECFDF5] text-[#047857]"
+// // //                 >
+// // //                   {React.cloneElement(feature.icon as React.ReactElement, {
+// // //                     size: 22,
+// // //                   })}
+// // //                 </div>
+// // //               </div>
+
+// // //               {/* Content */}
+// // //               <h3 className="text-xl font-semibold text-[#1E293B] mb-2">
+// // //                 {feature.title}
+// // //               </h3>
+
+// // //               <p className="text-[#64748B] leading-relaxed">
+// // //                 {feature.description}
+// // //               </p>
+// // //             </div>
 // // //           ))}
+
 // // //         </div>
-        
 // // //       </div>
 // // //     </section>
 // // //   );
@@ -147,132 +517,90 @@
 
 
 
+// // import React from "react";
+// // import {
+// //   Cpu,
+// //   Globe,
+// //   Mic2,
+// //   FileText,
+// //   Bot,
+// //   Briefcase,
+// // } from "lucide-react";
 
-// // import React from 'react';
-// // import { Cpu, Globe, Mic2, FileText, Bot, Briefcase } from 'lucide-react';
-
-// // interface FeatureCardProps {
-// //   icon: React.ReactNode;
-// //   title: string;
-// //   description: string;
-// // }
-
-// // const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
-// //   return (
-// //     <div className="
-// //       group relative 
-// //       bg-[#0f172a]/30 backdrop-blur-md 
-// //       p-6 sm:p-7 lg:p-8              /* ✅ responsive padding */
-// //       border border-blue-400/30 
-// //       shadow-[0_0_25px_rgba(59,130,246,0.2)]
-// //       hover:border-blue-400/50 
-// //       hover:bg-[#0f172a]/50 
-// //       hover:shadow-[0_0_35px_rgba(59,130,246,0.3)] 
-// //       transition-all duration-300
-// //       overflow-hidden
-// //     ">
-// //       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/40 to-transparent opacity-70" />
-
-// //       {/* Icon and Title in same row */}
-// //       <div className="flex items-center mb-4 sm:mb-6">
-// //         <div className="relative inline-block mr-4">
-// //           <div className="absolute inset-0 bg-blue-500 blur-xl opacity-40 group-hover:opacity-60 transition-opacity rounded-full"></div>
-
-// //           <div className="
-// //             relative 
-// //             w-12 h-12 sm:w-14 sm:h-14     
-// //             rounded-full 
-// //             bg-gradient-to-br from-[#1e3a8a] to-[#581c87]
-// //             flex items-center justify-center 
-// //             border-2 border-blue-400/40 
-// //             shadow-[0_0_15px_rgba(59,130,246,0.4)]
-// //             group-hover:scale-105 transition-transform
-// //           ">
-// //             {React.cloneElement(icon as React.ReactElement, {
-// //               size: 22,                  
-// //               className: "text-blue-50 drop-shadow-lg sm:size-[26px]"
-// //             })}
-// //           </div>
-// //         </div>
-
-// //         <h3 className="
-// //           text-xl sm:text-xl             
-// //           font-bold text-white 
-// //           tracking-wide 
-// //           group-hover:text-blue-200
-// //         ">
-// //           {title}
-// //         </h3>
-// //       </div>
-
-// //       <p className="
-// //         text-lg sm:text-lg
-// //         text-white/90 
-// //         leading-relaxed 
-// //         font-light
-// //       "
-// //       style={{ fontFamily: 'sans-serif' }}
-// //       >
-// //         {description}
-// //       </p>
-      
-// //     </div>
-// //   );
-// // };
+// // const features = [
+// //   {
+// //     icon: <Cpu />,
+// //     title: "Cutting-Edge Research",
+// //     description:
+// //       "Explore recent advances and practical innovations in AI, ML, and Robotics.",
+// //   },
+// //   {
+// //     icon: <Globe />,
+// //     title: "Global Networking",
+// //     description:
+// //       "Connect with researchers, students, and professionals worldwide.",
+// //   },
+// //   {
+// //     icon: <Mic2 />,
+// //     title: "World-Class Speakers",
+// //     description:
+// //       "Insights from leading researchers and industry experts.",
+// //   },
+// //   {
+// //     icon: <FileText />,
+// //     title: "Publication Opportunities",
+// //     description:
+// //       "Present your work and gain official conference recognition.",
+// //   },
+// //   {
+// //     icon: <Bot />,
+// //     title: "Industry & Innovation",
+// //     description:
+// //       "Engage with emerging technologies and real-world applications.",
+// //   },
+// //   {
+// //     icon: <Briefcase />,
+// //     title: "Career & Academic Growth",
+// //     description:
+// //       "Build your profile, get feedback, and expand your network.",
+// //   },
+// // ];
 
 // // const WhyAttendNew: React.FC = () => {
-// //   const features = [
-// //     { icon: <Cpu />, title: "Cutting-Edge Research", description: "Explore recent advances, emerging ideas, and practical innovations across AI, Machine Learning, and Robotics through peer-reviewed presentations." },
-// //     { icon: <Globe />, title: "Global Networking", description: "Connect with researchers, faculty members, students, and industry professionals from around the world in a collaborative academic environment." },
-// //     { icon: <Mic2 />, title: "World-Class Speakers", description: "Gain insights from experienced researchers, technical speakers, and industry practitioners sharing real-world applications and research perspectives." },
-// //     { icon: <FileText />, title: "Publication Opportunities", description: "Present your research, case study, or academic work through oral or poster presentations and receive official conference recognition." },
-// //     { icon: <Bot />, title: "Industry & Innovation", description: "Engage with applied research, emerging technologies, and real-world use cases in AI, robotics, and intelligent systems." },
-// //     { icon: <Briefcase />, title: "Career & Academic Growth", description: "Strengthen your academic profile, improve presentation skills, receive peer feedback, and expand professional connections." }
-// //   ];
-
 // //   return (
-// //     <section className="
-// //       relative min-h-screen 
-// //       py-16 sm:py-8 lg:py-16       /* ✅ mobile-first spacing */
-// //       px-4 sm:px-6 lg:px-8
-// //       bg-[#020617] overflow-hidden
-// //       flex flex-col justify-center
-// //     ">
-// //       <div className="max-w-7xl mx-auto relative z-10 w-full">
+// //     <section className="py-16 px-6 bg-white">
+// //       <div className="max-w-6xl mx-auto">
 
 // //         {/* Header */}
-// //         <div className="text-center mb-12 sm:mb-16">
-// //           {/* <h2 className="
-// //             text-3xl sm:text-4xl md:text-5xl 
-// //             font-bold text-white 
-// //             mb-3 sm:mb-4
-// //           ">
-// //             Why Attend AIMLR 2026?
-// //           </h2> */}
-
-// //           <h2 className="text-3xl font-bold text-[#ffffff] mb-8 text-center">
-// //            WHY ATTEND AIMLR 2026 ?
+// //         <div className="text-center mb-12">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+// //             Why Attend <span className="text-slate-600">ICBME 2026?</span>
 // //           </h2>
-
-// //           <p className="
-// //             text-sm sm:text-base md:text-lg
-// //             text-blue-200/70 
-// //             max-w-2xl mx-auto
-// //           ">
-// //             A global platform advancing Artificial Intelligence, Machine Learning & Robotics.
+// //           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+// //             Premier platform for Artificial Intelligence, Machine Learning, and Robotics research.
 // //           </p>
 // //         </div>
 
-// //         {/* Grid */}
-// //         <div className="
-// //           grid grid-cols-1 
-// //           sm:grid-cols-2 
-// //           lg:grid-cols-3
-// //           gap-6 sm:gap-4 lg:gap-6   /* ✅ tighter on mobile */
-// //           px-0 sm:px-4 lg:px-16
-// //         ">
+// //         {/* Compact Grid */}
+// //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 // //           {features.map((feature, index) => (
-// //             <FeatureCard key={index} {...feature} />
+// //             <div
+// //               key={index}
+// //               className="bg-gray-50 rounded-xl p-6 text-center border border-gray-100
+// //                          hover:shadow-md hover:border-slate-200 transition-all duration-300"
+// //             >
+// //               <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+// //                 {React.cloneElement(feature.icon as React.ReactElement, {
+// //                   size: 28,
+// //                 })}
+// //               </div>
+// //               <h3 className="text-xl font-medium text-gray-900 mb-3">
+// //                 {feature.title}
+// //               </h3>
+// //               <p className="text-sm text-gray-600 leading-relaxed">
+// //                 {feature.description}
+// //               </p>
+// //             </div>
 // //           ))}
 // //         </div>
 
@@ -298,106 +626,99 @@
 //   Briefcase,
 // } from "lucide-react";
 
-// interface Feature {
-//   icon: React.ReactNode;
-//   title: string;
-//   description: string;
-// }
+// /* ================= FEATURES ================= */
 
-// const features: Feature[] = [
+// const features = [
 //   {
-//     icon: <Cpu />,
-//     title: "Cutting-Edge Research",
+//     icon: <Mic2 />,
+//     title: "Expert Keynotes & Plenary Talks",
 //     description:
-//       "Explore recent advances, emerging ideas, and practical innovations across Artificial Intelligence, Machine Learning, and Robotics.",
+//       "Gain insights from leading researchers, clinicians, and thought leaders on breakthroughs in biomedical engineering and AI-assisted medicine.",
 //   },
 //   {
 //     icon: <Globe />,
-//     title: "Global Networking",
+//     title: "Interdisciplinary Networking",
 //     description:
-//       "Connect with researchers, faculty members, students, and industry professionals from around the world.",
-//   },
-//   {
-//     icon: <Mic2 />,
-//     title: "World-Class Speakers",
-//     description:
-//       "Gain insights from experienced researchers and industry practitioners sharing real-world applications.",
-//   },
-//   {
-//     icon: <FileText />,
-//     title: "Publication Opportunities",
-//     description:
-//       "Present your research through oral or poster sessions and receive official conference recognition.",
+//       "Connect with innovators from medical schools, research institutes, industry R&D labs, and healthcare delivery systems worldwide.",
 //   },
 //   {
 //     icon: <Bot />,
-//     title: "Industry & Innovation",
+//     title: "Innovations Showcase",
 //     description:
-//       "Engage with applied research, emerging technologies, and real-world use cases in AI and robotics.",
+//       "Experience live demonstrations of cutting-edge technologies including medical robotics, AI diagnostic platforms, and smart biomedical devices.",
 //   },
 //   {
 //     icon: <Briefcase />,
-//     title: "Career & Academic Growth",
+//     title: "Workshops & Panel Discussions",
 //     description:
-//       "Strengthen your academic profile, receive peer feedback, and expand your professional network.",
+//       "Participate in practical sessions covering regulatory strategy, clinical trials design, commercialization, and ethical deployment of healthcare technologies.",
+//   },
+//   {
+//     icon: <FileText />,
+//     title: "Research Presentations",
+//     description:
+//       "Explore oral and poster presentations from global researchers showcasing emerging work in biomedical engineering and healthcare technologies.",
+//   },
+//   {
+//     icon: <Cpu />,
+//     title: "Future-Ready Healthcare",
+//     description:
+//       "Discover how AI, digital health, and advanced biomedical systems are transforming next-generation healthcare delivery and patient care.",
 //   },
 // ];
 
+// /* ================= COMPONENT ================= */
+
 // const WhyAttendNew: React.FC = () => {
 //   return (
-//     <section className="bg-white py-20 px-4">
-//       <div className="max-w-7xl mx-auto">
+//     <section className="py-16 px-6 bg-white">
+//       <div className="max-w-6xl mx-auto">
 
 //         {/* Header */}
-//         <div className="text-center mb-16">
-//           <h2 className="text-3xl md:text-4xl font-bold text-[#0B5ED7] mb-4">
-//             Why Attend AIMLR 2026?
+//         <div className="text-center mb-12">
+//           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+//             Why Attend <span className="text-slate-600">the Summit?</span>
 //           </h2>
-//           <p className="text-[#1F2937]/70 max-w-2xl mx-auto text-lg">
-//             A premier international platform advancing Artificial Intelligence,
-//             Machine Learning, and Robotics research.
+//           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+//             A premier global forum advancing biomedical engineering, healthcare
+//             innovation, AI-enabled medicine, and translational research.
 //           </p>
 //         </div>
 
-//         {/* Features List */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
+//         {/* Grid */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 //           {features.map((feature, index) => (
 //             <div
 //               key={index}
-//               className="relative pl-6 border-l-4 border-[#00B4D8] bg-[#EAF2FF]/40
-//               p-6 rounded-lg hover:bg-[#EAF2FF]/70 transition-all"
+//               className="bg-gray-50 rounded-xl p-6 text-center border border-gray-100
+//                          hover:shadow-md hover:border-slate-200 transition-all duration-300"
 //             >
-//               {/* Icon */}
-//               <div className="mb-4">
-//                 <div
-//                   className="w-12 h-12 rounded-full flex items-center justify-center
-//                   bg-[#0B5ED7]/10 text-[#0B5ED7]"
-//                 >
-//                   {React.cloneElement(feature.icon as React.ReactElement, {
-//                     size: 22,
-//                   })}
-//                 </div>
+//               <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+//                 {React.cloneElement(feature.icon as React.ReactElement, {
+//                   size: 28,
+//                 })}
 //               </div>
-
-//               {/* Content */}
-//               <h3 className="text-xl font-semibold text-[#1F2937] mb-2">
+//               <h3 className="text-xl font-medium text-gray-900 mb-3">
 //                 {feature.title}
 //               </h3>
-
-//               <p className="text-[#1F2937]/70 leading-relaxed">
+//               <p className="text-sm text-gray-600 leading-relaxed">
 //                 {feature.description}
 //               </p>
 //             </div>
 //           ))}
-
 //         </div>
+
 //       </div>
 //     </section>
 //   );
 // };
 
 // export default WhyAttendNew;
+
+
+
+
+
 
 
 
@@ -411,102 +732,118 @@ import {
   Briefcase,
 } from "lucide-react";
 
-interface Feature {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
+/* ================= FEATURES ================= */
 
-const features: Feature[] = [
+const features = [
   {
-    icon: <Cpu />,
-    title: "Cutting-Edge Research",
+    icon: <Mic2 />,
+    title: "Expert Keynotes & Plenary Talks",
     description:
-      "Explore recent advances, emerging ideas, and practical innovations across Artificial Intelligence, Machine Learning, and Robotics.",
+      "Gain insights from leading researchers, clinicians, and thought leaders on breakthroughs in biomedical engineering and AI-assisted medicine.",
+    gradient: "from-[#D1FAE5] via-[#ECFDF5] to-[#F0FDFA]",
+    iconBg: "bg-[#3B6F6A]",
   },
   {
     icon: <Globe />,
-    title: "Global Networking",
+    title: "Interdisciplinary Networking",
     description:
-      "Connect with researchers, faculty members, students, and industry professionals from around the world.",
-  },
-  {
-    icon: <Mic2 />,
-    title: "World-Class Speakers",
-    description:
-      "Gain insights from experienced researchers and industry practitioners sharing real-world applications.",
-  },
-  {
-    icon: <FileText />,
-    title: "Publication Opportunities",
-    description:
-      "Present your research through oral or poster sessions and receive official conference recognition.",
+      "Connect with innovators from medical schools, research institutes, industry R&D labs, and healthcare delivery systems worldwide.",
+    gradient: "from-[#DBEAFE] via-[#EFF6FF] to-[#F8FAFC]",
+    iconBg: "bg-[#2563EB]",
   },
   {
     icon: <Bot />,
-    title: "Industry & Innovation",
+    title: "Innovations Showcase",
     description:
-      "Engage with applied research, emerging technologies, and real-world use cases in AI and robotics.",
+      "Experience live demonstrations of cutting-edge technologies including medical robotics, AI diagnostic platforms, and smart biomedical devices.",
+    gradient: "from-[#EDE9FE] via-[#F5F3FF] to-[#FAF5FF]",
+    iconBg: "bg-[#7C3AED]",
   },
   {
     icon: <Briefcase />,
-    title: "Career & Academic Growth",
+    title: "Workshops & Panel Discussions",
     description:
-      "Strengthen your academic profile, receive peer feedback, and expand your professional network.",
+      "Participate in practical sessions covering regulatory strategy, clinical trials design, commercialization, and ethical deployment of healthcare technologies.",
+    gradient: "from-[#FFF7ED] via-[#FFFBEB] to-[#FEFCE8]",
+    iconBg: "bg-[#D97706]",
+  },
+  {
+    icon: <FileText />,
+    title: "Research Presentations",
+    description:
+      "Explore oral and poster presentations from global researchers showcasing emerging work in biomedical engineering and healthcare technologies.",
+    gradient: "from-[#FCE7F3] via-[#FDF2F8] to-[#FFF1F2]",
+    iconBg: "bg-[#BE185D]",
+  },
+  {
+    icon: <Cpu />,
+    title: "Future-Ready Healthcare",
+    description:
+      "Discover how AI, digital health, and advanced biomedical systems are transforming next-generation healthcare delivery and patient care.",
+    gradient: "from-[#ECFEFF] via-[#F0FDFA] to-[#F8FAFC]",
+    iconBg: "bg-[#0F766E]",
   },
 ];
 
+/* ================= COMPONENT ================= */
+
 const WhyAttendNew: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-[#ECFDF5] to-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-6 bg-[#FFFFFF]">
+      <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#047857] mb-4">
-            Why Attend AIMLR 2026?
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2F3E3B]">
+            Why Attend <span className="text-[#3B6F6A]">the Summit?</span>
           </h2>
-          <p className="text-[#64748B] max-w-2xl mx-auto text-lg">
-            A premier international platform advancing Artificial Intelligence,
-            Machine Learning, and Robotics research.
+          <p className="mt-4 text-[#5F6F6C] max-w-2xl mx-auto">
+            A premier global forum advancing biomedical engineering, healthcare
+            innovation, AI-enabled medicine, and translational research.
           </p>
         </div>
 
-        {/* Features List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="relative pl-6 border-l-4 border-[#A7F3D0]
-              bg-white p-6 rounded-xl shadow-sm
-              hover:shadow-lg hover:border-[#047857]
-              transition-all"
+              className={`
+               p-7 text-center
+                border border-[#E6DED2]
+                bg-gradient-to-br bg-[#EEF4F2]
+                shadow-sm
+                hover:shadow-xl hover:-translate-y-1
+                transition-all duration-300
+              `}
             >
               {/* Icon */}
-              <div className="mb-4">
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center
-                  bg-[#ECFDF5] text-[#047857]"
-                >
-                  {React.cloneElement(feature.icon as React.ReactElement, {
-                    size: 22,
-                  })}
-                </div>
+              <div
+                className={`
+                  w-14 h-14 mx-auto mb-5
+                  rounded-xl flex items-center justify-center
+                  text-white shadow-md
+                  ${feature.iconBg}
+                `}
+              >
+                {React.cloneElement(feature.icon as React.ReactElement, {
+                  size: 26,
+                })}
               </div>
 
-              {/* Content */}
-              <h3 className="text-xl font-semibold text-[#1E293B] mb-2">
+              {/* Title */}
+              <h3 className="text-lg font-semibold text-[#2F3E3B] mb-3">
                 {feature.title}
               </h3>
 
-              <p className="text-[#64748B] leading-relaxed">
+              {/* Description */}
+              <p className="text-sm text-[#5F6F6C] leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
-
         </div>
+
       </div>
     </section>
   );

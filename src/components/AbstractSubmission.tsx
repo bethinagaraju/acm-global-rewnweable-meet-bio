@@ -1431,26 +1431,26 @@ const AbstractSubmission: React.FC = () => {
   return (
     <section className="bg-gray-50 py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-center text-[#303b71] mb-4">
+        <h2 className="text-4xl font-extrabold text-center text-[#047857] mb-4">
           Abstract Submission
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Submit your research abstract for the Artificial Intelligence, Machine Learning, and Robotics Conference 2026.
+          Submit your research abstract for the Biomedical Engineering and Health Sciences Conference 2026.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center">
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <Award className="mx-auto mb-3" size={32} style={{ color: '#344177' }} />
+            <Award className="mx-auto mb-3" size={32} style={{ color: '#047857' }} />
             <h3 className="font-bold text-lg text-gray-800">Abstract Deadline</h3>
             <p className="text-gray-600">January 30, 2026</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <Bell className="mx-auto mb-3" size={32} style={{ color: '#344177' }} />
+            <Bell className="mx-auto mb-3" size={32} style={{ color: '#047857' }} />
             <h3 className="font-bold text-lg text-gray-800">Notification of Acceptance</h3>
             <p className="text-gray-600">February 15, 2026</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <FileText className="mx-auto mb-3" size={32} style={{ color: '#344177' }} />
+            <FileText className="mx-auto mb-3" size={32} style={{ color: '#047857' }} />
             <h3 className="font-bold text-lg text-gray-800">File Format</h3>
             <p className="text-gray-600">PDF</p>
           </div>
@@ -1549,7 +1549,7 @@ const AbstractSubmission: React.FC = () => {
                 type="submit" 
                 disabled={isSubmitting}
                 className={`inline-flex items-center justify-center px-8 py-3 text-white font-bold rounded-lg shadow-lg transition-transform transform ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105'}`} 
-                style={{ backgroundColor: '#344177' }}
+                style={{ backgroundColor: '#047857' }}
               >
                 {isSubmitting ? (
                   <>

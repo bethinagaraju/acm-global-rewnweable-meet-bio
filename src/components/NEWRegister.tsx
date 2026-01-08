@@ -6958,7 +6958,7 @@ const RegistrationPage: React.FC = () => {
                         </h2>
                         <div className="w-24 h-1 bg-black mx-auto mb-2"></div>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            Register for the AIMLR 2026
+                            Register for the ICBME 2026
                         </p>
                     </div>
 
@@ -6968,11 +6968,11 @@ const RegistrationPage: React.FC = () => {
                             <div className="info-section">
                                 <div className="info-item">
                                     <label>Conference Date</label>
-                                    <p>July 28–30, 2026</p>
+                                    <p>August 25- 27, 2026</p>
                                 </div>
                                 <div className="info-item">
                                     <label>Location</label>
-                                    <p>Crowne Plaza - St. Peter’s Rome, Italy</p>
+                                    <p>Seoul, South Korea</p>
                                 </div>
                                 <div className="info-item">
                                     <label>Registration Deadline</label>
@@ -7340,7 +7340,7 @@ const RegistrationPage: React.FC = () => {
                             </div>
 
                             {/* SUBMIT BUTTON */}
-                            <div className="flex justify-center">
+                            {/* <div className="flex justify-center">
                                 <button
                                     type="submit"
                                     disabled={loading || verifyingPayment}
@@ -7351,7 +7351,24 @@ const RegistrationPage: React.FC = () => {
                                 >
                                     {loading ? 'Processing...' : 'Register & Pay Now'}
                                 </button>
-                            </div>
+                            </div> */}
+
+
+                            <div className="flex justify-center">
+  <button
+    type="button"
+    disabled
+    className="
+      px-8 py-3 rounded-lg font-semibold
+      bg-gray-300 text-gray-600
+      cursor-not-allowed
+      opacity-80
+    "
+  >
+    Submit
+  </button>
+</div>
+
                         </form>
                     </div>
                 </div>

@@ -5,28 +5,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// const logos = [
-//   { src: "purdue-university.png", alt: "University 1" },
-//   { src: "shanghai-jiao-tong-university.webp", alt: "University 2" },
-//   { src: "princeton-university.webp", alt: "University 4" },
-//   { src: "university-of-milan.webp", alt: "University 5" },
-//   { src: "university-of-electronic-science-technology-china.webp", alt: "University 6" },
-//   { src: "copenhagen-university.webp", alt: "University 9" },
-//   { src: "penn-state-university.webp", alt: "University 11" },
-//   { src: "san-jose-state-university.webp", alt: "University 12" },
-//   { src: "hochschule-kempten-university-of-applied-sciences.webp", alt: "University 12" },
-// ];
 
 
 const logos = [
-  { src: "purdue-university.png", alt: "Purdue University logo - Partner of AIMLR 2026" },
-  { src: "shanghai-jiao-tong-university.webp", alt: "Shanghai Jiao Tong University logo - Partner of AIMLR 2026" },
-  { src: "princeton-university.webp", alt: "Princeton University logo - Partner of AIMLR 2026" },
-  { src: "university-of-milan.webp", alt: "University of Milan logo - Partner of AIMLR 2026" },
-  { src: "university-of-electronic-science-technology-china.webp", alt: "University of Electronic Science and Technology of China logo - Partner of AIMLR 2026" },
-  { src: "copenhagen-university.webp", alt: "University of Copenhagen logo - Partner of AIMLR 2026" },
-  { src: "penn-state-university.webp", alt: "Pennsylvania State University logo - Partner of AIMLR 2026" },
-  { src: "san-jose-state-university.webp", alt: "San José State University logo - Partner of AIMLR 2026" },
+  { src: "purdue-university.png", alt: "Purdue University logo - Partner of ICBME 2026" },
+  { src: "shanghai-jiao-tong-university.webp", alt: "Shanghai Jiao Tong University logo - Partner of ICBME 2026" },
+  { src: "princeton-university.webp", alt: "Princeton University logo - Partner of ICBME 2026" },
+  { src: "university-of-milan.webp", alt: "University of Milan logo - Partner of ICBME 2026" },
+  { src: "university-of-electronic-science-technology-china.webp", alt: "University of Electronic Science and Technology of China logo - Partner of ICBME 2026" },
+  { src: "copenhagen-university.webp", alt: "University of Copenhagen logo - Partner of ICBME 2026" },
+  { src: "penn-state-university.webp", alt: "Pennsylvania State University logo - Partner of ICBME 2026" },
+  { src: "san-jose-state-university.webp", alt: "San José State University logo - Partner of ICBME 2026" },
   { src: "hochschule-kempten-university-of-applied-sciences.webp", alt: "Kempten University of Applied Sciences logo" },
 ];
 
@@ -74,7 +63,7 @@ const CompanyCarousel = () => {
     <section className="my-10 px-4 md:px-10 mb-0" aria-label="Partner Institutions">
       <h2
         className="text-center text-2xl md:text-3xl font-bold mb-2"
-        style={{ fontFamily: "'Manrope', sans-serif", color: "#0B5ED7" }}
+        style={{ fontFamily: "'Manrope', sans-serif", color: "#2F3E3B" }}
       >
         PARTNER INSTITUTIONS & SPONSORS
       </h2>

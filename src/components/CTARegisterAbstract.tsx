@@ -1,7 +1,75 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { UserPlus, FileText, ArrowRight } from 'lucide-react';
-// import { motion } from 'framer-motion';
+// // import React from 'react';
+// // import { Link } from 'react-router-dom';
+// // import { UserPlus, FileText, ArrowRight } from 'lucide-react';
+// // import { motion } from 'framer-motion';
+
+// // const CTARegisterAbstract: React.FC = () => {
+// //   return (
+// //     <motion.section
+// //       className="py-12 px-4"
+// //       initial={{ opacity: 0, y: 12 }}
+// //       animate={{ opacity: 1, y: 0 }}
+// //       transition={{ duration: 0.6, ease: 'easeOut' }}
+// //     >
+// //       <div className="container mx-auto max-w-5xl">
+// //         <div className="bg-[#0B5ED7] text-white shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+
+// //           {/* Left text */}
+// //           <div className="flex-1 text-center md:text-left">
+// //             <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: "'Manrope', sans-serif" }}>
+// //               Ready to join ICBME 2026?
+// //             </h2>
+// //             <p className="text-indigo-100 text-sm md:text-base max-w-2xl">
+// //               Secure your spot today or submit your research — two quick actions to become part of the global AI, ML & Robotics community.
+// //             </p>
+// //           </div>
+
+// //           {/* Buttons */}
+// //           <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4">
+// //             <Link to="/register" className="w-full sm:w-auto" title="Register for ICBME 2026 Conference" aria-label="Register for ICBME 2026 Conference">
+// //               <motion.button
+// //                 whileHover={{ scale: 1.02 }}
+// //                 whileTap={{ scale: 0.98 }}
+// //                 className="flex items-center gap-3 justify-center px-5 py-3 font-semibold bg-white text-indigo-800 shadow hover:shadow-md transition-all w-full sm:w-auto"
+// //                 title="Register for ICBME 2026 Conference"
+// //                 aria-label="Register for ICBME 2026 Conference"
+// //               >
+// //                 <UserPlus className="w-5 h-5 text-[#0B5ED7]" title="Register for ICBME 2026 Conference" aria-label="Register for ICBME 2026 Conference" />
+// //                 <span>Register</span>
+// //                 <ArrowRight className="w-4 h-4 text-[#0B5ED7] ml-1" title="Register for ICBME 2026 Conference" aria-label="Register for ICBME 2026 Conference" />
+// //               </motion.button>
+// //             </Link>
+
+// //             <Link to="/AbstractSubmission" className="w-full sm:w-auto" title="Submit Abstract for ICBME 2026 Conference" aria-label="Submit Abstract for ICBME 2026 Conference">
+// //               <motion.button
+// //                 whileHover={{ scale: 1.02 }}
+// //                 whileTap={{ scale: 0.98 }}
+// //                 className="flex items-center gap-3 justify-center px-5 py-3 font-semibold bg-transparent border border-white text-white hover:bg-white/10 transition-all w-full sm:w-auto"
+// //                 title="Submit Abstract for ICBME 2026 Conference"
+// //                 aria-label="Submit Abstract for ICBME 2026 Conference"
+// //               >
+// //                 <FileText className="w-5 h-5 text-white/90" />
+// //                 <span>Abstract Submission</span>
+// //                 <ArrowRight className="w-4 h-4 text-white ml-1"/>
+// //               </motion.button>
+// //             </Link>
+// //           </div>
+
+// //         </div>
+// //       </div>
+// //     </motion.section>
+// //   );
+// // };
+
+// // export default CTARegisterAbstract;
+
+
+
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import { UserPlus, FileText, ArrowRight } from "lucide-react";
+// import { motion } from "framer-motion";
 
 // const CTARegisterAbstract: React.FC = () => {
 //   return (
@@ -9,52 +77,78 @@
 //       className="py-12 px-4"
 //       initial={{ opacity: 0, y: 12 }}
 //       animate={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.6, ease: 'easeOut' }}
+//       transition={{ duration: 0.6, ease: "easeOut" }}
 //     >
 //       <div className="container mx-auto max-w-5xl">
-//         <div className="bg-[#0B5ED7] text-white shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+//         <div className="bg-[#047857] text-white shadow-xl rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
 
 //           {/* Left text */}
 //           <div className="flex-1 text-center md:text-left">
-//             <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: "'Manrope', sans-serif" }}>
-//               Ready to join AIMLR 2026?
+//             <h2
+//               className="text-2xl md:text-3xl font-bold mb-2"
+//               style={{ fontFamily: "'Manrope', sans-serif" }}
+//             >
+//               Ready to join ICBME 2026?
 //             </h2>
-//             <p className="text-indigo-100 text-sm md:text-base max-w-2xl">
-//               Secure your spot today or submit your research — two quick actions to become part of the global AI, ML & Robotics community.
+//             <p className="text-[#ECFDF5] text-sm md:text-base max-w-2xl">
+//               Secure your spot today or submit your research — two quick actions
+//               to become part of the global AI, ML & Robotics community.
 //             </p>
 //           </div>
 
 //           {/* Buttons */}
 //           <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4">
-//             <Link to="/register" className="w-full sm:w-auto" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference">
+
+//             {/* Register – Primary */}
+//             <Link
+//               to="/register"
+//               className="w-full sm:w-auto"
+//               title="Register for ICBME 2026 Conference"
+//               aria-label="Register for ICBME 2026 Conference"
+//             >
 //               <motion.button
-//                 whileHover={{ scale: 1.02 }}
-//                 whileTap={{ scale: 0.98 }}
-//                 className="flex items-center gap-3 justify-center px-5 py-3 font-semibold bg-white text-indigo-800 shadow hover:shadow-md transition-all w-full sm:w-auto"
-//                 title="Register for AIMLR 2026 Conference"
-//                 aria-label="Register for AIMLR 2026 Conference"
+//                 whileHover={{ scale: 1.03 }}
+//                 whileTap={{ scale: 0.97 }}
+//                 className="
+//                   flex items-center gap-3 justify-center
+//                   px-5 py-3 font-semibold
+//                   bg-[#84CC16] text-[#1E293B]
+//                   rounded-md shadow-md hover:shadow-lg
+//                   transition-all w-full sm:w-auto
+//                 "
 //               >
-//                 <UserPlus className="w-5 h-5 text-[#0B5ED7]" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference" />
+//                 <UserPlus className="w-5 h-5" />
 //                 <span>Register</span>
-//                 <ArrowRight className="w-4 h-4 text-[#0B5ED7] ml-1" title="Register for AIMLR 2026 Conference" aria-label="Register for AIMLR 2026 Conference" />
+//                 <ArrowRight className="w-4 h-4 ml-1" />
 //               </motion.button>
 //             </Link>
 
-//             <Link to="/AbstractSubmission" className="w-full sm:w-auto" title="Submit Abstract for AIMLR 2026 Conference" aria-label="Submit Abstract for AIMLR 2026 Conference">
+//             {/* Abstract Submission – Secondary */}
+//             <Link
+//               to="/AbstractSubmission"
+//               className="w-full sm:w-auto"
+//               title="Submit Abstract for ICBME 2026 Conference"
+//               aria-label="Submit Abstract for ICBME 2026 Conference"
+//             >
 //               <motion.button
-//                 whileHover={{ scale: 1.02 }}
-//                 whileTap={{ scale: 0.98 }}
-//                 className="flex items-center gap-3 justify-center px-5 py-3 font-semibold bg-transparent border border-white text-white hover:bg-white/10 transition-all w-full sm:w-auto"
-//                 title="Submit Abstract for AIMLR 2026 Conference"
-//                 aria-label="Submit Abstract for AIMLR 2026 Conference"
+//                 whileHover={{ scale: 1.03 }}
+//                 whileTap={{ scale: 0.97 }}
+//                 className="
+//                   flex items-center gap-3 justify-center
+//                   px-5 py-3 font-semibold
+//                   bg-transparent border border-white
+//                   text-white rounded-md
+//                   hover:bg-white/10
+//                   transition-all w-full sm:w-auto
+//                 "
 //               >
 //                 <FileText className="w-5 h-5 text-white/90" />
 //                 <span>Abstract Submission</span>
-//                 <ArrowRight className="w-4 h-4 text-white ml-1"/>
+//                 <ArrowRight className="w-4 h-4 ml-1" />
 //               </motion.button>
 //             </Link>
-//           </div>
 
+//           </div>
 //         </div>
 //       </div>
 //     </motion.section>
@@ -62,6 +156,7 @@
 // };
 
 // export default CTARegisterAbstract;
+
 
 
 
@@ -74,25 +169,33 @@ import { motion } from "framer-motion";
 const CTARegisterAbstract: React.FC = () => {
   return (
     <motion.section
-      className="py-12 px-4"
+      className="py-16 px-4 bg-[#FAF7F2] border-t border-[#E8E1D6]"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto max-w-5xl">
-        <div className="bg-[#047857] text-white shadow-xl rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <div
+          className="
+            bg-[#FDFBF7] border border-[#E6DED2]
+            shadow-md rounded-2xl
+            p-6 md:p-10
+            flex flex-col md:flex-row
+            items-center gap-6 md:gap-10
+          "
+        >
 
           {/* Left text */}
           <div className="flex-1 text-center md:text-left">
             <h2
-              className="text-2xl md:text-3xl font-bold mb-2"
+              className="text-2xl md:text-3xl font-bold mb-2 text-[#2F3E3B]"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              Ready to join AIMLR 2026?
+              Ready to join ICBME 2026?
             </h2>
-            <p className="text-[#ECFDF5] text-sm md:text-base max-w-2xl">
+            <p className="text-[#5F6F6C] text-sm md:text-base max-w-2xl">
               Secure your spot today or submit your research — two quick actions
-              to become part of the global AI, ML & Robotics community.
+              to become part of the global biomedical engineering and healthcare community.
             </p>
           </div>
 
@@ -103,8 +206,8 @@ const CTARegisterAbstract: React.FC = () => {
             <Link
               to="/register"
               className="w-full sm:w-auto"
-              title="Register for AIMLR 2026 Conference"
-              aria-label="Register for AIMLR 2026 Conference"
+              title="Register for ICBME 2026 Conference"
+              aria-label="Register for ICBME 2026 Conference"
             >
               <motion.button
                 whileHover={{ scale: 1.03 }}
@@ -112,8 +215,9 @@ const CTARegisterAbstract: React.FC = () => {
                 className="
                   flex items-center gap-3 justify-center
                   px-5 py-3 font-semibold
-                  bg-[#84CC16] text-[#1E293B]
-                  rounded-md shadow-md hover:shadow-lg
+                  bg-[#3B6F6A] text-white
+                  rounded-lg shadow-sm hover:shadow-md
+                  hover:bg-[#335F5B]
                   transition-all w-full sm:w-auto
                 "
               >
@@ -127,8 +231,8 @@ const CTARegisterAbstract: React.FC = () => {
             <Link
               to="/AbstractSubmission"
               className="w-full sm:w-auto"
-              title="Submit Abstract for AIMLR 2026 Conference"
-              aria-label="Submit Abstract for AIMLR 2026 Conference"
+              title="Submit Abstract for ICBME 2026 Conference"
+              aria-label="Submit Abstract for ICBME 2026 Conference"
             >
               <motion.button
                 whileHover={{ scale: 1.03 }}
@@ -136,13 +240,15 @@ const CTARegisterAbstract: React.FC = () => {
                 className="
                   flex items-center gap-3 justify-center
                   px-5 py-3 font-semibold
-                  bg-transparent border border-white
-                  text-white rounded-md
-                  hover:bg-white/10
+                  bg-[#F6F1E9]
+                  border border-[#E6DED2]
+                  text-[#2F3E3B]
+                  rounded-lg
+                  hover:bg-[#EEF4F2]
                   transition-all w-full sm:w-auto
                 "
               >
-                <FileText className="w-5 h-5 text-white/90" />
+                <FileText className="w-5 h-5 text-[#3B6F6A]" />
                 <span>Abstract Submission</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
               </motion.button>
