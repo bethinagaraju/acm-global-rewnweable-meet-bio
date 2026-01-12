@@ -405,7 +405,7 @@ import { Link } from "react-router-dom";
 
 const VenueAndContactSection: React.FC = () => {
   return (
-    <section className="bg-[#FAF7F2] py-24 px-6 border-t border-[#E8E1D6]">
+    <section className="py-10 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
@@ -422,7 +422,7 @@ const VenueAndContactSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Venue Card */}
-          <div className="group bg-[#FDFBF7] rounded-2xl p-8 border border-[#E6DED2] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div className="group rounded-2xl p-8 border border-[#E6DED2] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-[#EEF4F2] border border-[#DCE7E3] flex items-center justify-center text-[#3B6F6A]">
@@ -458,7 +458,10 @@ const VenueAndContactSection: React.FC = () => {
           </div>
 
           {/* Contact Card */}
-          <div className="group bg-[#F6F1E9] rounded-2xl p-8 border border-[#E6DED2] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+          <div style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }} className="group p-8 border border-[#E6DED2] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-[#EEF4F2] flex items-center justify-center text-[#3B6F6A]">
@@ -480,7 +483,7 @@ const VenueAndContactSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-[#E6DED2]">
+            <div className="mt-8 pt-8 border-t border-[#FFFFFF]">
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center w-full sm:w-auto bg-[#3B6F6A] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#335F5B] transition-all shadow-sm hover:shadow-md"

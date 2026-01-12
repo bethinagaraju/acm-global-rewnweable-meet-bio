@@ -532,7 +532,7 @@ const SpeakersPage: React.FC = () => {
       <Header />
 
       {/* ================= SPEAKERS SECTION ================= */}
-      <section className="bg-[#FFFFFF] py-20 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
 
           {/* Title */}
@@ -554,14 +554,16 @@ const SpeakersPage: React.FC = () => {
                 key={idx}
                 className="
                   relative
-                  bg-[#FDFBF7]
-                  border border-[#E6DED2]
-                  
+                 
                   p-6
                   text-center
                   transition-all duration-300
                   hover:shadow-xl
                 "
+                style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
               >
                 {/* Badge */}
                 {speaker.type && (
@@ -578,7 +580,7 @@ const SpeakersPage: React.FC = () => {
                 />
 
                 {/* Content */}
-                <h3 className="mt-4 font-semibold text-[#2F3E3B] text-[15.5px]">
+                <h3 className="mt-4 font-semibold text-[#000000] text-[15.5px]">
                   {speaker.name}
                 </h3>
 
@@ -599,9 +601,12 @@ const SpeakersPage: React.FC = () => {
               {committee.map((member, i) => (
                 <div
                   key={i}
+                  style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
                   className="
-                    bg-[#F6F1E9]
-                    border border-[#E6DED2]
+                   
                     p-3
                     flex flex-col sm:flex-row
                     sm:items-center
@@ -617,7 +622,7 @@ const SpeakersPage: React.FC = () => {
                     </p>
                   </div>
 
-                  <span className="mt-3 sm:mt-0 text-xs font-semibold text-[#3B6F6A]">
+                  <span className="mt-3 sm:mt-0 text-xs font-semibold text-[#000000]">
                     Committee Member
                   </span>
                 </div>

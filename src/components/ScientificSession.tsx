@@ -581,11 +581,15 @@ const ScientificSession: React.FC = () => {
         {sessions.map((session, index) => (
           <div
             key={index}
+            style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
             className="
               group relative
-              bg-[#FDFBF7]
+              
               px-6 py-4
-              border border-[#E6DED2]
+              
               shadow-sm
               transition-all duration-300
               hover:shadow-lg
@@ -605,7 +609,7 @@ const ScientificSession: React.FC = () => {
               "
             />
 
-            <span className="text-[#5F6F6C] font-semibold text-[15px] leading-snug">
+            <span className="text-[#000000] font-semibold text-[15px] leading-snug">
               {session}
             </span>
           </div>

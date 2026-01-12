@@ -341,7 +341,7 @@ import { Link } from "react-router-dom";
 
 const CallForPosters: React.FC = () => {
   return (
-    <div className="font-sans bg-[#FAF7F2] text-[#5F6F6C]">
+    <div className="font-sans text-[#5F6F6C]">
 
       {/* ================= HEADER ================= */}
       <section className="px-6 pt-14 pb-10">
@@ -363,23 +363,26 @@ const CallForPosters: React.FC = () => {
       <section className="max-w-5xl mx-auto px-6 pb-16 space-y-8">
 
         {/* INTRO CARD */}
-        <div className="bg-[#FDFBF7] border border-[#E6DED2] rounded-xl p-6">
+        <div style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }} className="border border-[#E6DED2] rounded-xl p-6">
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2 rounded-md bg-[#EEF4F2] text-[#3B6F6A]">
               <FileText className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-[#2F3E3B]">
+            <h3 className="text-lg font-bold text-[#000000]">
               About the Call
             </h3>
           </div>
 
-          <p className="text-[16.5px] leading-relaxed">
+          <p className="text-[16.5px] text-[#000000] leading-relaxed">
             Poster presentations offer an excellent opportunity to visually
             present early-stage research, innovative ideas, case studies, or
             preliminary results.
           </p>
 
-          <p className="mt-2 text-[16.5px] leading-relaxed">
+          <p className="mt-2 text-[16.5px] text-[#000000] leading-relaxed">
             This format is especially suitable for students and early-career
             researchers.
           </p>
@@ -456,9 +459,9 @@ const SectionCard: React.FC<{
   title: string;
   children: React.ReactNode;
 }> = ({ icon, title, children }) => (
-  <div className="bg-[#FDFBF7] border border-[#E6DED2] rounded-xl p-6">
+  <div className="p-6">
     <div className="flex items-center gap-3 mb-4">
-      <div className="p-2 rounded-md bg-[#EEF4F2] text-[#3B6F6A]">
+      <div className="p-2 text-[#3B6F6A]">
         {icon}
       </div>
       <h3 className="text-lg font-bold text-[#2F3E3B]">{title}</h3>

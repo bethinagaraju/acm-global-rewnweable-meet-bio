@@ -610,7 +610,10 @@ const AboutTheCall: React.FC = () => {
         <section className="max-w-5xl mx-auto px-6 pb-16 space-y-8">
 
           {/* INTRO CARD */}
-          <div className="bg-[#FDFBF7] border border-[#E6DED2] rounded-xl p-6">
+          <div className="border border-[#E6DED2] rounded-xl p-6" style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}>
             <div className="flex items-center gap-3 mb-3">
               <div className="p-2 rounded-md bg-[#EEF4F2] text-[#3B6F6A]">
                 <FileText className="w-5 h-5" />
@@ -739,7 +742,7 @@ const SectionCard: React.FC<{
   title: string;
   children: React.ReactNode;
 }> = ({ icon, title, children }) => (
-  <div className="bg-[#FDFBF7] border border-[#E6DED2] rounded-xl p-6">
+  <div className=" rounded-xl p-6">
     <div className="flex items-center gap-3 mb-4">
       <div className="p-2 rounded-md bg-[#EEF4F2] text-[#3B6F6A]">
         {icon}

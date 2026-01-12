@@ -608,7 +608,7 @@ const speakers = [
   return (
     <section
       id="speakers-section"
-      className="bg-[#FAF7F2] py-16 px-4 md:px-10"
+      className="py-16 px-4 md:px-10"
     >
       {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-12">
@@ -628,22 +628,28 @@ const speakers = [
             key={idx}
             className="
               relative
-              bg-[#FDFBF7]
-              border border-[#E6DED2]
+              
               
               shadow-sm hover:shadow-md transition-all
               text-center px-6 pt-10 pb-8
             "
+            style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
           >
-            {/* Badge */}
             <span
               className="
                 absolute top-4 right-4
-                text-xs font-semibold px-3 py-1 rounded-full
-                border border-[#DCE7E3]
-                bg-[#EEF4F2]
-                text-[#3B6F6A]
+                px-3 py-1 rounded-full
               "
+              style={{
+                backgroundColor: "#FFFFFF",
+                color: "#2F7F78",
+                border: "1px solid #CFE3DE",
+                fontSize: "12px",
+                fontWeight: 600,
+              }}
             >
               {speaker.type}
             </span>
@@ -657,12 +663,24 @@ const speakers = [
               />
             </div>
 
-            {/* Content */}
-            <h3 className="text-lg font-semibold text-[#2F3E3B]">
+            <h3
+              className="font-bold"
+              style={{
+                color: "#1F2D2A",
+                fontWeight: 700,
+                fontSize: "18px",
+              }}
+            >
               {speaker.name}
             </h3>
-
-            <p className="mt-1 text-sm text-[#5F6F6C] leading-snug">
+            <p
+              className="mt-1"
+              style={{
+                color: "#161817cb",
+                fontSize: "14px",
+                lineHeight: 1.6,
+              }}
+            >
               {speaker.title}
             </p>
           </div>

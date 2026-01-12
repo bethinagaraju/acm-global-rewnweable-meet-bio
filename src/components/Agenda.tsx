@@ -863,19 +863,23 @@ const Agenda: React.FC = () => {
       <div
         key={index}
         className="
-          bg-[#FDFBF7]
-          border border-[#E6DED2]
+
           rounded-xl
           p-5
           mb-4
           max-w-4xl
           mx-auto
         "
+
+        style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
       >
         <div className="flex flex-col sm:flex-row gap-4">
           {/* Time */}
           <div className="sm:w-1/4">
-            <span className="inline-block text-sm font-bold text-[#3B6F6A] bg-[#EEF4F2] px-3 py-1 rounded-full">
+            <span className="inline-block text-sm font-bold text-[#000000] bg-[#EEF4F2] px-3 py-1 rounded-full">
               {item.time}
             </span>
           </div>

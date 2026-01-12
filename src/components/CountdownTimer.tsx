@@ -476,7 +476,7 @@ const CountdownTimer: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-[#FAF7F2] border-t border-[#E6DED2]">
+    <section className="py-8 ">
       <div className="max-w-5xl mx-auto px-4 text-center">
 
         {/* Header */}
@@ -516,7 +516,7 @@ const TimeCard = ({
   highlight?: boolean;
 }) => (
   <div
-    className={`rounded-xl border bg-[#FDFBF7] px-4 py-3 transition-all
+    className={`rounded-xl border bg-[#eef4f2] px-4 py-3 transition-all
       ${highlight ? "border-[#334155] shadow-sm" : "border-[#E6DED2]"}`}
   >
     <div
@@ -528,5 +528,6 @@ const TimeCard = ({
     <div className="text-[10px] uppercase tracking-wider font-medium text-[#6B7280]">
       {label}
     </div>
+
   </div>
 );

@@ -169,7 +169,7 @@ import { motion } from "framer-motion";
 const CTARegisterAbstract: React.FC = () => {
   return (
     <motion.section
-      className="py-16 px-4 bg-[#FAF7F2] border-t border-[#E8E1D6]"
+      className="py-16 px-4"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -177,12 +177,16 @@ const CTARegisterAbstract: React.FC = () => {
       <div className="container mx-auto max-w-5xl">
         <div
           className="
-            bg-[#FDFBF7] border border-[#E6DED2]
-            shadow-md rounded-2xl
+            shadow-md 
             p-6 md:p-10
             flex flex-col md:flex-row
             items-center gap-6 md:gap-10
           "
+
+          style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
         >
 
           {/* Left text */}
@@ -193,7 +197,7 @@ const CTARegisterAbstract: React.FC = () => {
             >
               Ready to join ICBME 2026?
             </h2>
-            <p className="text-[#5F6F6C] text-sm md:text-base max-w-2xl">
+            <p className="text-[#000000]/80 text-sm md:text-base max-w-2xl">
               Secure your spot today or submit your research — two quick actions
               to become part of the global biomedical engineering and healthcare community.
             </p>
@@ -240,11 +244,11 @@ const CTARegisterAbstract: React.FC = () => {
                 className="
                   flex items-center gap-3 justify-center
                   px-5 py-3 font-semibold
-                  bg-[#F6F1E9]
+                  bg-[#FFFFFF]
                   border border-[#E6DED2]
                   text-[#2F3E3B]
                   rounded-lg
-                  hover:bg-[#EEF4F2]
+                  
                   transition-all w-full sm:w-auto
                 "
               >

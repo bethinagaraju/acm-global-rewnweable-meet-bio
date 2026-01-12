@@ -119,14 +119,14 @@ import { Mic2, ArrowRight } from "lucide-react";
 
 function SpeakersBottomSection() {
   return (
-    <section className="relative bg-[#FAF7F2] border-t border-[#E8E1D6] overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Decorative background (kept but smaller visual impact) */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-[#EEF4F2] rounded-full blur-3xl opacity-60" />
         <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-[#F6F1E9] rounded-full blur-3xl opacity-60" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 py-12 text-center">
+      <div className="relative max-w-6xl mx-auto px-6 py-6 text-center">
         {/* Badge */}
         <span className="inline-flex items-center gap-2 mb-4 px-4 py-1 text-xs font-semibold tracking-wider uppercase
           text-[#3B6F6A] bg-[#EEF4F2] border border-[#DCE7E3] rounded-full">

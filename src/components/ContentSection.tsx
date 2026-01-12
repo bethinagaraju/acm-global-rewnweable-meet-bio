@@ -1291,14 +1291,14 @@ const SectionHeader = () => (
 /* ================= INTRO ================= */
 
 const IntroBlock = () => (
-  <Block className="col-span-12 md:col-span-6">
+  <div className="col-span-12 md:col-span-6">
     <Microscope className="mb-6 text-[#3B6F6A]" size={36} />
 
     <h3 className="mb-4 text-2xl font-bold text-[#2F3E3B]">
       Biomedical Engineering & Healthcare Innovation Summit 2026
     </h3>
 
-    <p className="text-[#5F6F6C] leading-relaxed">
+    <p className="text-black leading-relaxed">
       The Biomedical Engineering & Healthcare Innovation Summit 2026 is a premier
       global platform dedicated to advancing research, technology, and
       interdisciplinary collaboration across biomedical engineering, medical
@@ -1311,43 +1311,87 @@ const IntroBlock = () => (
     >
       Learn more <FiArrowRight />
     </a>
-  </Block>
+  </div>
 );
 
 /* ================= FOCUS AREAS ================= */
 
+// const FocusBlock = () => (
+//   <div className="col-span-12 md:col-span-6 border-[#E6DED2]">
+//     <Activity className="mb-6 text-[#3B6F6A]" size={36} />
+
+//     <h3 className="mb-4 text-2xl font-bold text-[#2F3E3B]">
+//       Conference Focus Areas
+//     </h3>
+
+//     <ul className="space-y-3 text-[#2F3E3B] font-medium">
+//       <li>• Medical Imaging & Advanced Diagnostics</li>
+//       <li>• Biomedical Signal & Data Processing</li>
+//       <li>• Wearable, Implantable & Smart Medical Devices</li>
+//       <li>• AI-Enabled Healthcare & Digital Medicine</li>
+//       <li>• Translational Research & Clinical Innovation</li>
+//     </ul>
+//   </div>
+// );
 const FocusBlock = () => (
-  <Block className="col-span-12 md:col-span-6 bg-[#F6F1E9] border-[#E6DED2]">
+  <div
+    className="col-span-12 md:col-span-6 p-8"
+style={{
+  background: `
+    linear-gradient(
+      90deg,
+      #EEF4F2 0%,
+      rgba(238, 244, 242, 0.9) 30%,
+      rgba(238, 244, 242, 0.65) 50%,
+      rgba(238, 244, 242, 0.9) 70%,
+      #EEF4F2 100%
+    )
+  `,
+}}
+  >
     <Activity className="mb-6 text-[#3B6F6A]" size={36} />
 
     <h3 className="mb-4 text-2xl font-bold text-[#2F3E3B]">
       Conference Focus Areas
     </h3>
 
-    <ul className="space-y-3 text-[#2F3E3B] font-medium">
+    <ul className="space-y-3 text-black font-medium">
       <li>• Medical Imaging & Advanced Diagnostics</li>
       <li>• Biomedical Signal & Data Processing</li>
       <li>• Wearable, Implantable & Smart Medical Devices</li>
       <li>• AI-Enabled Healthcare & Digital Medicine</li>
       <li>• Translational Research & Clinical Innovation</li>
     </ul>
-  </Block>
+  </div>
 );
 
 /* ================= KEY TOPICS ================= */
 
 const TopicsBlock = () => (
-  <Block className="col-span-12">
+  <div className="col-span-12 p-8"
+style={{
+  background: `
+    linear-gradient(
+      90deg,
+      #EEF4F2 0%,
+      rgba(238, 244, 242, 0.9) 30%,
+      rgba(238, 244, 242, 0.65) 50%,
+      rgba(238, 244, 242, 0.9) 70%,
+      #EEF4F2 100%
+    )
+  `,
+}}
+>
     <Cpu className="mb-6 text-[#3B6F6A]" size={36} />
 
-    <p className="text-base leading-relaxed text-[#5F6F6C] font-medium">
+    <p className="text-base leading-relaxed text-black font-medium">
       The summit brings together scientists, clinicians, engineers, researchers,
       academicians, and industry leaders to explore breakthroughs in healthcare
       technologies, translational research, and real-world clinical impact.
       Emphasizing interdisciplinary collaboration, the conference fosters
       innovation-driven solutions for next-generation healthcare systems.
     </p>
-  </Block>
+  </div>
 );
 
 /* ================= LOCATION ================= */

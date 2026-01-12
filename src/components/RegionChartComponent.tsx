@@ -1575,7 +1575,7 @@ const RegionChart = () => {
   };
 
   return (
-    <div className="w-full bg-[#FDFBF7] border border-[#E6DED2] shadow rounded-lg p-4">
+    <div className="w-full border shadow  p-4">
       <AgCharts options={options} />
     </div>
   );
@@ -1586,7 +1586,7 @@ const RegionChart = () => {
 ========================= */
 const JobLevelChart = () => (
   <div className="w-full overflow-hidden bg-[#FDFBF7] border border-[#E6DED2] shadow rounded-lg">
-    <div className="bg-[#F6F1E9] px-6 pt-6 pb-4">
+    <div className="bg-[#eef4f2] px-6 pt-6 pb-4">
       <div className="font-semibold text-lg text-[#2F3E3B] mb-2">
         By Job Level
       </div>
@@ -1594,7 +1594,7 @@ const JobLevelChart = () => (
         <span className="text-4xl md:text-[56px] font-semibold text-[#3B6F6A]">
           72%
         </span>
-        <div className="text-sm md:text-base text-[#6B7C78] pb-2">
+        <div className="text-sm md:text-base text-black pb-2">
           Professor / PhD / Doctor / Academic
         </div>
       </div>
@@ -1608,15 +1608,15 @@ const JobLevelChart = () => (
     ].map((item, idx) => (
       <div
         key={idx}
-        className="px-6 py-4 border-t border-[#E8E1D6]"
+        className="px-6 py-4 border-t border-[#E8E1D6] bg-[#eef4f2]"
       >
         <div className="font-semibold text-lg text-[#3B6F6A]">
           {item.value}
         </div>
-        <div className="text-sm text-[#2F3E3B]">{item.label}</div>
+        <div className="text-sm text-black">{item.label}</div>
       </div>
-    ))}
-  </div>
+      ))}
+    </div>
 );
 
 /* =========================
@@ -1624,7 +1624,7 @@ const JobLevelChart = () => (
 ========================= */
 const CompanySizeChart = () => (
   <div className="w-full flex overflow-hidden bg-[#FDFBF7] border border-[#E6DED2] shadow rounded-lg min-h-[260px]">
-    <div className="w-1/2 flex flex-col justify-between bg-[#F6F1E9] p-6">
+    <div className="w-1/2 flex flex-col justify-between bg-[#eef4f2] p-6">
       <div className="font-semibold text-lg text-[#2F3E3B]">
         By Company Size
       </div>
@@ -1710,7 +1710,7 @@ const SectorChart = () => {
   const maxValue = Math.max(...sectors.map(s => s.percent));
 
   return (
-    <div className="w-full bg-[#FDFBF7] border border-[#E6DED2] shadow rounded-lg p-6">
+    <div className="w-full shadow p-6">
       <div className="font-semibold text-lg text-[#2F3E3B] mb-10">
         By Sector
       </div>

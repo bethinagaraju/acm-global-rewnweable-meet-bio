@@ -233,7 +233,7 @@ const SessionTypesSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] py-20 px-6">
+    <section className="py-20 px-6">
       {/* Heading */}
       <div className="max-w-5xl mx-auto text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#2F3E3B]">
@@ -262,6 +262,10 @@ const SessionTypesSection: React.FC = () => {
                 transition-all duration-300
                 hover:shadow-lg
               "
+              style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
             >
               {/* Icon */}
               <div

@@ -709,7 +709,10 @@ const EndFooter: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#FAF7F2] text-sm relative border-t border-[#E8E1D6]">
+    <footer style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }} className="text-sm relative border-t border-[#E8E1D6]">
 
       {/* ================= COOKIE SIDEBAR ================= */}
       <Sidebar
@@ -803,12 +806,12 @@ const EndFooter: React.FC = () => {
               <FaAt className="text-[#3B6F6A]" /> Contact Us
             </h3>
 
-            <div className="space-y-2 text-[#5F6F6C]">
+            <div className="space-y-2 text-[#1F2D2A]">
               <p><strong>Email:</strong> secretary@roboticsaisummit.com</p>
               <p><strong>WhatsApp:</strong> +1 (443) 653-0066</p>
               <p><strong>Address:</strong> 30 N Gould St Ste R Sheridan, WY 82801</p>
             </div>
-          </div>
+          </div>  
 
           {/* QUICK LINKS */}
           <div className="lg:col-span-9">
@@ -847,7 +850,7 @@ const EndFooter: React.FC = () => {
                   <Link
                     key={label as string}
                     to={path as string}
-                    className="text-[#5F6F6C] hover:text-[#3B6F6A] transition hover:translate-x-1 inline-block"
+                    className="text-[#1F2D2A] transition hover:translate-x-1 inline-block"
                     title={`${label} | ICBME 2026 Conference`}
                     aria-label={`${label} | ICBME 2026 Conference`}
                   >
@@ -873,7 +876,7 @@ const EndFooter: React.FC = () => {
 
       {/* ================= BOTTOM BAR ================= */}
       <div className="text-center py-4 border-t border-[#E8E1D6]">
-        <span className="block text-[#6B7C78] text-sm">
+        <span className="block text-[#1F2D2A] text-sm">
           © 2026 All rights reserved. AI, ML & Robotics Conference
         </span>
       </div>

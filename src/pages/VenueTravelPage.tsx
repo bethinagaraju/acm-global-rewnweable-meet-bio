@@ -1028,7 +1028,7 @@ function VenueTravelPage() {
             <div className="grid md:grid-cols-2 gap-8">
 
               {/* AIRPORT */}
-              <div className="bg-[#FDFBF7] border border-[#E6DED2] rounded-xl p-7 shadow-sm">
+              <div className="bg-[#FFFFFF] border border-[#E6DED2] rounded-xl p-7 shadow-sm">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 rounded-lg bg-[#EEF4F2]">
                     <Plane className="w-6 h-6 text-[#3B6F6A]" />
@@ -1056,7 +1056,10 @@ function VenueTravelPage() {
               </div>
 
               {/* LOCAL TRANSPORT */}
-              <div className="bg-[#F6F1E9] border border-dashed border-[#E6DED2] rounded-xl p-7">
+              <div style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }} className="border border-dashed border-[#E6DED2] rounded-xl p-7">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 rounded-full bg-[#EEF4F2]">
                     <Car className="w-6 h-6 text-[#3B6F6A]" />

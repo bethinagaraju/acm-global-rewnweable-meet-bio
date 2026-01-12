@@ -810,12 +810,17 @@ const WhyAttendNew: React.FC = () => {
               key={index}
               className={`
                p-7 text-center
-                border border-[#E6DED2]
-                bg-gradient-to-br bg-[#EEF4F2]
+                
+
                 shadow-sm
                 hover:shadow-xl hover:-translate-y-1
                 transition-all duration-300
               `}
+
+              style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
             >
               {/* Icon */}
               <div
@@ -832,12 +837,14 @@ const WhyAttendNew: React.FC = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold text-[#2F3E3B] mb-3">
+
+              <h3 className="text-lg font-semibold text-[#1F2D2A] mb-3"
+              >
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-[#5F6F6C] leading-relaxed">
+              <p className="text-sm text-black-700 leading-relaxed">
                 {feature.description}
               </p>
             </div>

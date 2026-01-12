@@ -977,7 +977,7 @@ const Testimonials: React.FC = () => {
       ];
 
   return (
-    <section className="bg-[#FAF7F2] py-24 px-4 border-t border-[#E8E1D6]">
+    <section className="py-12 px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Title */}
@@ -1003,11 +1003,16 @@ const Testimonials: React.FC = () => {
             {visibleItems.map((item) => (
               <div
                 key={`${item.id}-${currentIndex}`}
-                className="relative bg-[#FDFBF7] rounded-2xl
+                className="relative rounded-2xl
                 pt-16 px-8 pb-8 border border-[#E6DED2]
                 shadow-sm hover:shadow-md transition-all
                 text-center"
-              >
+
+                style={{
+      background:
+        "linear-gradient(90deg, rgb(238, 244, 242) 0%, rgba(238, 244, 242, 0.54) 39%, rgb(238, 244, 242) 100%, rgba(238, 244, 242, 0.55) 65%)",
+    }}
+              > 
                 {/* Avatar */}
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
                   <div className="w-20 h-20 rounded-full overflow-hidden
@@ -1021,12 +1026,12 @@ const Testimonials: React.FC = () => {
                 </div>
 
                 {/* Name */}
-                <h4 className="mt-4 font-semibold text-lg text-[#2F3E3B]">
+                <h4 className="mt-4 font-semibold text-lg text-[#1F2D2A]">
                   {item.name}
                 </h4>
 
                 {/* Title */}
-                <p className="text-sm text-[#6B7C78] mb-3">
+                <p className="text-sm text-[#4A615C] mb-3">
                   {item.title}
                 </p>
 
@@ -1046,7 +1051,7 @@ const Testimonials: React.FC = () => {
                 </div>
 
                 {/* Message */}
-                <p className="text-[#5F6F6C] text-sm leading-relaxed">
+                <p className="text-[#364B47] text-sm leading-relaxed">
                   {item.message}
                 </p>
               </div>
