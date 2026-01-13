@@ -732,7 +732,7 @@ const GuidelineBlock = ({
 
     <ul className="space-y-2 pl-12">
       {items.map((item, idx) => (
-        <li key={idx} className="text-sm text-[#5F6F6C] leading-relaxed">
+        <li key={idx} className="text-sm text-[#000000] font-semibold leading-relaxed">
           • {item}
         </li>
       ))}

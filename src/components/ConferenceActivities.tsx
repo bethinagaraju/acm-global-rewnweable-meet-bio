@@ -1152,10 +1152,10 @@ const ConferenceActivities: React.FC = () => {
 
                 {/* Text */}
                 <div className="flex-1">
-                  <h3 className="text-base font-semibold text-[#2F3E3B] leading-tight">
+                  <h3 className="text-base font-bold text-[#2F3E3B] leading-tight">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-sm text-[#5F6F6C] leading-relaxed">
+                  <p className="mt-1 text-sm text-[#000000] leading-relaxed">
                     {item.description}
                   </p>
                 </div>

@@ -1038,7 +1038,7 @@ function VenueTravelPage() {
                   </h3>
                 </div>
 
-                <p className="text-[#5F6F6C] mb-5">
+                <p className="text-[#000000] mb-5">
                   <strong>Rome Fiumicino Airport (FCO)</strong> is approximately
                   <strong> 30 km </strong>
                   from the conference venue.
@@ -1069,7 +1069,7 @@ function VenueTravelPage() {
                   </h3>
                 </div>
 
-                <p className="text-[#5F6F6C] mb-5">
+                <p className="text-[#000000] mb-5">
                   Rome offers efficient public transportation connecting all
                   major locations.
                 </p>
@@ -1095,19 +1095,19 @@ function VenueTravelPage() {
                   </h3>
 
                   <ul className="space-y-3 text-sm text-[#5F6F6C]">
-                    <li className="flex gap-2 flex items-center">
+                    <li className="flex gap-2 flex items-center text-[#000000]">
                       <CheckCircle2 className="w-4 h-4 text-[#3B6F6A]" />
                       Visa on Arrival available for 169 countries
                     </li>
-                    <li className="flex gap-2 flex items-center">
+                    <li className="flex gap-2 flex items-center text-[#000000]">
                       <CheckCircle2 className="w-4 h-4 text-[#3B6F6A]" />
                       30-day tourist visa: $35 USD
                     </li>
-                      <li className="flex gap-2 flex items-center">
+                      <li className="flex gap-2 flex items-center text-[#000000]">
                       <CheckCircle2 className="w-4 h-4 text-[#3B6F6A]" />
                       Valid passport with 6+ months validity
                     </li>
-                                          <li className="flex gap-2 flex items-center">
+                                          <li className="flex gap-2 flex items-center text-[#000000]">
                       <CheckCircle2 className="w-4 h-4 text-[#3B6F6A]" />
                       Return ticket required
                     </li>
@@ -1119,7 +1119,7 @@ function VenueTravelPage() {
                     Conference Support
                   </h3>
 
-                  <ul className="space-y-3 text-sm text-[#5F6F6C] ">
+                  <ul className="space-y-3 text-sm text-[#000000] ">
                     <li className="flex gap-2 flex items-center">
                       <Mail className="w-4 h-4 text-[#3B6F6A]" />
                       Invitation letter on request
@@ -1221,7 +1221,7 @@ function VenueTravelPage() {
 function TransportOption({ label }) {
   return (
     <li className="flex justify-between text-sm border-b border-[#E8E1D6] pb-2">
-      <span className="text-[#5F6F6C] font-medium">{label}</span>
+      <span className="text-[#000000] font-medium">{label}</span>
     </li>
   );
 }
@@ -1231,7 +1231,7 @@ function HotelCard({ name, stars, image, distance, price, tag }) {
     <div className="bg-[#FDFBF7] border border-[#E6DED2] rounded-xl overflow-hidden hover:shadow-xl transition">
       <img src={image} alt={name} className="h-48 w-full object-cover" />
       <div className="p-5 space-y-3">
-        <h3 className="font-semibold text-[#2F3E3B]">{name}</h3>
+        <h3 className="font-semibold text-[#000000]">{name}</h3>
         <div className="flex gap-1">
           {[...Array(stars)].map((_, i) => (
             <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />

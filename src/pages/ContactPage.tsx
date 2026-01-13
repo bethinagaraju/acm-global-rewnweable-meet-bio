@@ -424,7 +424,7 @@ const ContactPage: React.FC = () => {
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#2F3E3B]">
             Contact Us
           </h1>
-          <p className="mt-3 text-[#6B7C78] max-w-2xl">
+          <p className="mt-3 text-[#6B7C78] max-w-2xl text-sm text-[#000000] font-semibold">
             If you have questions regarding registration, submissions, or
             conference logistics, please feel free to contact us.
           </p>
@@ -547,7 +547,7 @@ const InfoRow = ({
   <div className="flex gap-3 items-start">
     <div className="text-[#3B6F6A] mt-1">{icon}</div>
     <div>
-      <p className="text-sm font-semibold text-[#2F3E3B]">{title}</p>
+      <p className="text-sm font-semibold text-sm text-[#000000] font-semibold">{title}</p>
       {link ? (
         <a href={link} className="text-sm text-[#5F6F6C] hover:underline">
           {value}

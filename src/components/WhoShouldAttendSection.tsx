@@ -447,7 +447,7 @@ const WhoShouldAttendSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#2F3E3B] mb-3">
             Who Should Attend?
           </h2>
-          <p className="text-[#6B7C78] text-lg max-w-2xl">
+          <p className="text-[#000000] text-lg max-w-2xl">
             Designed for professionals, researchers, leaders, and innovators
             shaping the future of AI and robotics.
           </p>
@@ -469,10 +469,10 @@ const WhoShouldAttendSection: React.FC = () => {
 
                 {/* Text */}
                 <div>
-                  <h3 className="text-xl font-semibold text-[#2F3E3B] mb-1">
+                  <h3 className="text-xl font-bold text-[#000000] mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-[#5F6F6C] leading-relaxed text-base">
+                  <p className="text-[#000000] leading-relaxed text-base">
                     {item.description}
                   </p>
                 </div>

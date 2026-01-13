@@ -471,7 +471,7 @@ const SectionCard: React.FC<{
 const ListItem: React.FC<{ text: string }> = ({ text }) => (
   <div className="flex items-start gap-3 mb-2 last:mb-0">
     <div className="mt-2 w-[5px] h-[5px] rounded-full bg-[#3B6F6A]" />
-    <span className="text-[16.5px] leading-relaxed text-[#5F6F6C]">
+    <span className="text-[16.5px] leading-relaxed text-sm text-[#000000] font-semibold">
       {text}
     </span>
   </div>

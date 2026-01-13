@@ -608,10 +608,10 @@ const ConferenceMissionVisionList: React.FC = () => {
         </div>
 
         {/* Mission & Vision */}
-        <ul className="list-disc list-inside space-y-6 text-[#5F6F6C] text-[17px] mb-8">
+        <ul className="list-disc list-inside space-y-6 text-[#000000] text-[17px] mb-8">
           {items.map((item, index) => (
             <li key={index}>
-              <span className="font-semibold text-[#2F3E3B]">
+              <span className="font-semibold text-[#000000]">
                 {item.title}:
               </span>{" "}
               {item.desc}
@@ -628,7 +628,7 @@ const ConferenceMissionVisionList: React.FC = () => {
             </h3>
           </div>
 
-          <ul className="list-disc list-inside space-y-2 text-[#5F6F6C] text-[17px]">
+          <ul className="list-disc list-inside space-y-2 text-[#000000] text-[17px]">
             {values.map((value, index) => (
               <li key={index}>{value}</li>
             ))}

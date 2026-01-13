@@ -1675,10 +1675,10 @@ const HeroSection: React.FC = () => {
       {/* Emerald Overlay (NO BLUE) */}
       <div
         className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(4,120,87,0.55) 0%, rgba(4,120,87,0.42) 50%, rgba(4,120,87,0.28) 100%)",
-        }}
+        // style={{
+        //   background:
+        //     "linear-gradient(90deg, rgba(4,120,87,0.55) 0%, rgba(4,120,87,0.42) 50%, rgba(4,120,87,0.28) 100%)",
+        // }}
       />
 
       <div className="relative z-10 h-full flex flex-col justify-between px-6 lg:px-16 py-16">
